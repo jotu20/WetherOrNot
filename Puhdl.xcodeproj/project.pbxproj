@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF68CE742885EB3E0092E5DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68CE732885EB3E0092E5DE /* AppDelegate.swift */; };
+		CF68CE762885EB3E0092E5DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68CE752885EB3E0092E5DE /* SceneDelegate.swift */; };
+		CF68CE782885EB3E0092E5DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68CE772885EB3E0092E5DE /* ViewController.swift */; };
+		CF68CE7B2885EB3E0092E5DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF68CE792885EB3E0092E5DE /* Main.storyboard */; };
+		CF68CE7D2885EB3F0092E5DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF68CE7C2885EB3F0092E5DE /* Assets.xcassets */; };
+		CF68CE802885EB3F0092E5DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF68CE7E2885EB3F0092E5DE /* LaunchScreen.storyboard */; };
+		CF68CE8B2885EB400092E5DE /* PuhdlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68CE8A2885EB400092E5DE /* PuhdlTests.swift */; };
+		CF68CE952885EB400092E5DE /* PuhdlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68CE942885EB400092E5DE /* PuhdlUITests.swift */; };
+		CF68CE972885EB400092E5DE /* PuhdlUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68CE962885EB400092E5DE /* PuhdlUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF68CE872885EB400092E5DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF68CE682885EB3E0092E5DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF68CE6F2885EB3E0092E5DE;
+			remoteInfo = Puhdl;
+		};
+		CF68CE912885EB400092E5DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF68CE682885EB3E0092E5DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF68CE6F2885EB3E0092E5DE;
+			remoteInfo = Puhdl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF68CE702885EB3E0092E5DE /* Puhdl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puhdl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF68CE732885EB3E0092E5DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF68CE752885EB3E0092E5DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CF68CE772885EB3E0092E5DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF68CE7A2885EB3E0092E5DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF68CE7C2885EB3F0092E5DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF68CE7F2885EB3F0092E5DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF68CE812885EB3F0092E5DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF68CE862885EB400092E5DE /* PuhdlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuhdlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF68CE8A2885EB400092E5DE /* PuhdlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuhdlTests.swift; sourceTree = "<group>"; };
+		CF68CE902885EB400092E5DE /* PuhdlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuhdlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF68CE942885EB400092E5DE /* PuhdlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuhdlUITests.swift; sourceTree = "<group>"; };
+		CF68CE962885EB400092E5DE /* PuhdlUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuhdlUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CF68CEA32885ED620092E5DE /* Puhdl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Puhdl.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF68CE6D2885EB3E0092E5DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF68CE832885EB400092E5DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF68CE8D2885EB400092E5DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF68CE672885EB3E0092E5DE = {
+			isa = PBXGroup;
+			children = (
+				CF68CE722885EB3E0092E5DE /* Puhdl */,
+				CF68CE892885EB400092E5DE /* PuhdlTests */,
+				CF68CE932885EB400092E5DE /* PuhdlUITests */,
+				CF68CE712885EB3E0092E5DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF68CE712885EB3E0092E5DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF68CE702885EB3E0092E5DE /* Puhdl.app */,
+				CF68CE862885EB400092E5DE /* PuhdlTests.xctest */,
+				CF68CE902885EB400092E5DE /* PuhdlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF68CE722885EB3E0092E5DE /* Puhdl */ = {
+			isa = PBXGroup;
+			children = (
+				CF68CEA32885ED620092E5DE /* Puhdl.entitlements */,
+				CF68CE732885EB3E0092E5DE /* AppDelegate.swift */,
+				CF68CE752885EB3E0092E5DE /* SceneDelegate.swift */,
+				CF68CEA62885F2B50092E5DE /* View */,
+				CF68CEA52885F2780092E5DE /* Models */,
+				CF68CEA42885F2710092E5DE /* Utilties */,
+				CF68CEA82885F2D20092E5DE /* Resources */,
+				CF68CE812885EB3F0092E5DE /* Info.plist */,
+			);
+			path = Puhdl;
+			sourceTree = "<group>";
+		};
+		CF68CE892885EB400092E5DE /* PuhdlTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF68CE8A2885EB400092E5DE /* PuhdlTests.swift */,
+			);
+			path = PuhdlTests;
+			sourceTree = "<group>";
+		};
+		CF68CE932885EB400092E5DE /* PuhdlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF68CE942885EB400092E5DE /* PuhdlUITests.swift */,
+				CF68CE962885EB400092E5DE /* PuhdlUITestsLaunchTests.swift */,
+			);
+			path = PuhdlUITests;
+			sourceTree = "<group>";
+		};
+		CF68CEA42885F2710092E5DE /* Utilties */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilties;
+			sourceTree = "<group>";
+		};
+		CF68CEA52885F2780092E5DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CF68CEA62885F2B50092E5DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF68CEA72885F2BA0092E5DE /* Controllers */,
+				CF68CE792885EB3E0092E5DE /* Main.storyboard */,
+				CF68CE7E2885EB3F0092E5DE /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF68CEA72885F2BA0092E5DE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF68CE772885EB3E0092E5DE /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CF68CEA82885F2D20092E5DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CF68CE7C2885EB3F0092E5DE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF68CE6F2885EB3E0092E5DE /* Puhdl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF68CE9A2885EB400092E5DE /* Build configuration list for PBXNativeTarget "Puhdl" */;
+			buildPhases = (
+				CF68CE6C2885EB3E0092E5DE /* Sources */,
+				CF68CE6D2885EB3E0092E5DE /* Frameworks */,
+				CF68CE6E2885EB3E0092E5DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Puhdl;
+			productName = Puhdl;
+			productReference = CF68CE702885EB3E0092E5DE /* Puhdl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF68CE852885EB400092E5DE /* PuhdlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF68CE9D2885EB400092E5DE /* Build configuration list for PBXNativeTarget "PuhdlTests" */;
+			buildPhases = (
+				CF68CE822885EB400092E5DE /* Sources */,
+				CF68CE832885EB400092E5DE /* Frameworks */,
+				CF68CE842885EB400092E5DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF68CE882885EB400092E5DE /* PBXTargetDependency */,
+			);
+			name = PuhdlTests;
+			productName = PuhdlTests;
+			productReference = CF68CE862885EB400092E5DE /* PuhdlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF68CE8F2885EB400092E5DE /* PuhdlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF68CEA02885EB400092E5DE /* Build configuration list for PBXNativeTarget "PuhdlUITests" */;
+			buildPhases = (
+				CF68CE8C2885EB400092E5DE /* Sources */,
+				CF68CE8D2885EB400092E5DE /* Frameworks */,
+				CF68CE8E2885EB400092E5DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF68CE922885EB400092E5DE /* PBXTargetDependency */,
+			);
+			name = PuhdlUITests;
+			productName = PuhdlUITests;
+			productReference = CF68CE902885EB400092E5DE /* PuhdlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF68CE682885EB3E0092E5DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					CF68CE6F2885EB3E0092E5DE = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					CF68CE852885EB400092E5DE = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = CF68CE6F2885EB3E0092E5DE;
+					};
+					CF68CE8F2885EB400092E5DE = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = CF68CE6F2885EB3E0092E5DE;
+					};
+				};
+			};
+			buildConfigurationList = CF68CE6B2885EB3E0092E5DE /* Build configuration list for PBXProject "Puhdl" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF68CE672885EB3E0092E5DE;
+			productRefGroup = CF68CE712885EB3E0092E5DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF68CE6F2885EB3E0092E5DE /* Puhdl */,
+				CF68CE852885EB400092E5DE /* PuhdlTests */,
+				CF68CE8F2885EB400092E5DE /* PuhdlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF68CE6E2885EB3E0092E5DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF68CE802885EB3F0092E5DE /* LaunchScreen.storyboard in Resources */,
+				CF68CE7D2885EB3F0092E5DE /* Assets.xcassets in Resources */,
+				CF68CE7B2885EB3E0092E5DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF68CE842885EB400092E5DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF68CE8E2885EB400092E5DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF68CE6C2885EB3E0092E5DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF68CE782885EB3E0092E5DE /* ViewController.swift in Sources */,
+				CF68CE742885EB3E0092E5DE /* AppDelegate.swift in Sources */,
+				CF68CE762885EB3E0092E5DE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF68CE822885EB400092E5DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF68CE8B2885EB400092E5DE /* PuhdlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF68CE8C2885EB400092E5DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF68CE972885EB400092E5DE /* PuhdlUITestsLaunchTests.swift in Sources */,
+				CF68CE952885EB400092E5DE /* PuhdlUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF68CE882885EB400092E5DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF68CE6F2885EB3E0092E5DE /* Puhdl */;
+			targetProxy = CF68CE872885EB400092E5DE /* PBXContainerItemProxy */;
+		};
+		CF68CE922885EB400092E5DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF68CE6F2885EB3E0092E5DE /* Puhdl */;
+			targetProxy = CF68CE912885EB400092E5DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF68CE792885EB3E0092E5DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF68CE7A2885EB3E0092E5DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF68CE7E2885EB3F0092E5DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF68CE7F2885EB3F0092E5DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF68CE982885EB400092E5DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF68CE992885EB400092E5DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF68CE9B2885EB400092E5DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Puhdl/Puhdl.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24WZU35MAF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Puhdl/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Puhdl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF68CE9C2885EB400092E5DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Puhdl/Puhdl.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24WZU35MAF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Puhdl/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.Puhdl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF68CE9E2885EB400092E5DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24WZU35MAF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.PuhdlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Puhdl.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Puhdl";
+			};
+			name = Debug;
+		};
+		CF68CE9F2885EB400092E5DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24WZU35MAF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.PuhdlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Puhdl.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Puhdl";
+			};
+			name = Release;
+		};
+		CF68CEA12885EB400092E5DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24WZU35MAF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.PuhdlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Puhdl;
+			};
+			name = Debug;
+		};
+		CF68CEA22885EB400092E5DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24WZU35MAF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.PuhdlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Puhdl;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF68CE6B2885EB3E0092E5DE /* Build configuration list for PBXProject "Puhdl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF68CE982885EB400092E5DE /* Debug */,
+				CF68CE992885EB400092E5DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF68CE9A2885EB400092E5DE /* Build configuration list for PBXNativeTarget "Puhdl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF68CE9B2885EB400092E5DE /* Debug */,
+				CF68CE9C2885EB400092E5DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF68CE9D2885EB400092E5DE /* Build configuration list for PBXNativeTarget "PuhdlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF68CE9E2885EB400092E5DE /* Debug */,
+				CF68CE9F2885EB400092E5DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF68CEA02885EB400092E5DE /* Build configuration list for PBXNativeTarget "PuhdlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF68CEA12885EB400092E5DE /* Debug */,
+				CF68CEA22885EB400092E5DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF68CE682885EB3E0092E5DE /* Project object */;
+}
