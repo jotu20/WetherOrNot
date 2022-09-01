@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Puhdl
+//  WetherOrNot
 //
 //  Created by Joseph Szafarowicz on 7/18/22.
 //

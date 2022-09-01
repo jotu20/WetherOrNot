@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Puhdl
+//  WetherOrNot
 //
 //  Created by Joseph Szafarowicz on 7/18/22.
 //
@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
 

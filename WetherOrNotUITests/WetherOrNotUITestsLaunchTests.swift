@@ -1,13 +1,13 @@
 //
-//  PuhdlUITestsLaunchTests.swift
-//  PuhdlUITests
+//  WetherOrNotUITestsLaunchTests.swift
+//  WetherOrNotUITests
 //
 //  Created by Joseph Szafarowicz on 7/18/22.
 //
 
 import XCTest
 
-final class PuhdlUITestsLaunchTests: XCTestCase {
+final class WetherOrNotUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

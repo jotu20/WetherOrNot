@@ -1,13 +1,13 @@
 //
-//  PuhdlUITests.swift
-//  PuhdlUITests
+//  WetherOrNotUITests.swift
+//  WetherOrNotUITests
 //
 //  Created by Joseph Szafarowicz on 7/18/22.
 //
 
 import XCTest
 
-final class PuhdlUITests: XCTestCase {
+final class WetherOrNotUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
