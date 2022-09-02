@@ -7,6 +7,10 @@
 
 import Foundation
 
-struct CurrentWeatherModel {
-    let symbolName: String
+struct DayForecast {
+    let day: Date
+    let symbol: String
+    let highTemp: Double
+    let lowTemp: Double
+    let precipChance: Double
 }

@@ -5,19 +5,32 @@
 //  Created by Joseph Szafarowicz on 8/18/22.
 //
 
-import Foundation
 import WeatherKit
 import CoreLocation
 
-class FetchWeather: ObservableObject {
+class FetchWeather {
+    var dailyForecasts: [DayForecast] = []
     
-    func fetchCurrent() async {
+    func fetchCurrent(latitude: Double, longitude: Double) async {
         let weatherService = WeatherService()
-        let melbourne = CLLocation(
-             latitude: -37.815018,
-             longitude: 144.946014
-        )
+        let location = CLLocation(latitude: latitude, longitude: longitude)
         
-        let weather = try! await weatherService.weather(for: melbourne)
+        let weather = try! await weatherService.weather(for: location)
+        
+        let dailyWeather = weather.dailyForecast.forecast
+        let dailyForecasts = Array(dailyWeather.prefix(5)).map {
+            DayForecast(
+                day: $0.date,
+                symbol: $0.symbolName,
+                highTemp: $0.highTemperature.value,
+                lowTemp: $0.lowTemperature.value,
+                precipChance: $0.precipitationChance
+             )
+          }
+   
+          DispatchQueue.main.async {
+              self.dailyForecasts = dailyForecasts
+              print(dailyForecasts)
+          }
     }
 }
