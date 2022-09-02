@@ -12,6 +12,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var currentCardView: DayCardView!
     @IBOutlet weak var day0CardView: DayCardView!
+    @IBOutlet weak var day1CardView: DayCardView!
+    @IBOutlet weak var day2CardView: DayCardView!
+    @IBOutlet weak var day3CardView: DayCardView!
+    @IBOutlet weak var day4CardView: DayCardView!
 
     let locationManager = CLLocationManager()
     var fetcher = FetchWeather()
@@ -42,6 +46,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     await self.fetcher.fetchCurrent(latitude: latitude, longitude: longitude)
                     
                     setupDayCard(dayView: self.day0CardView, dayNumber: 0, data: self.fetcher)
+                    setupDayCard(dayView: self.day1CardView, dayNumber: 1, data: self.fetcher)
+                    setupDayCard(dayView: self.day2CardView, dayNumber: 2, data: self.fetcher)
+                    setupDayCard(dayView: self.day3CardView, dayNumber: 3, data: self.fetcher)
+                    setupDayCard(dayView: self.day4CardView, dayNumber: 4, data: self.fetcher)
                 }
             }
         }

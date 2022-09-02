@@ -9,7 +9,7 @@ import WeatherKit
 import CoreLocation
 
 class FetchWeather {
-    var dailyForecasts: [DayForecast] = []
+    var dailyForecasts: [DailyForecast] = []
     
     func fetchCurrent(latitude: Double, longitude: Double) async {
         let weatherService = WeatherService()
@@ -19,7 +19,7 @@ class FetchWeather {
         
         let dailyWeather = weather.dailyForecast.forecast
         let dailyForecasts = Array(dailyWeather.prefix(5)).map {
-            DayForecast(
+            DailyForecast(
                 day: $0.date,
                 symbol: $0.symbolName,
                 highTemp: $0.highTemperature.value,

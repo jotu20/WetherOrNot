@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DayForecast {
+struct DailyForecast {
     let day: Date
     let symbol: String
     let highTemp: Double
