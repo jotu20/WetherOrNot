@@ -1,44 +1,23 @@
 //
-//  CurrentForecast.swift
+//  GlobalVariables.swift
 //  WetherOrNot
 //
-//  Created by Joseph Szafarowicz on 8/18/22.
+//  Created by Joseph Szafarowicz on 9/7/22.
 //
 
-import WeatherKit
-import CoreLocation
+import Foundation
 
-class FetchWeather {
-    var dailyForecast: [DailyForecast] = []
+class CurrentForecast {
     
-    func fetchDaily(latitude: Double, longitude: Double) async {
-        let weatherService = WeatherService()
-        let location = CLLocation(latitude: latitude, longitude: longitude)
-        
-        let weather = try! await weatherService.weather(for: location)
-        
-        let currentWeather = weather.currentWeather
-        GlobalForecastVariables.sharedInstance.symbol = currentWeather.symbolName
-        GlobalForecastVariables.sharedInstance.temp = currentWeather.temperature.value
-        GlobalForecastVariables.sharedInstance.apparentTemp = currentWeather.apparentTemperature.value
-        GlobalForecastVariables.sharedInstance.uvIndex = currentWeather.uvIndex.value
-        GlobalForecastVariables.sharedInstance.humidity = currentWeather.humidity
-        GlobalForecastVariables.sharedInstance.windSpeed = currentWeather.wind.speed.value
-        GlobalForecastVariables.sharedInstance.pressure = currentWeather.pressure.value
-        
-        let dailyWeather = weather.dailyForecast.forecast
-        let dailyForecast = Array(dailyWeather.prefix(5)).map {
-            DailyForecast(
-                day: $0.date,
-                symbol: $0.symbolName,
-                highTemp: $0.highTemperature.value,
-                lowTemp: $0.lowTemperature.value,
-                precipChance: $0.precipitationChance
-             )
-          }
-   
-          DispatchQueue.main.async {
-              self.dailyForecast = dailyForecast
-          }
-    }
+    static let sharedInstance = CurrentForecast()
+    private init() {}
+    
+    var symbol: String = ""
+    var temp: Double = 0
+    var apparentTemp: Double = 0
+    var uvIndex: Int = 0
+    var humidity: Double = 0
+    var windSpeed: Double = 0
+    var pressure: Double = 0
+    
 }

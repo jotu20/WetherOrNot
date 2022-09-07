@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B356698828C8E218002A9BC6 /* AttireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356698728C8E218002A9BC6 /* AttireModel.swift */; };
+		B356698A28C8E240002A9BC6 /* CurrentForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356698928C8E240002A9BC6 /* CurrentForecast.swift */; };
 		CF118CF628C29FBE00C63CE4 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF118CF528C29FBE00C63CE4 /* DateExtension.swift */; };
-		CF4C9BBE28AE819000804BC1 /* CurrentForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C9BBD28AE819000804BC1 /* CurrentForecast.swift */; };
+		CF4C9BBE28AE819000804BC1 /* FetchWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C9BBD28AE819000804BC1 /* FetchWeather.swift */; };
 		CF4C9BC028AE88A100804BC1 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C9BBF28AE88A100804BC1 /* ForecastModel.swift */; };
 		CF68CE742885EB3E0092E5DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68CE732885EB3E0092E5DE /* AppDelegate.swift */; };
 		CF68CE762885EB3E0092E5DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68CE752885EB3E0092E5DE /* SceneDelegate.swift */; };
@@ -41,8 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B356698728C8E218002A9BC6 /* AttireModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttireModel.swift; sourceTree = "<group>"; };
+		B356698928C8E240002A9BC6 /* CurrentForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentForecast.swift; sourceTree = "<group>"; };
 		CF118CF528C29FBE00C63CE4 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
-		CF4C9BBD28AE819000804BC1 /* CurrentForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentForecast.swift; sourceTree = "<group>"; };
+		CF4C9BBD28AE819000804BC1 /* FetchWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWeather.swift; sourceTree = "<group>"; };
 		CF4C9BBF28AE88A100804BC1 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		CF68CE702885EB3E0092E5DE /* WetherOrNot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WetherOrNot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF68CE732885EB3E0092E5DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,7 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				CF118CF428C29F8500C63CE4 /* Extensions */,
-				CF4C9BBD28AE819000804BC1 /* CurrentForecast.swift */,
+				CF4C9BBD28AE819000804BC1 /* FetchWeather.swift */,
+				B356698928C8E240002A9BC6 /* CurrentForecast.swift */,
 			);
 			path = Utilties;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				CF4C9BBF28AE88A100804BC1 /* ForecastModel.swift */,
+				B356698728C8E218002A9BC6 /* AttireModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -333,11 +339,13 @@
 			files = (
 				CF68CE782885EB3E0092E5DE /* ViewController.swift in Sources */,
 				CF118CF628C29FBE00C63CE4 /* DateExtension.swift in Sources */,
+				B356698828C8E218002A9BC6 /* AttireModel.swift in Sources */,
 				CF68CE742885EB3E0092E5DE /* AppDelegate.swift in Sources */,
+				B356698A28C8E240002A9BC6 /* CurrentForecast.swift in Sources */,
 				CFD718A028C13F30001A1694 /* CurrentCardView.swift in Sources */,
 				CF4C9BC028AE88A100804BC1 /* ForecastModel.swift in Sources */,
 				CFD718A228C13F3A001A1694 /* DayCardView.swift in Sources */,
-				CF4C9BBE28AE819000804BC1 /* CurrentForecast.swift in Sources */,
+				CF4C9BBE28AE819000804BC1 /* FetchWeather.swift in Sources */,
 				CF68CE762885EB3E0092E5DE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
