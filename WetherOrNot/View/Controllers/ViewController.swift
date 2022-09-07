@@ -10,7 +10,7 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
-    @IBOutlet weak var currentCardView: DayCardView!
+    @IBOutlet weak var currentCardView: CurrentCardView!
     @IBOutlet weak var day0CardView: DayCardView!
     @IBOutlet weak var day1CardView: DayCardView!
     @IBOutlet weak var day2CardView: DayCardView!
@@ -19,8 +19,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     let locationManager = CLLocationManager()
     var fetcher = FetchWeather()
-    
-    override func viewWillAppear(_ animated: Bool) {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
 
@@ -31,10 +33,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             let latitude = location.coordinate.latitude
@@ -43,13 +41,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             DispatchQueue.main.async {
                 Task {
-                    await self.fetcher.fetchCurrent(latitude: latitude, longitude: longitude)
+                    await self.fetcher.fetchDaily(latitude: latitude, longitude: longitude)
                     
-                    setupDayCard(dayView: self.day0CardView, dayNumber: 0, data: self.fetcher)
-                    setupDayCard(dayView: self.day1CardView, dayNumber: 1, data: self.fetcher)
-                    setupDayCard(dayView: self.day2CardView, dayNumber: 2, data: self.fetcher)
-                    setupDayCard(dayView: self.day3CardView, dayNumber: 3, data: self.fetcher)
-                    setupDayCard(dayView: self.day4CardView, dayNumber: 4, data: self.fetcher)
+                    setupCurrentCard(view: self.currentCardView)
+                    setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
+                    setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
+                    setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
+                    setupDayCard(view: self.day3CardView, dayNumber: 3, data: self.fetcher)
+                    setupDayCard(view: self.day4CardView, dayNumber: 4, data: self.fetcher)
                 }
             }
         }

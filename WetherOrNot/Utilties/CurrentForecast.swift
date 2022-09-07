@@ -9,16 +9,25 @@ import WeatherKit
 import CoreLocation
 
 class FetchWeather {
-    var dailyForecasts: [DailyForecast] = []
+    var dailyForecast: [DailyForecast] = []
     
-    func fetchCurrent(latitude: Double, longitude: Double) async {
+    func fetchDaily(latitude: Double, longitude: Double) async {
         let weatherService = WeatherService()
         let location = CLLocation(latitude: latitude, longitude: longitude)
         
         let weather = try! await weatherService.weather(for: location)
         
+        let currentWeather = weather.currentWeather
+        GlobalForecastVariables.sharedInstance.symbol = currentWeather.symbolName
+        GlobalForecastVariables.sharedInstance.temp = currentWeather.temperature.value
+        GlobalForecastVariables.sharedInstance.apparentTemp = currentWeather.apparentTemperature.value
+        GlobalForecastVariables.sharedInstance.uvIndex = currentWeather.uvIndex.value
+        GlobalForecastVariables.sharedInstance.humidity = currentWeather.humidity
+        GlobalForecastVariables.sharedInstance.windSpeed = currentWeather.wind.speed.value
+        GlobalForecastVariables.sharedInstance.pressure = currentWeather.pressure.value
+        
         let dailyWeather = weather.dailyForecast.forecast
-        let dailyForecasts = Array(dailyWeather.prefix(5)).map {
+        let dailyForecast = Array(dailyWeather.prefix(5)).map {
             DailyForecast(
                 day: $0.date,
                 symbol: $0.symbolName,
@@ -29,8 +38,7 @@ class FetchWeather {
           }
    
           DispatchQueue.main.async {
-              self.dailyForecasts = dailyForecasts
-              print(dailyForecasts)
+              self.dailyForecast = dailyForecast
           }
     }
 }

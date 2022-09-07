@@ -1,5 +1,5 @@
 //
-//  CurrentCardView.swift
+//  DayCardView.swift
 //  WetherOrNot
 //
 //  Created by Joseph Szafarowicz on 9/1/22.
@@ -7,18 +7,15 @@
 
 import UIKit
 
-class CurrentCardView: UIView {
-    
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var currentTemperatureLabel: UILabel!
+class DayCardView: UIView {
+
+    @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var highTemperatureLabel: UILabel!
     @IBOutlet weak var lowTemperatureLabel: UILabel!
+    @IBOutlet weak var precipitationLabel: UILabel!
     @IBOutlet weak var conditionImage: UIImageView!
     
-    @IBOutlet weak var precipitationLabel: UILabel!
-    @IBOutlet weak var humidityLabel: UILabel!
-    @IBOutlet weak var windLabel: UILabel!
-    @IBOutlet weak var pressureLabel: UILabel!
+    @IBOutlet weak var height: NSLayoutConstraint!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,4 +46,16 @@ class CurrentCardView: UIView {
 //            slotLabel1.isHidden = true
 //        }
 //    }
+}
+
+func setupDayCard(view: DayCardView, dayNumber: Int, data: FetchWeather) {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE"
+    let dayOfTheWeekString = dateFormatter.string(from: data.dailyForecast[dayNumber].day)
+
+    view.dayLabel.text = dayOfTheWeekString
+    view.highTemperatureLabel.text = "H: \(Int(data.dailyForecast[dayNumber].highTemp))°"
+    view.lowTemperatureLabel.text = "L: \(Int(data.dailyForecast[dayNumber].lowTemp))°"
+    view.precipitationLabel.text = "P: \(Int(data.dailyForecast[dayNumber].precipChance * 100))%"
+    view.conditionImage.image = UIImage(systemName: "\(data.dailyForecast[dayNumber].symbol)")
 }
