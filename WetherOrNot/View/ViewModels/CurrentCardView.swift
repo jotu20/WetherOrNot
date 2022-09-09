@@ -51,11 +51,11 @@ class CurrentCardView: UIView {
 
 func setupCurrentCard(view: CurrentCardView) {
     view.locationLabel.text = ""
-    view.currentTemperatureLabel.text = "\(Int(GlobalForecastVariables.sharedInstance.temp))"
-    view.apparentTemperatureLabel.text = "\(Int(GlobalForecastVariables.sharedInstance.apparentTemp))"
-    view.uvIndexLabel.text = "\(GlobalForecastVariables.sharedInstance.uvIndex)"
-    view.humidityLabel.text = "\(Int(GlobalForecastVariables.sharedInstance.humidity))"
-    view.windLabel.text = "\(Int(GlobalForecastVariables.sharedInstance.windSpeed))"
-    view.pressureLabel.text = "\(Int(GlobalForecastVariables.sharedInstance.pressure))"
-    view.conditionImage.image = UIImage(systemName: "\(GlobalForecastVariables.sharedInstance.symbol)")
+    view.currentTemperatureLabel.text = "\(Int(CurrentForecast.sharedInstance.temp))"
+    view.apparentTemperatureLabel.text = "\(Int(CurrentForecast.sharedInstance.apparentTemp))"
+    view.uvIndexLabel.text = "\(CurrentForecast.sharedInstance.uvIndex)"
+    view.humidityLabel.text = "\(Int(CurrentForecast.sharedInstance.humidity))"
+    view.windLabel.text = "\(Int(CurrentForecast.sharedInstance.windSpeed))"
+    view.pressureLabel.text = "\(Int(CurrentForecast.sharedInstance.pressure))"
+    view.conditionImage.image = UIImage(systemName: "\(CurrentForecast.sharedInstance.symbol)")
 }
