@@ -44,7 +44,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
             DispatchQueue.main.async {
                 self.locationManager.stopUpdatingLocation()
 //                self.fetcher.fetchDaily(latitude: latitude, longitude: longitude)
-//
+
 //                setupCurrentCard(view: self.currentCardView)
 //                setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
 //                setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
