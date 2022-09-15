@@ -17,15 +17,14 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var day2CardView: DayCardView!
     @IBOutlet weak var day3CardView: DayCardView!
     @IBOutlet weak var day4CardView: DayCardView!
-
     @IBOutlet weak var settingsButton: UIButton!
+    
+    @IBOutlet weak var currentCardViewWidth: NSLayoutConstraint!
     
     let locationManager = CLLocationManager()
     var fetcher = FetchWeather()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func viewWillAppear(_ animated: Bool) {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
 
@@ -34,6 +33,14 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        createSpinnerView()
+        
+        let screenSize: CGRect = UIScreen.main.bounds
+        currentCardViewWidth.constant = CGFloat(screenSize.width - 30)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -57,14 +64,14 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
             self.locationManager.stopUpdatingLocation()
             DispatchQueue.main.async {
                 Task {
-//                    await self.fetcher.fetch(latitude: latitude, longitude: longitude)
-//
-//                    setupCurrentCard(view: self.currentCardView)
-//                    setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
-//                    setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
-//                    setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
-//                    setupDayCard(view: self.day3CardView, dayNumber: 3, data: self.fetcher)
-//                    setupDayCard(view: self.day4CardView, dayNumber: 4, data: self.fetcher)
+                    await self.fetcher.fetch(latitude: latitude, longitude: longitude)
+
+                    setupCurrentCard(view: self.currentCardView)
+                    setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
+                    setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
+                    setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
+                    setupDayCard(view: self.day3CardView, dayNumber: 3, data: self.fetcher)
+                    setupDayCard(view: self.day4CardView, dayNumber: 4, data: self.fetcher)
                 }
             }
         }
@@ -80,6 +87,21 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsVC
         let navController = UINavigationController(rootViewController: vc)
         self.present(navController, animated: true, completion: nil)
+    }
+    
+    func createSpinnerView() {
+        let child = SpinnerViewController()
+
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            child.willMove(toParent: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParent()
+        }
     }
 
 }

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYr-EG-3as">
-                                <rect key="frame" x="0.0" y="17" width="390" height="808"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="34T-cE-ViW">
                                         <rect key="frame" x="16" y="25" width="360" height="708"/>
@@ -28,7 +28,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="360" height="250"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skx-es-NTP">
-                                                        <rect key="frame" x="20.000000000000004" y="45.333333333333329" width="63.333333333333343" height="40.666666666666671"/>
+                                                        <rect key="frame" x="20.000000000000004" y="45.333333333333371" width="63.333333333333343" height="40.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -268,7 +268,7 @@
                                                         <rect key="frame" x="0.0" y="160" width="360" height="70"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwU-GG-Ljp">
-                                                                <rect key="frame" x="20" y="24.666666666666686" width="100" height="20.333333333333329"/>
+                                                                <rect key="frame" x="20" y="24.666666666666657" width="100" height="20.333333333333329"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="ghM-35-3jX"/>
                                                                 </constraints>
@@ -285,7 +285,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vRt-VX-mSt">
-                                                                <rect key="frame" x="173.66666666666666" y="25.333333333333314" width="101.33333333333334" height="19.333333333333329"/>
+                                                                <rect key="frame" x="173.66666666666666" y="25.333333333333343" width="101.33333333333334" height="19.333333333333329"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L: 000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6K-7G-k2n">
                                                                         <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="19.333333333333332"/>
@@ -455,11 +455,11 @@
                                 <constraints>
                                     <constraint firstItem="34T-cE-ViW" firstAttribute="leading" secondItem="gZC-zD-DRK" secondAttribute="leading" constant="16" id="7nm-Mn-GXQ"/>
                                     <constraint firstItem="LZA-K0-DoF" firstAttribute="top" secondItem="34T-cE-ViW" secondAttribute="bottom" constant="25" id="8aW-lB-iam"/>
-                                    <constraint firstAttribute="trailing" secondItem="34T-cE-ViW" secondAttribute="trailing" constant="14" id="8qd-MF-PFN"/>
+                                    <constraint firstAttribute="trailing" secondItem="34T-cE-ViW" secondAttribute="trailing" constant="14" id="Dho-QF-P1d"/>
                                     <constraint firstItem="gZC-zD-DRK" firstAttribute="trailing" secondItem="LZA-K0-DoF" secondAttribute="trailing" constant="344" id="Ml1-TA-dgW"/>
                                     <constraint firstItem="34T-cE-ViW" firstAttribute="top" secondItem="gZC-zD-DRK" secondAttribute="top" constant="25" id="Pbs-03-uXe"/>
+                                    <constraint firstAttribute="bottom" secondItem="LZA-K0-DoF" secondAttribute="bottom" constant="20" id="RIi-Gy-Xmh"/>
                                     <constraint firstItem="LZA-K0-DoF" firstAttribute="leading" secondItem="34T-cE-ViW" secondAttribute="leading" id="Tbi-XH-Grt"/>
-                                    <constraint firstAttribute="bottom" secondItem="LZA-K0-DoF" secondAttribute="bottom" constant="20" id="bFY-5a-Ic7"/>
                                     <constraint firstItem="gZC-zD-DRK" firstAttribute="bottom" secondItem="LZA-K0-DoF" secondAttribute="bottom" constant="20" id="zui-Kn-aT2"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Hoq-F9-rpc"/>
@@ -469,13 +469,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FYr-EG-3as" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hhc-rD-b6a"/>
-                            <constraint firstItem="FYr-EG-3as" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QKj-gt-zYm"/>
-                            <constraint firstItem="FYr-EG-3as" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-30" id="UUK-bz-bxE"/>
+                            <constraint firstItem="FYr-EG-3as" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0am-T1-Ng8"/>
+                            <constraint firstItem="FYr-EG-3as" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="9WT-se-0Ek"/>
+                            <constraint firstItem="FYr-EG-3as" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BNm-Ut-k5a"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="currentCardView" destination="MCV-Gk-jpr" id="smR-OW-Ex0"/>
+                        <outlet property="currentCardViewWidth" destination="9fF-uP-5Nx" id="1P7-iH-ohG"/>
                         <outlet property="day0CardView" destination="1Ao-0b-32v" id="kHF-eG-DLs"/>
                         <outlet property="day1CardView" destination="Gk2-Xr-5gd" id="OHP-Eg-kPG"/>
                         <outlet property="day2CardView" destination="ksU-95-1Ej" id="TVg-TV-Ldm"/>
@@ -585,6 +586,9 @@
                                                             <color key="tintColor" systemColor="labelColor"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="gray" title="Droplet - $0.99"/>
+                                                            <connections>
+                                                                <action selector="dropletTipButtonTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="X7H-qb-BKO"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4H-3d-0qM">
                                                             <rect key="frame" x="0.0" y="44.333333333333329" width="250" height="34.333333333333329"/>
@@ -592,6 +596,9 @@
                                                             <color key="tintColor" systemColor="labelColor"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="gray" title="Drizzle - $2.99"/>
+                                                            <connections>
+                                                                <action selector="drizzleTipButtonTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="coG-j4-bnm"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wal-it-SD5">
                                                             <rect key="frame" x="0.0" y="88.666666666666657" width="250" height="34.333333333333343"/>
@@ -599,6 +606,9 @@
                                                             <color key="tintColor" systemColor="labelColor"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="gray" title="Shower - $4.99"/>
+                                                            <connections>
+                                                                <action selector="showerTipButtonTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="LIw-Kc-vcw"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ne1-Ed-eAL">
                                                             <rect key="frame" x="0.0" y="133" width="250" height="34.333333333333343"/>
@@ -606,6 +616,9 @@
                                                             <color key="tintColor" systemColor="labelColor"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="gray" title="Downpour - $19.99"/>
+                                                            <connections>
+                                                                <action selector="downpourTipButtonTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="hFR-dU-fy4"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -627,6 +640,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="Jgu-bU-GsE"/>
+                    <connections>
+                        <outlet property="downpourTipButton" destination="ne1-Ed-eAL" id="6ad-Pp-Noq"/>
+                        <outlet property="drizzleTipButton" destination="f4H-3d-0qM" id="QSa-d9-QO3"/>
+                        <outlet property="dropletTipButton" destination="BES-qh-eAP" id="KuR-MJ-mXp"/>
+                        <outlet property="showerTipButton" destination="Wal-it-SD5" id="Gat-Tg-uzq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5A-MP-5CT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
