@@ -10,6 +10,7 @@ import CoreLocation
 
 class ForecastVC: UIViewController, CLLocationManagerDelegate {
     
+    @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var currentCardView: CurrentCardView!
     @IBOutlet weak var day0CardView: DayCardView!
     @IBOutlet weak var day1CardView: DayCardView!
@@ -41,17 +42,29 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
             let longitude = location.coordinate.longitude
             print("User location found.", latitude, longitude)
             
+            let geoCoder = CLGeocoder()
+            let location = CLLocation(latitude: latitude, longitude: longitude)
+            geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+
+                var placeMark: CLPlacemark!
+                placeMark = placemarks?[0]
+                
+                if let locationName = placeMark.locality  {
+                    self.locationNameLabel.text = locationName
+                }
+            })
+            
             self.locationManager.stopUpdatingLocation()
             DispatchQueue.main.async {
                 Task {
-                    await self.fetcher.fetch(latitude: latitude, longitude: longitude)
-                    
-                    setupCurrentCard(view: self.currentCardView)
-                    setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
-                    setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
-                    setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
-                    setupDayCard(view: self.day3CardView, dayNumber: 3, data: self.fetcher)
-                    setupDayCard(view: self.day4CardView, dayNumber: 4, data: self.fetcher)
+//                    await self.fetcher.fetch(latitude: latitude, longitude: longitude)
+//
+//                    setupCurrentCard(view: self.currentCardView)
+//                    setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
+//                    setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
+//                    setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
+//                    setupDayCard(view: self.day3CardView, dayNumber: 3, data: self.fetcher)
+//                    setupDayCard(view: self.day4CardView, dayNumber: 4, data: self.fetcher)
                 }
             }
         }

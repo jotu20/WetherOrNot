@@ -9,7 +9,6 @@ import UIKit
 
 class CurrentCardView: UIView {
     
-    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var apparentTemperatureLabel: UILabel!
     @IBOutlet weak var uvIndexLabel: UILabel!
@@ -50,7 +49,6 @@ class CurrentCardView: UIView {
 }
 
 func setupCurrentCard(view: CurrentCardView) {
-    view.locationLabel.text = ""
     view.currentTemperatureLabel.text = "\(Int(CurrentForecast.sharedInstance.temp))°"
     view.apparentTemperatureLabel.text = "Feels like: \(Int(CurrentForecast.sharedInstance.apparentTemp))°"
     view.conditionImage.image = UIImage(systemName: "\(CurrentForecast.sharedInstance.symbol)")
