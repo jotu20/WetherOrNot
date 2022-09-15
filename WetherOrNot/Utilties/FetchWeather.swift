@@ -11,7 +11,7 @@ import CoreLocation
 class FetchWeather {
     var dailyForecast: [DailyForecast] = []
     
-    func fetchDaily(latitude: Double, longitude: Double) async {
+    func fetch(latitude: Double, longitude: Double) async {
         let weatherService = WeatherService()
         let location = CLLocation(latitude: latitude, longitude: longitude)
         
@@ -24,6 +24,8 @@ class FetchWeather {
         CurrentForecast.sharedInstance.uvIndex = currentWeather.uvIndex.value
         CurrentForecast.sharedInstance.humidity = currentWeather.humidity
         CurrentForecast.sharedInstance.windSpeed = currentWeather.wind.speed.value
+        CurrentForecast.sharedInstance.windGust = currentWeather.wind.gust!.value 
+        CurrentForecast.sharedInstance.windDirection = currentWeather.wind.compassDirection.abbreviation
         CurrentForecast.sharedInstance.pressure = currentWeather.pressure.value
         
         let dailyWeather = weather.dailyForecast.forecast
@@ -39,8 +41,6 @@ class FetchWeather {
    
           DispatchQueue.main.async {
               self.dailyForecast = dailyForecast
-              print(dailyForecast.count)
-              print(dailyForecast[5])
           }
     }
 }
