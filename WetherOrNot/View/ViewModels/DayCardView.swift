@@ -28,7 +28,7 @@ class DayCardView: UIView {
     }
     
     private func setup() {
-        layer.cornerRadius = 10
+        layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
     }
     
 //    @IBAction func cardTapped(_ sender: UITapGestureRecognizer) {
@@ -54,8 +54,8 @@ func setupDayCard(view: DayCardView, dayNumber: Int, data: FetchWeather) {
     let dayOfTheWeekString = dateFormatter.string(from: data.dailyForecast[dayNumber].day)
 
     view.dayLabel.text = dayOfTheWeekString
-    view.highTemperatureLabel.text = "H: \(Int(data.dailyForecast[dayNumber].highTemp))°"
-    view.lowTemperatureLabel.text = "L: \(Int(data.dailyForecast[dayNumber].lowTemp))°"
+    view.highTemperatureLabel.text = "\(Int(data.dailyForecast[dayNumber].highTemp))°"
+    view.lowTemperatureLabel.text = "\(Int(data.dailyForecast[dayNumber].lowTemp))°"
     //view.precipitationLabel.text = "P: \(Int(data.dailyForecast[dayNumber].precipChance * 100))%"
     view.conditionImage.image = UIImage(systemName: "\(data.dailyForecast[dayNumber].symbol)")
 }

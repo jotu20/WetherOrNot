@@ -15,4 +15,5 @@ class GlobalVariables {
     var latitude: Double = 0
     var longitude: Double = 0
     var locationName: String = ""
+    let cornerRadius = 15
 }

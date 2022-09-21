@@ -22,4 +22,6 @@ class CurrentForecast {
     var windDirection: String = ""
     var pressure: Double = 0
     
+    var sunrise: String = ""
+    var sunset: String = ""
 }

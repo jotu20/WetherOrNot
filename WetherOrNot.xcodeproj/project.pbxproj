@@ -10,6 +10,7 @@
 		B356698828C8E218002A9BC6 /* AttireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356698728C8E218002A9BC6 /* AttireModel.swift */; };
 		B356698A28C8E240002A9BC6 /* CurrentForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356698928C8E240002A9BC6 /* CurrentForecast.swift */; };
 		B3AC5B6C28CB7EB8004C9B40 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC5B6B28CB7EB8004C9B40 /* SettingsVC.swift */; };
+		B3D4B7BB28DB5DCC00A57732 /* CurrentSubheadCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4B7BA28DB5DCC00A57732 /* CurrentSubheadCardView.swift */; };
 		B3F2AAC928D37F7F008CF9E7 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2AAC828D37F7F008CF9E7 /* Functions.swift */; };
 		B3F2AACB28D3BFFD008CF9E7 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2AACA28D3BFFD008CF9E7 /* GlobalVariables.swift */; };
 		B3F2AACD28D3C54C008CF9E7 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2AACC28D3C54C008CF9E7 /* SpinnerViewController.swift */; };
@@ -50,6 +51,7 @@
 		B356698728C8E218002A9BC6 /* AttireModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttireModel.swift; sourceTree = "<group>"; };
 		B356698928C8E240002A9BC6 /* CurrentForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentForecast.swift; sourceTree = "<group>"; };
 		B3AC5B6B28CB7EB8004C9B40 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		B3D4B7BA28DB5DCC00A57732 /* CurrentSubheadCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSubheadCardView.swift; sourceTree = "<group>"; };
 		B3F2AAC828D37F7F008CF9E7 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		B3F2AACA28D3BFFD008CF9E7 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		B3F2AACC28D3C54C008CF9E7 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				CFD7189F28C13F30001A1694 /* CurrentCardView.swift */,
+				B3D4B7BA28DB5DCC00A57732 /* CurrentSubheadCardView.swift */,
 				CFD718A128C13F3A001A1694 /* DayCardView.swift */,
 			);
 			path = ViewModels;
@@ -352,6 +355,7 @@
 				B3AC5B6C28CB7EB8004C9B40 /* SettingsVC.swift in Sources */,
 				CF68CE782885EB3E0092E5DE /* ForecastVC.swift in Sources */,
 				CF118CF628C29FBE00C63CE4 /* DateExtension.swift in Sources */,
+				B3D4B7BB28DB5DCC00A57732 /* CurrentSubheadCardView.swift in Sources */,
 				B356698828C8E218002A9BC6 /* AttireModel.swift in Sources */,
 				B3F2AACB28D3BFFD008CF9E7 /* GlobalVariables.swift in Sources */,
 				CF68CE742885EB3E0092E5DE /* AppDelegate.swift in Sources */,

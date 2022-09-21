@@ -19,10 +19,10 @@ class SettingsVC: UITableViewController {
         self.navigationController?.title = "Settings"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
-        dropletTipButton.layer.cornerRadius = 10
-        drizzleTipButton.layer.cornerRadius = 10
-        showerTipButton.layer.cornerRadius = 10
-        downpourTipButton.layer.cornerRadius = 10
+        dropletTipButton.layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
+        drizzleTipButton.layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
+        showerTipButton.layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
+        downpourTipButton.layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
     }
     
     @IBAction func dropletTipButtonTapped(_ sender: UIButton) {

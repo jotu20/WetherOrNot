@@ -38,6 +38,12 @@ class FetchWeather {
                 precipChance: $0.precipitationChance
              )
           }
+        
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "HH:mm"
+        
+        CurrentForecast.sharedInstance.sunrise = dateFormatterGet.string(from: dailyWeather[0].sun.sunrise ?? Date())
+        CurrentForecast.sharedInstance.sunset = dateFormatterGet.string(from: dailyWeather[0].sun.sunset ?? Date())
    
           DispatchQueue.main.async {
               self.dailyForecast = dailyForecast
