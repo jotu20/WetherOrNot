@@ -22,7 +22,6 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var day2CardView: DayCardView!
     @IBOutlet weak var day3CardView: DayCardView!
     @IBOutlet weak var day4CardView: DayCardView!
-    @IBOutlet weak var settingsButton: UIButton!
     
     let locationManager = CLLocationManager()
     var fetcher = FetchWeather()
@@ -41,7 +40,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         createSpinnerView()
-        //view.backgroundColor = UIColor(hex:0xB92946)
+        setColor(view: view, value: defaults.integer(forKey: "color"))
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -65,19 +64,19 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
             self.locationManager.stopUpdatingLocation()
             DispatchQueue.main.async {
                 Task {
-                    await self.fetcher.fetch(latitude: latitude, longitude: longitude)
-
-                    setupCurrentCard(view: self.currentCardView)
-                    setupCurrentSubheadCard(view: self.currentSubheadCardView0, type: "Wind")
-                    setupCurrentSubheadCard(view: self.currentSubheadCardView1, type: "UV Index")
-                    setupCurrentSubheadCard(view: self.currentSubheadCardView2, type: "Humidity")
-                    setupCurrentSubheadCard(view: self.currentSubheadCardView3, type: "Pressure")
-                    
-                    setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
-                    setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
-                    setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
-                    setupDayCard(view: self.day3CardView, dayNumber: 3, data: self.fetcher)
-                    setupDayCard(view: self.day4CardView, dayNumber: 4, data: self.fetcher)
+//                    await self.fetcher.fetch(latitude: latitude, longitude: longitude)
+//
+//                    setupCurrentCard(view: self.currentCardView)
+//                    setupCurrentSubheadCard(view: self.currentSubheadCardView0, type: "Wind")
+//                    setupCurrentSubheadCard(view: self.currentSubheadCardView1, type: "UV Index")
+//                    setupCurrentSubheadCard(view: self.currentSubheadCardView2, type: "Humidity")
+//                    setupCurrentSubheadCard(view: self.currentSubheadCardView3, type: "Pressure")
+//
+//                    setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
+//                    setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
+//                    setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
+//                    setupDayCard(view: self.day3CardView, dayNumber: 3, data: self.fetcher)
+//                    setupDayCard(view: self.day4CardView, dayNumber: 4, data: self.fetcher)
                 }
             }
         }

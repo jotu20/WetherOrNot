@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,7 +17,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ijc-it-ZGD">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <sections>
                             <tableViewSection id="8lH-xf-hNf">
                                 <cells>
@@ -49,6 +50,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="GOS-en-udu" secondAttribute="trailing" constant="20" symbolic="YES" id="ywY-19-xgT"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="SIH-cz-AeO">
                                         <rect key="frame" x="0.0" y="110" width="390" height="60"/>
@@ -79,9 +81,169 @@
                                                 <constraint firstItem="ZG6-AE-rVc" firstAttribute="leading" secondItem="u4Z-Nk-B0j" secondAttribute="leading" constant="20" id="sIn-rr-BRv"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="190" id="XFT-3U-Ahr">
+                                        <rect key="frame" x="0.0" y="170" width="390" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XFT-3U-Ahr" id="DhW-Ri-Rrc">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mL-nH-S7H">
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="41" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ja6-Q8-xXV">
+                                                    <rect key="frame" x="20" y="51.333333333333343" width="350" height="110"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="85n-1b-bom">
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUa-EX-O4C">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="50"/>
+                                                                    <color key="tintColor" name="lightOrange"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton0Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="k4H-J8-h2E"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0w9-7O-ynh">
+                                                                    <rect key="frame" x="74.333333333333329" y="0.0" width="53" height="50"/>
+                                                                    <color key="tintColor" name="pollen"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton1Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="XMM-Vv-opw"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aci-tM-rE9">
+                                                                    <rect key="frame" x="148.33333333333334" y="0.0" width="53.333333333333343" height="50"/>
+                                                                    <color key="tintColor" name="mint"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton2Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="0Iz-jm-tsv"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDd-B4-BTe">
+                                                                    <rect key="frame" x="222.66666666666666" y="0.0" width="52.999999999999972" height="50"/>
+                                                                    <color key="tintColor" name="lilac"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton3Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="CJ8-4r-TsT"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gW-tP-hc4">
+                                                                    <rect key="frame" x="296.66666666666669" y="0.0" width="53.333333333333314" height="50"/>
+                                                                    <color key="tintColor" name="azure"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton4Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="EH7-8p-vJ8"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="yag-Ub-L27">
+                                                            <rect key="frame" x="0.0" y="60" width="350" height="50"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvp-GH-4V6">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="50"/>
+                                                                    <color key="tintColor" name="midnightBlue"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton5Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="hDB-kz-Rmw"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isx-ur-Vbw">
+                                                                    <rect key="frame" x="74.333333333333329" y="0.0" width="53" height="50"/>
+                                                                    <color key="tintColor" name="ultraViolet"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton6Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="jnE-vt-QP5"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxZ-b0-LcF">
+                                                                    <rect key="frame" x="148.33333333333334" y="0.0" width="53.333333333333343" height="50"/>
+                                                                    <color key="tintColor" name="roseRed"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton7Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="T0m-hF-A2H"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQj-Tg-Kly">
+                                                                    <rect key="frame" x="222.66666666666666" y="0.0" width="52.999999999999972" height="50"/>
+                                                                    <color key="tintColor" name="antiqueWhite"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton8Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="PwN-ux-QJh"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FR-Gl-KGN">
+                                                                    <rect key="frame" x="296.66666666666669" y="0.0" width="53.333333333333314" height="50"/>
+                                                                    <color key="tintColor" name="darkOlive"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton9Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="p9n-9g-qdJ"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5mL-nH-S7H" firstAttribute="leading" secondItem="DhW-Ri-Rrc" secondAttribute="leading" constant="20" id="2On-5W-L1Q"/>
+                                                <constraint firstItem="Ja6-Q8-xXV" firstAttribute="leading" secondItem="DhW-Ri-Rrc" secondAttribute="leading" constant="20" id="Ffz-zB-Wva"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ja6-Q8-xXV" secondAttribute="trailing" constant="20" id="fb0-bc-SHM"/>
+                                                <constraint firstItem="5mL-nH-S7H" firstAttribute="top" secondItem="DhW-Ri-Rrc" secondAttribute="top" constant="11" id="lAF-YO-hA5"/>
+                                                <constraint firstItem="Ja6-Q8-xXV" firstAttribute="top" secondItem="5mL-nH-S7H" secondAttribute="bottom" constant="20" id="nhu-gO-7cx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="245" id="wak-By-wdN">
-                                        <rect key="frame" x="0.0" y="170" width="390" height="245"/>
+                                        <rect key="frame" x="0.0" y="360" width="390" height="245"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wak-By-wdN" id="Rkf-X2-QJK">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="245"/>
@@ -98,43 +260,47 @@
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BES-qh-eAP">
                                                             <rect key="frame" x="0.0" y="0.0" width="250" height="34.333333333333336"/>
-                                                            <color key="backgroundColor" name="AccentColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="250" id="Esd-kS-djm"/>
                                                             </constraints>
-                                                            <color key="tintColor" systemColor="labelColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="gray" title="Droplet - $0.99"/>
+                                                            <buttonConfiguration key="configuration" style="gray" title="Droplet - $0.99">
+                                                                <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                <color key="baseBackgroundColor" name="AccentColor"/>
+                                                            </buttonConfiguration>
                                                             <connections>
                                                                 <action selector="dropletTipButtonTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="X7H-qb-BKO"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4H-3d-0qM">
                                                             <rect key="frame" x="0.0" y="44.333333333333329" width="250" height="34.333333333333329"/>
-                                                            <color key="backgroundColor" name="AccentColor"/>
-                                                            <color key="tintColor" systemColor="labelColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="gray" title="Drizzle - $2.99"/>
+                                                            <buttonConfiguration key="configuration" style="gray" title="Drizzle - $2.99">
+                                                                <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                <color key="baseBackgroundColor" name="AccentColor"/>
+                                                            </buttonConfiguration>
                                                             <connections>
                                                                 <action selector="drizzleTipButtonTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="coG-j4-bnm"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wal-it-SD5">
                                                             <rect key="frame" x="0.0" y="88.666666666666657" width="250" height="34.333333333333343"/>
-                                                            <color key="backgroundColor" name="AccentColor"/>
-                                                            <color key="tintColor" systemColor="labelColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="gray" title="Shower - $4.99"/>
+                                                            <buttonConfiguration key="configuration" style="gray" title="Shower - $4.99">
+                                                                <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                <color key="baseBackgroundColor" name="AccentColor"/>
+                                                            </buttonConfiguration>
                                                             <connections>
                                                                 <action selector="showerTipButtonTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="LIw-Kc-vcw"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ne1-Ed-eAL">
                                                             <rect key="frame" x="0.0" y="133" width="250" height="34.333333333333343"/>
-                                                            <color key="backgroundColor" name="AccentColor"/>
-                                                            <color key="tintColor" systemColor="labelColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="gray" title="Downpour - $19.99"/>
+                                                            <buttonConfiguration key="configuration" style="gray" title="Downpour - $19.99">
+                                                                <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                <color key="baseBackgroundColor" name="AccentColor"/>
+                                                            </buttonConfiguration>
                                                             <connections>
                                                                 <action selector="downpourTipButtonTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="hFR-dU-fy4"/>
                                                             </connections>
@@ -149,6 +315,7 @@
                                                 <constraint firstItem="5eX-8A-mIg" firstAttribute="leading" secondItem="Rkf-X2-QJK" secondAttribute="leading" constant="20" id="noR-We-9Jh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -164,6 +331,16 @@
                         <outlet property="drizzleTipButton" destination="f4H-3d-0qM" id="QSa-d9-QO3"/>
                         <outlet property="dropletTipButton" destination="BES-qh-eAP" id="KuR-MJ-mXp"/>
                         <outlet property="showerTipButton" destination="Wal-it-SD5" id="Gat-Tg-uzq"/>
+                        <outlet property="themeButton0" destination="tUa-EX-O4C" id="997-DM-wl5"/>
+                        <outlet property="themeButton1" destination="0w9-7O-ynh" id="lOn-Ze-eXV"/>
+                        <outlet property="themeButton2" destination="aci-tM-rE9" id="Lwy-LT-rNc"/>
+                        <outlet property="themeButton3" destination="QDd-B4-BTe" id="4jS-1e-O8E"/>
+                        <outlet property="themeButton4" destination="3gW-tP-hc4" id="Lr1-I2-IDc"/>
+                        <outlet property="themeButton5" destination="Rvp-GH-4V6" id="XXL-p6-UD5"/>
+                        <outlet property="themeButton6" destination="isx-ur-Vbw" id="1sg-XL-3hL"/>
+                        <outlet property="themeButton7" destination="rxZ-b0-LcF" id="gIu-OR-2o8"/>
+                        <outlet property="themeButton8" destination="rQj-Tg-Kly" id="2gf-TL-jH9"/>
+                        <outlet property="themeButton9" destination="6FR-Gl-KGN" id="JOy-uQ-hCB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5A-MP-5CT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -855,6 +1032,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circle.fill" catalog="system" width="128" height="123"/>
         <image name="cloud.rain" catalog="system" width="126" height="128"/>
         <image name="gauge.high" catalog="system" width="128" height="123"/>
         <image name="humidity" catalog="system" width="128" height="96"/>
@@ -866,11 +1044,38 @@
         <namedColor name="AccentColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
+        <namedColor name="antiqueWhite">
+            <color red="0.83137254901960789" green="0.71372549019607845" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="azure">
+            <color red="0.52941176470588236" green="0.60392156862745094" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkOlive">
+            <color red="0.5490196078431373" green="0.5490196078431373" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightOrange">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lilac">
+            <color red="0.75686274509803919" green="0.84705882352941175" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="midnightBlue">
+            <color red="0.37647058823529411" green="0.51764705882352946" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mint">
+            <color red="0.68235294117647061" green="0.92549019607843142" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="pollen">
+            <color red="1" green="0.82352941176470584" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="roseRed">
+            <color red="0.72549019607843135" green="0.16078431372549021" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ultraViolet">
+            <color red="0.44313725490196076" green="0.3411764705882353" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
