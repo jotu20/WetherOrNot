@@ -41,6 +41,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         createSpinnerView()
+        //view.backgroundColor = UIColor(hex:0xB92946)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
