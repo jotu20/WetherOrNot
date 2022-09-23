@@ -249,8 +249,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="245"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support this app with a tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eX-8A-mIg">
-                                                    <rect key="frame" x="20" y="10.999999999999998" width="200" height="20.333333333333329"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support the developer with a tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eX-8A-mIg">
+                                                    <rect key="frame" x="19.999999999999986" y="10.999999999999998" width="243.66666666666663" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -286,7 +286,7 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wal-it-SD5">
                                                             <rect key="frame" x="0.0" y="88.666666666666657" width="250" height="34.333333333333343"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="gray" title="Shower - $4.99">
+                                                            <buttonConfiguration key="configuration" style="gray" title="Shower - $8.99">
                                                                 <color key="baseForegroundColor" systemColor="labelColor"/>
                                                                 <color key="baseBackgroundColor" name="AccentColor"/>
                                                             </buttonConfiguration>
