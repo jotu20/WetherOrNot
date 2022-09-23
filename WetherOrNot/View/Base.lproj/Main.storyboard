@@ -366,7 +366,7 @@
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ue7-GS-O9F">
                                                         <rect key="frame" x="0.0" y="0.99999999999999822" width="30" height="28.333333333333336"/>
-                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                        <color key="tintColor" name="AccentColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="Orj-KW-kQy"/>
                                                             <constraint firstAttribute="height" constant="30" id="mmr-05-htY"/>
@@ -375,7 +375,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKb-y8-IJz">
                                                         <rect key="frame" x="40" y="0.0" width="330" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="AccentColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -389,7 +389,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhA-c2-QuX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="67"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="56"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="AccentColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels: 000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjP-rl-SqK">
@@ -398,14 +398,14 @@
                                                                     <constraint firstAttribute="width" constant="115" id="gzA-2T-d9d"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="AccentColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dXa-db-58K">
                                                         <rect key="frame" x="270" y="19.666666666666671" width="80" height="81"/>
-                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                        <color key="tintColor" name="AccentColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="5D4-EM-Z0I"/>
                                                             <constraint firstAttribute="width" constant="80" id="B3Q-n3-Q35"/>
@@ -419,7 +419,7 @@
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunrise" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LHO-49-x79">
                                                                         <rect key="frame" x="0.0" y="0.66666666666666607" width="30" height="29"/>
-                                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                                        <color key="tintColor" name="AccentColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="KhN-IN-ZFc"/>
                                                                             <constraint firstAttribute="width" constant="30" id="nbV-4t-Fse"/>
@@ -428,7 +428,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunrise" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKi-bg-9IH">
                                                                         <rect key="frame" x="35" y="0.0" width="44" height="30"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="AccentColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
@@ -438,7 +438,7 @@
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunset" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8rb-B5-YCP">
                                                                         <rect key="frame" x="0.0" y="0.66666666666666607" width="30" height="29"/>
-                                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                                        <color key="tintColor" name="AccentColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="Y1N-hO-RRl"/>
                                                                             <constraint firstAttribute="width" constant="30" id="b0G-Ov-s9C"/>
@@ -447,7 +447,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunset" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6R-Cv-YHi">
                                                                         <rect key="frame" x="35" y="0.0" width="44" height="30"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="AccentColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
@@ -455,7 +455,7 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.24663849914965985" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="dXa-db-58K" secondAttribute="bottom" constant="50" id="97Z-AD-Jsz"/>
                                                     <constraint firstItem="CHw-1s-p5B" firstAttribute="leading" secondItem="Pa7-gO-zI9" secondAttribute="leading" constant="20" id="Ev5-YY-9aj"/>
@@ -484,7 +484,7 @@
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dBo-Mr-swz">
                                                                         <rect key="frame" x="15" y="16.666666666666664" width="30" height="26.666666666666664"/>
-                                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                                        <color key="tintColor" name="AccentColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="30" id="p5N-xQ-NvQ"/>
                                                                         </constraints>
@@ -501,13 +501,13 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0mph NNE" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWM-8v-PN8">
                                                                                 <rect key="frame" x="0.0" y="22" width="115.66666666666667" height="16.666666666666671"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" name="AccentColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" name="AccentColor"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.24663849909999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="bottom" secondItem="dBo-Mr-swz" secondAttribute="bottom" constant="30" id="40l-lm-rzc"/>
                                                                     <constraint firstItem="Yxt-so-OxC" firstAttribute="leading" secondItem="dBo-Mr-swz" secondAttribute="trailing" constant="10" id="I3J-wx-sn5"/>
@@ -529,7 +529,7 @@
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.min" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2CY-c9-qFM">
                                                                         <rect key="frame" x="15" y="15.999999999999996" width="30" height="28.333333333333332"/>
-                                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                                        <color key="tintColor" name="AccentColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="kqS-J3-bkY"/>
                                                                             <constraint firstAttribute="width" constant="30" id="uzv-9P-y0W"/>
@@ -547,13 +547,13 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moderate (0)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4o-aq-KVg">
                                                                                 <rect key="frame" x="0.0" y="22" width="115.33333333333333" height="16.666666666666671"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" name="AccentColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" name="AccentColor"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.24663849909999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="bottom" secondItem="v35-1Q-GAb" secondAttribute="bottom" constant="21.329999999999998" id="HvQ-ia-kio"/>
                                                                     <constraint firstAttribute="height" constant="75" id="O3e-jJ-kqX"/>
@@ -580,7 +580,7 @@
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humidity" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2J6-n8-vem">
                                                                         <rect key="frame" x="15" y="17.666666666666664" width="30" height="26.333333333333336"/>
-                                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                                        <color key="tintColor" name="AccentColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="30" id="QzM-9B-UZw"/>
                                                                             <constraint firstAttribute="height" constant="30" id="ceS-ZS-Prg"/>
@@ -598,13 +598,13 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High (0%)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0y-MI-CeT">
                                                                                 <rect key="frame" x="0.0" y="22" width="115.66666666666667" height="16.666666666666671"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" name="AccentColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" name="AccentColor"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.24663849909999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="75" id="9b1-D7-kV8"/>
                                                                     <constraint firstItem="2J6-n8-vem" firstAttribute="top" secondItem="PjA-Qu-bfI" secondAttribute="top" constant="15" id="Eec-8L-rnV"/>
@@ -626,7 +626,7 @@
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gauge.high" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cxP-op-29B">
                                                                         <rect key="frame" x="15" y="15.999999999999998" width="30" height="28.666666666666664"/>
-                                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                                        <color key="tintColor" name="AccentColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="8oS-ph-Rgq"/>
                                                                             <constraint firstAttribute="width" constant="30" id="vDu-hR-tbR"/>
@@ -644,13 +644,13 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jj-GJ-GGw">
                                                                                 <rect key="frame" x="0.0" y="22" width="115.33333333333333" height="16.666666666666671"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" name="AccentColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" name="AccentColor"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.24663849909999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="trailing" secondItem="8Ri-DX-aL9" secondAttribute="trailing" constant="10" id="072-TX-WNi"/>
                                                                     <constraint firstItem="cxP-op-29B" firstAttribute="top" secondItem="38j-PT-dVe" secondAttribute="top" constant="15" id="08w-PH-pj3"/>
@@ -686,12 +686,12 @@
                                                                     <constraint firstAttribute="width" constant="100" id="eew-F2-LP1"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="AccentColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2a3-nj-MT7">
                                                                 <rect key="frame" x="300" y="9.6666666666666714" width="50" height="51"/>
-                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <color key="tintColor" name="AccentColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="3CK-y9-J6M"/>
                                                                     <constraint firstAttribute="height" constant="50" id="CFR-63-Pi4"/>
@@ -703,19 +703,19 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5A-B0-f7q">
                                                                         <rect key="frame" x="0.0" y="0.0" width="29.333333333333332" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="AccentColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyU-vr-jaK">
                                                                         <rect key="frame" x="34.333333333333314" y="0.0" width="27.666666666666671" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="AccentColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.24663849909999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="2a3-nj-MT7" firstAttribute="leading" secondItem="odP-Bx-Jio" secondAttribute="trailing" constant="15" id="DFg-If-yvr"/>
                                                             <constraint firstItem="2a3-nj-MT7" firstAttribute="centerY" secondItem="mNG-aY-thH" secondAttribute="centerY" id="HXm-Iv-62K"/>
@@ -742,12 +742,12 @@
                                                                     <constraint firstAttribute="width" constant="100" id="OXK-WQ-3Ea"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="AccentColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xlz-51-H5N">
                                                                 <rect key="frame" x="300" y="9.6666666666666714" width="50" height="51"/>
-                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <color key="tintColor" name="AccentColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="bNa-T5-CHD"/>
                                                                     <constraint firstAttribute="width" constant="50" id="xf4-1D-F84"/>
@@ -759,19 +759,19 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trm-eL-pz8">
                                                                         <rect key="frame" x="0.0" y="0.0" width="29.333333333333332" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="AccentColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cya-Oi-7fI">
                                                                         <rect key="frame" x="34.333333333333314" y="0.0" width="27.666666666666671" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="AccentColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.24663849909999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="xlz-51-H5N" secondAttribute="trailing" constant="20" id="18d-x9-VQW"/>
                                                             <constraint firstItem="Wep-A8-qTy" firstAttribute="centerY" secondItem="f46-uy-hbq" secondAttribute="centerY" id="8tl-aO-sfG"/>
@@ -798,12 +798,12 @@
                                                                     <constraint firstAttribute="width" constant="100" id="fiE-3L-zbE"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="AccentColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sPx-hk-bxw">
                                                                 <rect key="frame" x="300" y="9.6666666666666714" width="50" height="51"/>
-                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <color key="tintColor" name="AccentColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="SL9-Qf-IYK"/>
                                                                     <constraint firstAttribute="height" constant="50" id="zqt-0x-6zd"/>
@@ -815,19 +815,19 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqM-wB-Fd8">
                                                                         <rect key="frame" x="0.0" y="0.0" width="29.333333333333332" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="AccentColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgi-3p-bdA">
                                                                         <rect key="frame" x="34.333333333333314" y="0.0" width="27.666666666666671" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="AccentColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.24663849909999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="sPx-hk-bxw" firstAttribute="centerY" secondItem="YqV-jK-zcg" secondAttribute="centerY" id="1S7-pj-f0L"/>
                                                             <constraint firstAttribute="trailing" secondItem="sPx-hk-bxw" secondAttribute="trailing" constant="20" id="82G-AN-0oM"/>
@@ -854,12 +854,12 @@
                                                                     <constraint firstAttribute="width" constant="100" id="RBD-f7-9xA"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="AccentColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YT6-28-xAC">
                                                                 <rect key="frame" x="300" y="9.6666666666666714" width="50" height="51"/>
-                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <color key="tintColor" name="AccentColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="box-Ii-jOi"/>
                                                                     <constraint firstAttribute="height" constant="50" id="zDQ-sr-8NO"/>
@@ -871,19 +871,19 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdS-ZO-Vyu">
                                                                         <rect key="frame" x="0.0" y="0.0" width="29.333333333333332" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="AccentColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="628-H8-hsk">
                                                                         <rect key="frame" x="34.333333333333314" y="0.0" width="27.666666666666671" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="AccentColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.24663849909999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="YT6-28-xAC" firstAttribute="leading" secondItem="iaM-Dk-2c9" secondAttribute="trailing" constant="15" id="A4u-E1-2uI"/>
                                                             <constraint firstAttribute="trailing" secondItem="YT6-28-xAC" secondAttribute="trailing" constant="20" id="FXa-eK-P3B"/>
@@ -910,12 +910,12 @@
                                                                     <constraint firstAttribute="width" constant="100" id="4id-Dw-E5d"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="AccentColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FEd-N5-DUT">
                                                                 <rect key="frame" x="300" y="9.6666666666666714" width="50" height="51"/>
-                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <color key="tintColor" name="AccentColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="OdA-rn-OeI"/>
                                                                     <constraint firstAttribute="height" constant="50" id="ph4-c7-YyZ"/>
@@ -927,19 +927,19 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdB-TV-VbV">
                                                                         <rect key="frame" x="0.0" y="0.0" width="29.333333333333332" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="AccentColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkU-j5-pzx">
                                                                         <rect key="frame" x="34.333333333333314" y="0.0" width="27.666666666666671" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="AccentColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.24663849909999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="FEd-N5-DUT" secondAttribute="trailing" constant="20" id="BQT-dS-Syd"/>
                                                             <constraint firstItem="FEd-N5-DUT" firstAttribute="centerY" secondItem="igU-hs-PcT" secondAttribute="centerY" id="SAP-2n-iXc"/>
