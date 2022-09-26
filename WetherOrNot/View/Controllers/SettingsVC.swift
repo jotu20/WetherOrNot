@@ -10,6 +10,11 @@ import StoreKit
 
 class SettingsVC: UITableViewController {
 
+    @IBOutlet weak var clockControl: UISegmentedControl!
+    @IBOutlet weak var temperatureUnitsControl: UISegmentedControl!
+    @IBOutlet weak var windUnitsControl: UISegmentedControl!
+    @IBOutlet weak var pressureUnitsControl: UISegmentedControl!
+    
     @IBOutlet weak var dropletTipButton: UIButton!
     @IBOutlet weak var drizzleTipButton: UIButton!
     @IBOutlet weak var showerTipButton: UIButton!
@@ -49,6 +54,30 @@ class SettingsVC: UITableViewController {
             self?.productsArray = products
          }
         
+        if defaults.string(forKey: "clock") == "12h" {
+            clockControl.selectedSegmentIndex = 0
+        } else {
+            clockControl.selectedSegmentIndex = 1
+        }
+        
+        if defaults.string(forKey: "temperatureUnits") == "F" {
+            temperatureUnitsControl.selectedSegmentIndex = 0
+        } else {
+            temperatureUnitsControl.selectedSegmentIndex = 1
+        }
+        
+        if defaults.string(forKey: "windUnits") == "mph" {
+            windUnitsControl.selectedSegmentIndex = 0
+        } else {
+            windUnitsControl.selectedSegmentIndex = 1
+        }
+        
+        if defaults.string(forKey: "pressureUnits") == "inHg" {
+            pressureUnitsControl.selectedSegmentIndex = 0
+        } else {
+            pressureUnitsControl.selectedSegmentIndex = 1
+        }
+        
         settingsChanged = false
     }
     
@@ -62,12 +91,52 @@ class SettingsVC: UITableViewController {
         }
     }
     
+    @IBAction func clockControlTapped(_ sender: UISegmentedControl) {
+        settingsChanged = true
+        
+        if clockControl.isEnabledForSegment(at: 0) {
+            clockControl.selectedSegmentIndex = 1
+            defaults.set("24h", forKey: "clock")
+        } else {
+            clockControl.selectedSegmentIndex = 0
+            defaults.set("12h", forKey: "clock")
+        }
+    }
+    
     @IBAction func temperatureUnitsControlTapped(_ sender: UISegmentedControl) {
         settingsChanged = true
+        
+        if temperatureUnitsControl.isEnabledForSegment(at: 0) {
+            temperatureUnitsControl.selectedSegmentIndex = 1
+            defaults.set("C", forKey: "temperatureUnits")
+        } else {
+            temperatureUnitsControl.selectedSegmentIndex = 0
+            defaults.set("F", forKey: "temperatureUnits")
+        }
     }
     
     @IBAction func windUnitsControlTapped(_ sender: UISegmentedControl) {
         settingsChanged = true
+        
+        if windUnitsControl.isEnabledForSegment(at: 0) {
+            windUnitsControl.selectedSegmentIndex = 1
+            defaults.set("km/h", forKey: "windUnits")
+        } else {
+            windUnitsControl.selectedSegmentIndex = 0
+            defaults.set("mph", forKey: "windUnits")
+        }
+    }
+    
+    @IBAction func pressureUnitsControlTapped(_ sender: UISegmentedControl) {
+        settingsChanged = true
+        
+        if pressureUnitsControl.isEnabledForSegment(at: 0) {
+            pressureUnitsControl.selectedSegmentIndex = 1
+            defaults.set("inHg", forKey: "pressureUnits")
+        } else {
+            pressureUnitsControl.selectedSegmentIndex = 0
+            defaults.set("mmHg", forKey: "pressureUnits")
+        }
     }
     
     @IBAction func themeButton0Tapped(_ sender: UIButton) {

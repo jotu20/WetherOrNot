@@ -56,6 +56,6 @@ func setColor(view: UIView, value: Int) {
     } else if value == 9 {
         view.backgroundColor = darkOlive
     } else {
-        view.backgroundColor = UIColor.systemGroupedBackground
+        view.backgroundColor = pollen
     }
 }

@@ -49,7 +49,7 @@ class CurrentCardView: UIView {
 func setupCurrentCard(view: CurrentCardView) {
     view.currentTemperatureLabel.text = "\(Int(CurrentForecast.sharedInstance.temp))°"
     view.apparentTemperatureLabel.text = "Feels like: \(Int(CurrentForecast.sharedInstance.apparentTemp))°"
-    view.sunriseLabel.text = "\(CurrentForecast.sharedInstance.sunrise)"
-    view.sunsetLabel.text = "\(CurrentForecast.sharedInstance.sunset)"
+    view.sunriseLabel.text = "\(CurrentForecast.sharedInstance.sunrise.lowercased())"
+    view.sunsetLabel.text = "\(CurrentForecast.sharedInstance.sunset.lowercased())"
     view.conditionImage.image = UIImage(systemName: "\(CurrentForecast.sharedInstance.symbol)")
 }

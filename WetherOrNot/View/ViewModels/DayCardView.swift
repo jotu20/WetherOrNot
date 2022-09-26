@@ -56,6 +56,6 @@ func setupDayCard(view: DayCardView, dayNumber: Int, data: FetchWeather) {
     view.dayLabel.text = dayOfTheWeekString
     view.highTemperatureLabel.text = "\(Int(data.dailyForecast[dayNumber].highTemp))°"
     view.lowTemperatureLabel.text = "\(Int(data.dailyForecast[dayNumber].lowTemp))°"
-    //view.precipitationLabel.text = "P: \(Int(data.dailyForecast[dayNumber].precipChance * 100))%"
+    view.precipitationLabel.text = "\(Int(data.dailyForecast[dayNumber].precipChance * 100))%"
     view.conditionImage.image = UIImage(systemName: "\(data.dailyForecast[dayNumber].symbol)")
 }

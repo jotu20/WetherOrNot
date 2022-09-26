@@ -37,13 +37,25 @@ class FetchWeather {
                 lowTemp: $0.lowTemperature.value,
                 precipChance: $0.precipitationChance
              )
-          }
+        }
         
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "HH:mm"
+        let dateFormatter = DateFormatter()
+        if defaults.string(forKey: "clock") == "12h" {
+            dateFormatter.dateFormat = "h:mm a"
+        } else {
+            dateFormatter.dateFormat = "HH:mm"
+        }
         
-        CurrentForecast.sharedInstance.sunrise = dateFormatterGet.string(from: dailyWeather[0].sun.sunrise ?? Date())
-        CurrentForecast.sharedInstance.sunset = dateFormatterGet.string(from: dailyWeather[0].sun.sunset ?? Date())
+//        defaults.string(forKey: "clock") == "12h"
+//
+//        defaults.string(forKey: "temperatureUnits") == "F"
+//
+//        defaults.string(forKey: "windUnits") == "mph"
+//
+//        defaults.string(forKey: "pressureUnits") == "inHg"
+        
+        CurrentForecast.sharedInstance.sunrise = dateFormatter.string(from: dailyWeather[0].sun.sunrise ?? Date())
+        CurrentForecast.sharedInstance.sunset = dateFormatter.string(from: dailyWeather[0].sun.sunset ?? Date())
    
           DispatchQueue.main.async {
               self.dailyForecast = dailyForecast

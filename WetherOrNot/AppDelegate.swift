@@ -10,10 +10,29 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if defaults.string(forKey: "color") == nil {
+            defaults.set(1, forKey: "color")
+        }
+        
+        if defaults.string(forKey: "clock") == nil {
+            defaults.set("12h", forKey: "clock")
+        }
+        
+        if defaults.string(forKey: "temperatureUnits") == nil {
+            defaults.set("F", forKey: "temperatureUnits")
+        }
+        
+        if defaults.string(forKey: "windUnits") == nil {
+            defaults.set("mph", forKey: "windUnits")
+        }
+        
+        if defaults.string(forKey: "pressureUnits") == nil {
+            defaults.set("inHg", forKey: "pressureUnits")
+        }
+        
         return true
     }
 
