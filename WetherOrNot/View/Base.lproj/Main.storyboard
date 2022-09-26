@@ -13,7 +13,7 @@
         <!--Settings-->
         <scene sceneID="nxg-2N-WhU">
             <objects>
-                <tableViewController storyboardIdentifier="SettingsVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6KL-QO-hrw" customClass="SettingsVC" customModule="WetherOrNot" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6KL-QO-hrw" customClass="SettingsVC" customModule="WetherOrNot" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ijc-it-ZGD">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,6 +41,9 @@
                                                         <segment title="F°"/>
                                                         <segment title="C°"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="temperatureUnitsControlTapped:" destination="6KL-QO-hrw" eventType="valueChanged" id="FaM-jP-LCA"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -50,7 +53,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="GOS-en-udu" secondAttribute="trailing" constant="20" symbolic="YES" id="ywY-19-xgT"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="SIH-cz-AeO">
                                         <rect key="frame" x="0.0" y="110" width="390" height="60"/>
@@ -72,6 +75,9 @@
                                                         <segment title="mph"/>
                                                         <segment title="km/h"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="windUnitsControlTapped:" destination="6KL-QO-hrw" eventType="valueChanged" id="vF0-pz-mhj"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -81,7 +87,7 @@
                                                 <constraint firstItem="ZG6-AE-rVc" firstAttribute="leading" secondItem="u4Z-Nk-B0j" secondAttribute="leading" constant="20" id="sIn-rr-BRv"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="190" id="XFT-3U-Ahr">
                                         <rect key="frame" x="0.0" y="170" width="390" height="190"/>
@@ -240,7 +246,7 @@
                                                 <constraint firstItem="Ja6-Q8-xXV" firstAttribute="top" secondItem="5mL-nH-S7H" secondAttribute="bottom" constant="20" id="nhu-gO-7cx"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="245" id="wak-By-wdN">
                                         <rect key="frame" x="0.0" y="360" width="390" height="245"/>
@@ -315,7 +321,29 @@
                                                 <constraint firstItem="5eX-8A-mIg" firstAttribute="leading" secondItem="Rkf-X2-QJK" secondAttribute="leading" constant="20" id="noR-We-9Jh"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="45" id="rIK-Ki-Z3g">
+                                        <rect key="frame" x="0.0" y="605" width="390" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rIK-Ki-Z3g" id="gDd-7k-vbg">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="45"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: 1.0(0)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgs-S8-Koy">
+                                                    <rect key="frame" x="25" y="14.666666666666668" width="340" height="15.666666666666668"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Tgs-S8-Koy" firstAttribute="centerY" secondItem="gDd-7k-vbg" secondAttribute="centerY" id="RDK-Iq-ddA"/>
+                                                <constraint firstAttribute="trailing" secondItem="Tgs-S8-Koy" secondAttribute="trailing" constant="25" id="eCl-eZ-0xs"/>
+                                                <constraint firstItem="Tgs-S8-Koy" firstAttribute="leading" secondItem="gDd-7k-vbg" secondAttribute="leading" constant="25" id="xG0-JN-Rb0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -352,7 +380,7 @@
         <!--ForecastVC-->
         <scene sceneID="PJr-0M-zGS">
             <objects>
-                <viewController storyboardIdentifier="ForecastVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RI9-jT-E62" customClass="ForecastVC" customModule="WetherOrNot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForecastVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RI9-jT-E62" customClass="ForecastVC" customModule="WetherOrNot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o6r-Vd-F4y">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
