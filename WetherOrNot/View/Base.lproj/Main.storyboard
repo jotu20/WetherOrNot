@@ -13,7 +13,7 @@
         <!--Settings-->
         <scene sceneID="nxg-2N-WhU">
             <objects>
-                <tableViewController storyboardIdentifier="SettingsVC" id="6KL-QO-hrw" customClass="SettingsVC" customModule="WetherOrNot" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingsVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6KL-QO-hrw" customClass="SettingsVC" customModule="WetherOrNot" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ijc-it-ZGD">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,7 +325,9 @@
                             <outlet property="delegate" destination="6KL-QO-hrw" id="ufg-MG-uig"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="Jgu-bU-GsE"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="downpourTipButton" destination="ne1-Ed-eAL" id="6ad-Pp-Noq"/>
                         <outlet property="drizzleTipButton" destination="f4H-3d-0qM" id="QSa-d9-QO3"/>
@@ -350,7 +352,7 @@
         <!--ForecastVC-->
         <scene sceneID="PJr-0M-zGS">
             <objects>
-                <viewController id="RI9-jT-E62" customClass="ForecastVC" customModule="WetherOrNot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForecastVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RI9-jT-E62" customClass="ForecastVC" customModule="WetherOrNot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o6r-Vd-F4y">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

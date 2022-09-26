@@ -32,6 +32,7 @@ class SettingsVC: UITableViewController {
         super.viewDidLoad()
         self.navigationController?.title = "Settings"
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneTapped))
         
         dropletTipButton.layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
         drizzleTipButton.layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
@@ -40,10 +41,14 @@ class SettingsVC: UITableViewController {
         
         ProductIAPHandler.shared.setProductIds(ids: ["com.dropletTip", "com.drizzleTip", "com.showerTip", "com.downpourTip"])
         ProductIAPHandler.shared.fetchAvailableProducts { [weak self] (products) in
-//            guard let sSelf = self else {return}
-//            sSelf.productsArray = products
             self?.productsArray = products
          }
+    }
+    
+    @objc func doneTapped(sender: UIBarButtonItem) {
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "ForecastVC") as! ForecastVC
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func themeButton0Tapped(_ sender: UIButton) {

@@ -89,6 +89,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     @IBAction func settingsButtonTapped(_ sender: UIButton) {
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsVC
         let navController = UINavigationController(rootViewController: vc)
+        navController.modalPresentationStyle = .fullScreen
         self.present(navController, animated: true, completion: nil)
     }
     
