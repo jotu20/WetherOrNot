@@ -90,7 +90,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsVC
         let navController = UINavigationController(rootViewController: vc)
         navController.modalPresentationStyle = .fullScreen
-        self.present(navController, animated: false, completion: nil)
+        self.present(navController, animated: true, completion: nil)
     }
     
     func createSpinnerView() {

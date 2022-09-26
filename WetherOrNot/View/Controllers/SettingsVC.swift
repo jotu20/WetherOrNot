@@ -56,9 +56,9 @@ class SettingsVC: UITableViewController {
         if settingsChanged == true {
             let vc = self.storyboard!.instantiateViewController(withIdentifier: "ForecastVC") as! ForecastVC
             vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: false, completion: nil)
+            self.present(vc, animated: true, completion: nil)
         } else {
-            self.dismiss(animated: false)
+            self.dismiss(animated: true)
         }
     }
     
