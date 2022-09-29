@@ -16,4 +16,5 @@ class GlobalVariables {
     var longitude: Double = 0
     var locationName: String = ""
     let cornerRadius = 15
+    var description: String = "I couldn't get enough info so I'm not sure what you might need today :("
 }

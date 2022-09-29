@@ -16,10 +16,10 @@ enum ProductIAPHandlerAlertType {
     
     var message: String {
         switch self {
-        case .setProductIds: return "Product ids not set, call setProductIds method!"
-        case .disabled: return "Purchases are disabled on your device!"
-        case .restored: return "You've successfully restored your purchase!"
-        case .purchased: return "You've successfully bought this purchase!"
+            case .setProductIds: return "Product ids not set, call setProductIds method!"
+            case .disabled: return "Purchases are disabled on your device!"
+            case .restored: return "You've successfully restored your purchase!"
+            case .purchased: return "You've successfully bought this purchase!"
         }
     }
 }

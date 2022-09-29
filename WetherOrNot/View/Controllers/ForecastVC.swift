@@ -12,6 +12,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var currentCardView: CurrentCardView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var currentSubheadCardView0: CurrentSubheadCardView!
     @IBOutlet weak var currentSubheadCardView1: CurrentSubheadCardView!
     @IBOutlet weak var currentSubheadCardView2: CurrentSubheadCardView!
@@ -41,6 +42,12 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         createSpinnerView()
         setColor(view: view, value: defaults.integer(forKey: "color"))
+        
+        if defaults.string(forKey: "recommendations") == "off" {
+            descriptionLabel.isHidden = true
+        } else {
+            descriptionLabel.isHidden = false
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -71,6 +78,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
                     setupCurrentSubheadCard(view: self.currentSubheadCardView1, type: "UV Index")
                     setupCurrentSubheadCard(view: self.currentSubheadCardView2, type: "Humidity")
                     setupCurrentSubheadCard(view: self.currentSubheadCardView3, type: "Pressure")
+                    self.descriptionLabel.text = GlobalVariables.sharedInstance.description
 
                     setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
                     setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)

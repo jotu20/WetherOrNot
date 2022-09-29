@@ -28,6 +28,35 @@ class FetchWeather {
         CurrentForecast.sharedInstance.windDirection = currentWeather.wind.compassDirection.abbreviation
         CurrentForecast.sharedInstance.pressure = currentWeather.pressure.value
         
+        // Attire description
+        if CurrentForecast.sharedInstance.temp >= 75 {
+            GlobalVariables.sharedInstance.description = "This is great t-shirt weather!"
+        } else if CurrentForecast.sharedInstance.temp < 75 && CurrentForecast.sharedInstance.temp > 50 {
+            GlobalVariables.sharedInstance.description = "It's like that perfect spring weather for a light jacket."
+        } else if CurrentForecast.sharedInstance.temp < 50 && CurrentForecast.sharedInstance.temp > 30 {
+            GlobalVariables.sharedInstance.description = "Is it fall? You should probably grab your jacket."
+        } else if CurrentForecast.sharedInstance.temp < 30 {
+            GlobalVariables.sharedInstance.description = "You'll definetely want a heavy jacket today with these freezing temps."
+        }
+        
+        let currentCondition = currentWeather.condition.description.lowercased()
+        let cloudCover = Int(currentWeather.cloudCover * 100)
+        if currentCondition.contains("sun") || currentCondition.contains("partly cloudy") && cloudCover < 50 {
+            GlobalVariables.sharedInstance.description = "You might want your sunglasses."
+        }
+        
+        if CurrentForecast.sharedInstance.uvIndex >= 8 {
+            GlobalVariables.sharedInstance.description = "You'll definetely want sunscreen with these UV levels."
+        }
+        
+        if currentCondition.contains("drizzle") {
+            GlobalVariables.sharedInstance.description = "A rain jacket might be worth it in these conditions."
+        }
+        
+        if currentCondition.contains("rain") {
+            GlobalVariables.sharedInstance.description = "You should probably grab an umbrella or poncho with this rain."
+        }
+        
         let dailyWeather = weather.dailyForecast.forecast
         let dailyForecast = Array(dailyWeather.prefix(5)).map {
             DailyForecast(

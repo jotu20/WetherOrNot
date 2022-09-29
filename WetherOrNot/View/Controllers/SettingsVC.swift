@@ -14,12 +14,14 @@ class SettingsVC: UITableViewController {
     @IBOutlet weak var temperatureUnitsControl: UISegmentedControl!
     @IBOutlet weak var windUnitsControl: UISegmentedControl!
     @IBOutlet weak var pressureUnitsControl: UISegmentedControl!
+    @IBOutlet weak var recommendationsControl: UISegmentedControl!
     
     @IBOutlet weak var dropletTipButton: UIButton!
     @IBOutlet weak var drizzleTipButton: UIButton!
     @IBOutlet weak var showerTipButton: UIButton!
     @IBOutlet weak var downpourTipButton: UIButton!
     
+    @IBOutlet weak var themeLabel: UILabel!
     @IBOutlet weak var themeButton0: UIButton!
     @IBOutlet weak var themeButton1: UIButton!
     @IBOutlet weak var themeButton2: UIButton!
@@ -78,6 +80,34 @@ class SettingsVC: UITableViewController {
             pressureUnitsControl.selectedSegmentIndex = 1
         }
         
+        if defaults.string(forKey: "recommendations") == "off" {
+            recommendationsControl.selectedSegmentIndex = 0
+        } else {
+            recommendationsControl.selectedSegmentIndex = 1
+        }
+        
+        if defaults.integer(forKey: "color") == 0 {
+            themeLabel.text = "light orange"
+        } else if defaults.integer(forKey: "color") == 1 {
+            themeLabel.text = "pollen"
+        } else if defaults.integer(forKey: "color") == 2 {
+            themeLabel.text = "mint"
+        } else if defaults.integer(forKey: "color") == 3 {
+            themeLabel.text = "lilac"
+        } else if defaults.integer(forKey: "color") == 4 {
+            themeLabel.text = "azure"
+        } else if defaults.integer(forKey: "color") == 5 {
+            themeLabel.text = "midnight blue"
+        } else if defaults.integer(forKey: "color") == 6 {
+            themeLabel.text = "ultra violet"
+        } else if defaults.integer(forKey: "color") == 7 {
+            themeLabel.text = "rose red"
+        } else if defaults.integer(forKey: "color") == 8 {
+            themeLabel.text = "antique white"
+        } else if defaults.integer(forKey: "color") == 9 {
+            themeLabel.text = "dark olive"
+        }
+        
         settingsChanged = false
     }
     
@@ -91,13 +121,13 @@ class SettingsVC: UITableViewController {
         }
     }
     
-    @IBAction func clockControlTapped(_ sender: UISegmentedControl) {
+    @IBAction func clockControlValue(_ sender: UISegmentedControl) {
         settingsChanged = true
         
-        if clockControl.isEnabledForSegment(at: 0) {
+        if clockControl.selectedSegmentIndex == 0 {
             clockControl.selectedSegmentIndex = 1
             defaults.set("24h", forKey: "clock")
-        } else {
+        } else if clockControl.selectedSegmentIndex == 1 {
             clockControl.selectedSegmentIndex = 0
             defaults.set("12h", forKey: "clock")
         }
@@ -106,10 +136,10 @@ class SettingsVC: UITableViewController {
     @IBAction func temperatureUnitsControlTapped(_ sender: UISegmentedControl) {
         settingsChanged = true
         
-        if temperatureUnitsControl.isEnabledForSegment(at: 0) {
+        if temperatureUnitsControl.selectedSegmentIndex == 0 {
             temperatureUnitsControl.selectedSegmentIndex = 1
             defaults.set("C", forKey: "temperatureUnits")
-        } else {
+        } else if temperatureUnitsControl.selectedSegmentIndex == 1 {
             temperatureUnitsControl.selectedSegmentIndex = 0
             defaults.set("F", forKey: "temperatureUnits")
         }
@@ -118,10 +148,10 @@ class SettingsVC: UITableViewController {
     @IBAction func windUnitsControlTapped(_ sender: UISegmentedControl) {
         settingsChanged = true
         
-        if windUnitsControl.isEnabledForSegment(at: 0) {
+        if windUnitsControl.selectedSegmentIndex == 0 {
             windUnitsControl.selectedSegmentIndex = 1
             defaults.set("km/h", forKey: "windUnits")
-        } else {
+        } else if windUnitsControl.selectedSegmentIndex == 1 {
             windUnitsControl.selectedSegmentIndex = 0
             defaults.set("mph", forKey: "windUnits")
         }
@@ -130,63 +160,85 @@ class SettingsVC: UITableViewController {
     @IBAction func pressureUnitsControlTapped(_ sender: UISegmentedControl) {
         settingsChanged = true
         
-        if pressureUnitsControl.isEnabledForSegment(at: 0) {
+        if pressureUnitsControl.selectedSegmentIndex == 0 {
             pressureUnitsControl.selectedSegmentIndex = 1
-            defaults.set("inHg", forKey: "pressureUnits")
-        } else {
-            pressureUnitsControl.selectedSegmentIndex = 0
             defaults.set("mmHg", forKey: "pressureUnits")
+        } else if pressureUnitsControl.selectedSegmentIndex == 1 {
+            pressureUnitsControl.selectedSegmentIndex = 0
+            defaults.set("inHg", forKey: "pressureUnits")
+        }
+    }
+    
+    @IBAction func recommendationsControlTapped(_ sender: UISegmentedControl) {
+        settingsChanged = true
+        
+        if recommendationsControl.selectedSegmentIndex == 0 {
+            recommendationsControl.selectedSegmentIndex = 1
+            defaults.set("on", forKey: "recommendations")
+        } else if recommendationsControl.selectedSegmentIndex == 1 {
+            recommendationsControl.selectedSegmentIndex = 0
+            defaults.set("off", forKey: "recommendations")
         }
     }
     
     @IBAction func themeButton0Tapped(_ sender: UIButton) {
-        defaults.set(0, forKey: "color")
         settingsChanged = true
+        defaults.set(0, forKey: "color")
+        themeLabel.text = "light orange"
     }
     
     @IBAction func themeButton1Tapped(_ sender: UIButton) {
         settingsChanged = true
         defaults.set(1, forKey: "color")
+        themeLabel.text = "pollen"
     }
     
     @IBAction func themeButton2Tapped(_ sender: UIButton) {
         settingsChanged = true
         defaults.set(2, forKey: "color")
+        themeLabel.text = "mint"
     }
     
     @IBAction func themeButton3Tapped(_ sender: UIButton) {
         settingsChanged = true
         defaults.set(3, forKey: "color")
+        themeLabel.text = "lilac"
     }
     
     @IBAction func themeButton4Tapped(_ sender: UIButton) {
         settingsChanged = true
         defaults.set(4, forKey: "color")
+        themeLabel.text = "azure"
     }
     
     @IBAction func themeButton5Tapped(_ sender: UIButton) {
         settingsChanged = true
         defaults.set(5, forKey: "color")
+        themeLabel.text = "midnight blue"
     }
     
     @IBAction func themeButton6Tapped(_ sender: UIButton) {
         settingsChanged = true
         defaults.set(6, forKey: "color")
+        themeLabel.text = "ultra violet"
     }
     
     @IBAction func themeButton7Tapped(_ sender: UIButton) {
         settingsChanged = true
         defaults.set(7, forKey: "color")
+        themeLabel.text = "rose red"
     }
     
     @IBAction func themeButton8Tapped(_ sender: UIButton) {
         settingsChanged = true
         defaults.set(8, forKey: "color")
+        themeLabel.text = "antique white"
     }
     
     @IBAction func themeButton9Tapped(_ sender: UIButton) {
         settingsChanged = true
         defaults.set(9, forKey: "color")
+        themeLabel.text = "dark olive"
     }
     
     @IBAction func dropletTipButtonTapped(_ sender: UIButton) {

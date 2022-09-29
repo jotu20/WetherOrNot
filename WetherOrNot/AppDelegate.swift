@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             defaults.set(1, forKey: "color")
         }
         
+        if defaults.string(forKey: "recommendations") == nil {
+            defaults.set("on", forKey: "recommendations")
+        }
+        
         if defaults.string(forKey: "clock") == nil {
             defaults.set("12h", forKey: "clock")
         }

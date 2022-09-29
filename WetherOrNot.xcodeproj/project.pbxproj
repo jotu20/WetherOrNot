@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B356698828C8E218002A9BC6 /* AttireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356698728C8E218002A9BC6 /* AttireModel.swift */; };
 		B356698A28C8E240002A9BC6 /* CurrentForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356698928C8E240002A9BC6 /* CurrentForecast.swift */; };
 		B3AB483828DE071B00767393 /* ProductIAPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AB483728DE071B00767393 /* ProductIAPHandler.swift */; };
 		B3AC5B6C28CB7EB8004C9B40 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC5B6B28CB7EB8004C9B40 /* SettingsVC.swift */; };
@@ -51,7 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B356698728C8E218002A9BC6 /* AttireModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttireModel.swift; sourceTree = "<group>"; };
 		B356698928C8E240002A9BC6 /* CurrentForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentForecast.swift; sourceTree = "<group>"; };
 		B3AB483728DE071B00767393 /* ProductIAPHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductIAPHandler.swift; sourceTree = "<group>"; };
 		B3AC5B6B28CB7EB8004C9B40 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				CF4C9BBF28AE88A100804BC1 /* ForecastModel.swift */,
-				B356698728C8E218002A9BC6 /* AttireModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -367,7 +364,6 @@
 				B3D4B7C128DB7E4700A57732 /* Colors.swift in Sources */,
 				B3AB483828DE071B00767393 /* ProductIAPHandler.swift in Sources */,
 				B3D4B7BB28DB5DCC00A57732 /* CurrentSubheadCardView.swift in Sources */,
-				B356698828C8E218002A9BC6 /* AttireModel.swift in Sources */,
 				B3F2AACB28D3BFFD008CF9E7 /* GlobalVariables.swift in Sources */,
 				CF68CE742885EB3E0092E5DE /* AppDelegate.swift in Sources */,
 				B356698A28C8E240002A9BC6 /* CurrentForecast.swift in Sources */,
@@ -568,6 +564,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -606,6 +603,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
