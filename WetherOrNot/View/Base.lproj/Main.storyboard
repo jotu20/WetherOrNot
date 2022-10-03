@@ -10,503 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
-        <scene sceneID="nxg-2N-WhU">
-            <objects>
-                <tableViewController storyboardIdentifier="SettingsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6KL-QO-hrw" customClass="SettingsVC" customModule="WetherOrNot" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ijc-it-ZGD">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                        <sections>
-                            <tableViewSection id="8lH-xf-hNf">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="Ruh-Ra-1kX">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ruh-Ra-1kX" id="pAW-RD-ciG">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqJ-Lm-Z1N">
-                                                    <rect key="frame" x="20.000000000000004" y="20" width="43.333333333333343" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GOS-en-udu">
-                                                    <rect key="frame" x="283" y="14.666666666666664" width="87" height="32"/>
-                                                    <color key="backgroundColor" name="AccentColor"/>
-                                                    <segments>
-                                                        <segment title="12h"/>
-                                                        <segment title="24h"/>
-                                                    </segments>
-                                                    <connections>
-                                                        <action selector="clockControlValue:" destination="6KL-QO-hrw" eventType="touchUpInside" id="vyE-Zw-H1m"/>
-                                                    </connections>
-                                                </segmentedControl>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="FqJ-Lm-Z1N" firstAttribute="centerY" secondItem="pAW-RD-ciG" secondAttribute="centerY" id="7m5-6o-jFw"/>
-                                                <constraint firstItem="GOS-en-udu" firstAttribute="centerY" secondItem="pAW-RD-ciG" secondAttribute="centerY" id="M39-oD-Fph"/>
-                                                <constraint firstItem="FqJ-Lm-Z1N" firstAttribute="leading" secondItem="pAW-RD-ciG" secondAttribute="leading" constant="20" id="sXp-vy-tlE"/>
-                                                <constraint firstAttribute="trailing" secondItem="GOS-en-udu" secondAttribute="trailing" constant="20" symbolic="YES" id="ywY-19-xgT"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="vOk-Oy-wCv">
-                                        <rect key="frame" x="0.0" y="110" width="390" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vOk-Oy-wCv" id="KOD-Ce-5iT">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempertaure Units" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHx-7Q-eWj">
-                                                    <rect key="frame" x="20" y="20" width="141" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VP9-wZ-Iif">
-                                                    <rect key="frame" x="301" y="14.666666666666664" width="69" height="32"/>
-                                                    <color key="backgroundColor" name="AccentColor"/>
-                                                    <segments>
-                                                        <segment title="F°"/>
-                                                        <segment title="C°"/>
-                                                    </segments>
-                                                    <connections>
-                                                        <action selector="temperatureUnitsControlTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="S5w-YX-CGv"/>
-                                                    </connections>
-                                                </segmentedControl>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="dHx-7Q-eWj" firstAttribute="leading" secondItem="KOD-Ce-5iT" secondAttribute="leading" constant="20" id="Ioz-i0-UL9"/>
-                                                <constraint firstItem="VP9-wZ-Iif" firstAttribute="centerY" secondItem="KOD-Ce-5iT" secondAttribute="centerY" id="TWt-Ka-QwF"/>
-                                                <constraint firstAttribute="trailing" secondItem="VP9-wZ-Iif" secondAttribute="trailing" constant="20" symbolic="YES" id="lro-Hh-LkI"/>
-                                                <constraint firstItem="dHx-7Q-eWj" firstAttribute="centerY" secondItem="KOD-Ce-5iT" secondAttribute="centerY" id="qsh-ba-Y43"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="SIH-cz-AeO">
-                                        <rect key="frame" x="0.0" y="170" width="390" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SIH-cz-AeO" id="u4Z-Nk-B0j">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed Units" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZG6-AE-rVc">
-                                                    <rect key="frame" x="20" y="20" width="136.33333333333334" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VtR-2L-s1E">
-                                                    <rect key="frame" x="271" y="14.666666666666664" width="99" height="32"/>
-                                                    <color key="backgroundColor" name="AccentColor"/>
-                                                    <segments>
-                                                        <segment title="mph"/>
-                                                        <segment title="km/h"/>
-                                                    </segments>
-                                                    <connections>
-                                                        <action selector="windUnitsControlTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="KVI-Wt-VnN"/>
-                                                    </connections>
-                                                </segmentedControl>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ZG6-AE-rVc" firstAttribute="centerY" secondItem="u4Z-Nk-B0j" secondAttribute="centerY" id="JfS-Kj-NuS"/>
-                                                <constraint firstItem="VtR-2L-s1E" firstAttribute="centerY" secondItem="u4Z-Nk-B0j" secondAttribute="centerY" id="dMN-gA-Idu"/>
-                                                <constraint firstAttribute="trailing" secondItem="VtR-2L-s1E" secondAttribute="trailing" constant="20" symbolic="YES" id="iye-Lz-QXY"/>
-                                                <constraint firstItem="ZG6-AE-rVc" firstAttribute="leading" secondItem="u4Z-Nk-B0j" secondAttribute="leading" constant="20" id="sIn-rr-BRv"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="Qn9-AU-h8d">
-                                        <rect key="frame" x="0.0" y="230" width="390" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qn9-AU-h8d" id="oBb-s7-OFH">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure Units" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0y-YX-5hW">
-                                                    <rect key="frame" x="20.000000000000007" y="20" width="110.66666666666669" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dhM-Zz-y0S">
-                                                    <rect key="frame" x="251" y="14.666666666666664" width="119" height="32"/>
-                                                    <color key="backgroundColor" name="AccentColor"/>
-                                                    <segments>
-                                                        <segment title="inHg"/>
-                                                        <segment title="mmHg"/>
-                                                    </segments>
-                                                    <connections>
-                                                        <action selector="pressureUnitsControlTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="8v0-5I-64B"/>
-                                                    </connections>
-                                                </segmentedControl>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="H0y-YX-5hW" firstAttribute="leading" secondItem="oBb-s7-OFH" secondAttribute="leading" constant="20" id="1gq-Qe-y30"/>
-                                                <constraint firstItem="dhM-Zz-y0S" firstAttribute="centerY" secondItem="oBb-s7-OFH" secondAttribute="centerY" id="9ho-6P-eb9"/>
-                                                <constraint firstItem="H0y-YX-5hW" firstAttribute="centerY" secondItem="oBb-s7-OFH" secondAttribute="centerY" id="m36-1P-MLU"/>
-                                                <constraint firstAttribute="trailing" secondItem="dhM-Zz-y0S" secondAttribute="trailing" constant="20" symbolic="YES" id="sLI-sP-6Us"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="nVp-Rd-2bp">
-                                        <rect key="frame" x="0.0" y="290" width="390" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nVp-Rd-2bp" id="Z0v-6t-fWs">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommendations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kru-Km-9N8">
-                                                    <rect key="frame" x="20" y="20" width="142" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="q3k-FN-OjD">
-                                                    <rect key="frame" x="297" y="14.666666666666664" width="73" height="32"/>
-                                                    <color key="backgroundColor" name="AccentColor"/>
-                                                    <segments>
-                                                        <segment title="off"/>
-                                                        <segment title="on"/>
-                                                    </segments>
-                                                    <connections>
-                                                        <action selector="recommendationsControlTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="PgL-8r-2Pg"/>
-                                                    </connections>
-                                                </segmentedControl>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="kru-Km-9N8" firstAttribute="centerY" secondItem="Z0v-6t-fWs" secondAttribute="centerY" id="C3b-ZV-350"/>
-                                                <constraint firstAttribute="trailing" secondItem="q3k-FN-OjD" secondAttribute="trailing" constant="20" symbolic="YES" id="GUT-z0-AP9"/>
-                                                <constraint firstItem="kru-Km-9N8" firstAttribute="leading" secondItem="Z0v-6t-fWs" secondAttribute="leading" constant="20" id="aMR-i7-g3Q"/>
-                                                <constraint firstItem="q3k-FN-OjD" firstAttribute="centerY" secondItem="Z0v-6t-fWs" secondAttribute="centerY" id="tHc-1J-4Nr"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="190" id="XFT-3U-Ahr">
-                                        <rect key="frame" x="0.0" y="350" width="390" height="190"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XFT-3U-Ahr" id="DhW-Ri-Rrc">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="190"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mL-nH-S7H">
-                                                    <rect key="frame" x="20" y="10.999999999999998" width="41" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ja6-Q8-xXV">
-                                                    <rect key="frame" x="20" y="51.333333333333343" width="350" height="110"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="85n-1b-bom">
-                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUa-EX-O4C">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="50"/>
-                                                                    <color key="tintColor" name="lightOrange"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
-                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
-                                                                    </buttonConfiguration>
-                                                                    <connections>
-                                                                        <action selector="themeButton0Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="k4H-J8-h2E"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0w9-7O-ynh">
-                                                                    <rect key="frame" x="74.333333333333329" y="0.0" width="53" height="50"/>
-                                                                    <color key="tintColor" name="pollen"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
-                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
-                                                                    </buttonConfiguration>
-                                                                    <connections>
-                                                                        <action selector="themeButton1Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="XMM-Vv-opw"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aci-tM-rE9">
-                                                                    <rect key="frame" x="148.33333333333334" y="0.0" width="53.333333333333343" height="50"/>
-                                                                    <color key="tintColor" name="mint"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
-                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
-                                                                    </buttonConfiguration>
-                                                                    <connections>
-                                                                        <action selector="themeButton2Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="0Iz-jm-tsv"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDd-B4-BTe">
-                                                                    <rect key="frame" x="222.66666666666666" y="0.0" width="52.999999999999972" height="50"/>
-                                                                    <color key="tintColor" name="lilac"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
-                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
-                                                                    </buttonConfiguration>
-                                                                    <connections>
-                                                                        <action selector="themeButton3Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="CJ8-4r-TsT"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gW-tP-hc4">
-                                                                    <rect key="frame" x="296.66666666666669" y="0.0" width="53.333333333333314" height="50"/>
-                                                                    <color key="tintColor" name="azure"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
-                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
-                                                                    </buttonConfiguration>
-                                                                    <connections>
-                                                                        <action selector="themeButton4Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="EH7-8p-vJ8"/>
-                                                                    </connections>
-                                                                </button>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="yag-Ub-L27">
-                                                            <rect key="frame" x="0.0" y="60" width="350" height="50"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvp-GH-4V6">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="50"/>
-                                                                    <color key="tintColor" name="midnightBlue"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
-                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
-                                                                    </buttonConfiguration>
-                                                                    <connections>
-                                                                        <action selector="themeButton5Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="hDB-kz-Rmw"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isx-ur-Vbw">
-                                                                    <rect key="frame" x="74.333333333333329" y="0.0" width="53" height="50"/>
-                                                                    <color key="tintColor" name="ultraViolet"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
-                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
-                                                                    </buttonConfiguration>
-                                                                    <connections>
-                                                                        <action selector="themeButton6Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="jnE-vt-QP5"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxZ-b0-LcF">
-                                                                    <rect key="frame" x="148.33333333333334" y="0.0" width="53.333333333333343" height="50"/>
-                                                                    <color key="tintColor" name="roseRed"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
-                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
-                                                                    </buttonConfiguration>
-                                                                    <connections>
-                                                                        <action selector="themeButton7Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="T0m-hF-A2H"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQj-Tg-Kly">
-                                                                    <rect key="frame" x="222.66666666666666" y="0.0" width="52.999999999999972" height="50"/>
-                                                                    <color key="tintColor" name="antiqueWhite"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
-                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
-                                                                    </buttonConfiguration>
-                                                                    <connections>
-                                                                        <action selector="themeButton8Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="PwN-ux-QJh"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FR-Gl-KGN">
-                                                                    <rect key="frame" x="296.66666666666669" y="0.0" width="53.333333333333314" height="50"/>
-                                                                    <color key="tintColor" name="darkOlive"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
-                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
-                                                                    </buttonConfiguration>
-                                                                    <connections>
-                                                                        <action selector="themeButton9Tapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="p9n-9g-qdJ"/>
-                                                                    </connections>
-                                                                </button>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="theme" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CG-Pl-uYY">
-                                                    <rect key="frame" x="170" y="10.999999999999998" width="200" height="20.333333333333329"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="RFx-Ok-K6T"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="5mL-nH-S7H" firstAttribute="leading" secondItem="DhW-Ri-Rrc" secondAttribute="leading" constant="20" id="2On-5W-L1Q"/>
-                                                <constraint firstItem="Ja6-Q8-xXV" firstAttribute="leading" secondItem="DhW-Ri-Rrc" secondAttribute="leading" constant="20" id="Ffz-zB-Wva"/>
-                                                <constraint firstAttribute="trailing" secondItem="8CG-Pl-uYY" secondAttribute="trailing" constant="20" id="KAe-fY-grK"/>
-                                                <constraint firstItem="8CG-Pl-uYY" firstAttribute="top" secondItem="DhW-Ri-Rrc" secondAttribute="top" constant="11" id="TVF-rZ-BdY"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ja6-Q8-xXV" secondAttribute="trailing" constant="20" id="fb0-bc-SHM"/>
-                                                <constraint firstItem="5mL-nH-S7H" firstAttribute="top" secondItem="DhW-Ri-Rrc" secondAttribute="top" constant="11" id="lAF-YO-hA5"/>
-                                                <constraint firstItem="Ja6-Q8-xXV" firstAttribute="top" secondItem="5mL-nH-S7H" secondAttribute="bottom" constant="20" id="nhu-gO-7cx"/>
-                                                <constraint firstItem="Ja6-Q8-xXV" firstAttribute="top" secondItem="8CG-Pl-uYY" secondAttribute="bottom" constant="20" id="o2S-yF-6lN"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="330" id="wak-By-wdN">
-                                        <rect key="frame" x="0.0" y="540" width="390" height="330"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wak-By-wdN" id="Rkf-X2-QJK">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="330"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support the developer with a tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eX-8A-mIg">
-                                                    <rect key="frame" x="19.999999999999986" y="10.999999999999998" width="243.66666666666663" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5gK-Kn-1Eo">
-                                                    <rect key="frame" x="70" y="56.333333333333343" width="250" height="230.00000000000003"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BES-qh-eAP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="250" id="Esd-kS-djm"/>
-                                                                <constraint firstAttribute="height" constant="50" id="y1X-wX-grG"/>
-                                                            </constraints>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="gray" title="Droplet - $0.99">
-                                                                <color key="baseForegroundColor" systemColor="labelColor"/>
-                                                                <color key="baseBackgroundColor" name="AccentColor"/>
-                                                            </buttonConfiguration>
-                                                            <connections>
-                                                                <action selector="dropletTipButtonTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="X7H-qb-BKO"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4H-3d-0qM">
-                                                            <rect key="frame" x="0.0" y="60" width="250" height="50"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="I11-PS-8GX"/>
-                                                            </constraints>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="gray" title="Drizzle - $2.99">
-                                                                <color key="baseForegroundColor" systemColor="labelColor"/>
-                                                                <color key="baseBackgroundColor" name="AccentColor"/>
-                                                            </buttonConfiguration>
-                                                            <connections>
-                                                                <action selector="drizzleTipButtonTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="coG-j4-bnm"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wal-it-SD5">
-                                                            <rect key="frame" x="0.0" y="120" width="250" height="50"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="A0E-lQ-qpH"/>
-                                                            </constraints>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="gray" title="Shower - $8.99">
-                                                                <color key="baseForegroundColor" systemColor="labelColor"/>
-                                                                <color key="baseBackgroundColor" name="AccentColor"/>
-                                                            </buttonConfiguration>
-                                                            <connections>
-                                                                <action selector="showerTipButtonTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="LIw-Kc-vcw"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ne1-Ed-eAL">
-                                                            <rect key="frame" x="0.0" y="180" width="250" height="50"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="oCF-EV-c0m"/>
-                                                            </constraints>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="gray" title="Downpour - $19.99">
-                                                                <color key="baseForegroundColor" systemColor="labelColor"/>
-                                                                <color key="baseBackgroundColor" name="AccentColor"/>
-                                                            </buttonConfiguration>
-                                                            <connections>
-                                                                <action selector="downpourTipButtonTapped:" destination="6KL-QO-hrw" eventType="touchUpInside" id="hFR-dU-fy4"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="5gK-Kn-1Eo" firstAttribute="top" secondItem="5eX-8A-mIg" secondAttribute="bottom" constant="25" id="BA1-rS-V1Y"/>
-                                                <constraint firstItem="5eX-8A-mIg" firstAttribute="top" secondItem="Rkf-X2-QJK" secondAttribute="top" constant="11" id="bF6-Sb-fuZ"/>
-                                                <constraint firstItem="5gK-Kn-1Eo" firstAttribute="centerX" secondItem="Rkf-X2-QJK" secondAttribute="centerX" id="n17-Gj-42C"/>
-                                                <constraint firstItem="5eX-8A-mIg" firstAttribute="leading" secondItem="Rkf-X2-QJK" secondAttribute="leading" constant="20" id="noR-We-9Jh"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="rIK-Ki-Z3g">
-                                        <rect key="frame" x="0.0" y="870" width="390" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rIK-Ki-Z3g" id="gDd-7k-vbg">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Version: 1.0(0)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgs-S8-Koy">
-                                                    <rect key="frame" x="25" y="17.333333333333332" width="340" height="15.666666666666668"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Tgs-S8-Koy" firstAttribute="centerY" secondItem="gDd-7k-vbg" secondAttribute="centerY" id="RDK-Iq-ddA"/>
-                                                <constraint firstAttribute="trailing" secondItem="Tgs-S8-Koy" secondAttribute="trailing" constant="25" id="eCl-eZ-0xs"/>
-                                                <constraint firstItem="Tgs-S8-Koy" firstAttribute="leading" secondItem="gDd-7k-vbg" secondAttribute="leading" constant="25" id="xG0-JN-Rb0"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="6KL-QO-hrw" id="5th-GS-N5Q"/>
-                            <outlet property="delegate" destination="6KL-QO-hrw" id="ufg-MG-uig"/>
-                        </connections>
-                    </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="Jgu-bU-GsE"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="clockControl" destination="GOS-en-udu" id="9sU-T5-3lO"/>
-                        <outlet property="downpourTipButton" destination="ne1-Ed-eAL" id="6ad-Pp-Noq"/>
-                        <outlet property="drizzleTipButton" destination="f4H-3d-0qM" id="QSa-d9-QO3"/>
-                        <outlet property="dropletTipButton" destination="BES-qh-eAP" id="KuR-MJ-mXp"/>
-                        <outlet property="pressureUnitsControl" destination="dhM-Zz-y0S" id="Ydl-cG-ckR"/>
-                        <outlet property="recommendationsControl" destination="q3k-FN-OjD" id="vqO-IS-jbs"/>
-                        <outlet property="showerTipButton" destination="Wal-it-SD5" id="Gat-Tg-uzq"/>
-                        <outlet property="temperatureUnitsControl" destination="VP9-wZ-Iif" id="Na2-gg-zn4"/>
-                        <outlet property="themeButton0" destination="tUa-EX-O4C" id="997-DM-wl5"/>
-                        <outlet property="themeButton1" destination="0w9-7O-ynh" id="lOn-Ze-eXV"/>
-                        <outlet property="themeButton2" destination="aci-tM-rE9" id="Lwy-LT-rNc"/>
-                        <outlet property="themeButton3" destination="QDd-B4-BTe" id="4jS-1e-O8E"/>
-                        <outlet property="themeButton4" destination="3gW-tP-hc4" id="Lr1-I2-IDc"/>
-                        <outlet property="themeButton5" destination="Rvp-GH-4V6" id="XXL-p6-UD5"/>
-                        <outlet property="themeButton6" destination="isx-ur-Vbw" id="1sg-XL-3hL"/>
-                        <outlet property="themeButton7" destination="rxZ-b0-LcF" id="gIu-OR-2o8"/>
-                        <outlet property="themeButton8" destination="rQj-Tg-Kly" id="2gf-TL-jH9"/>
-                        <outlet property="themeButton9" destination="6FR-Gl-KGN" id="JOy-uQ-hCB"/>
-                        <outlet property="themeLabel" destination="8CG-Pl-uYY" id="70j-FI-rXm"/>
-                        <outlet property="windUnitsControl" destination="VtR-2L-s1E" id="4kL-G8-wW5"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I5A-MP-5CT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="961.53846153846155" y="-28.436018957345969"/>
-        </scene>
         <!--ForecastVC-->
         <scene sceneID="PJr-0M-zGS">
             <objects>
@@ -1330,6 +833,530 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3E-rt-hyJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="167.69230769230768" y="-28.436018957345969"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="0c8-fQ-WDc">
+            <objects>
+                <tableViewController storyboardIdentifier="SettingsVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="e0O-77-lLc" customClass="SettingsVC" customModule="WetherOrNot" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="usJ-Eg-Gbe">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <sections>
+                            <tableViewSection id="ir2-Fx-Rbw">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="3vR-QZ-Fmw">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3vR-QZ-Fmw" id="aoZ-qS-dXo">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcm-Dg-dOe">
+                                                    <rect key="frame" x="20" y="20" width="230" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="clW-vW-vxi">
+                                                    <rect key="frame" x="270" y="15" width="100" height="31"/>
+                                                    <color key="backgroundColor" name="AccentColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="MCW-1n-6sp"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="12h"/>
+                                                        <segment title="24h"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="clockControlTapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="t9t-2K-teT"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="clW-vW-vxi" secondAttribute="trailing" constant="20" id="0ZX-tZ-PkY"/>
+                                                <constraint firstItem="clW-vW-vxi" firstAttribute="top" secondItem="aoZ-qS-dXo" secondAttribute="top" constant="15" id="0mG-vr-J3D"/>
+                                                <constraint firstItem="Mcm-Dg-dOe" firstAttribute="leading" secondItem="aoZ-qS-dXo" secondAttribute="leading" constant="20" id="VGo-H6-cSi"/>
+                                                <constraint firstAttribute="bottom" secondItem="clW-vW-vxi" secondAttribute="bottom" constant="15" id="WAx-I6-6M4"/>
+                                                <constraint firstItem="clW-vW-vxi" firstAttribute="leading" secondItem="Mcm-Dg-dOe" secondAttribute="trailing" constant="20" id="qxK-BM-DIa"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mcm-Dg-dOe" secondAttribute="bottom" constant="20" id="zO1-IQ-bbC"/>
+                                                <constraint firstItem="Mcm-Dg-dOe" firstAttribute="top" secondItem="aoZ-qS-dXo" secondAttribute="top" constant="20" id="zmD-vx-MGF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="fzu-hf-Cxn">
+                                        <rect key="frame" x="0.0" y="110" width="390" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fzu-hf-Cxn" id="QJp-J8-mZa">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempertaure Units" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFY-4x-0Ce">
+                                                    <rect key="frame" x="20" y="20" width="230" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="seZ-i3-CRT">
+                                                    <rect key="frame" x="270" y="15" width="100" height="31"/>
+                                                    <color key="backgroundColor" name="AccentColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="sLq-1P-6Iw"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="F°"/>
+                                                        <segment title="C°"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="temperatureUnitsControlTapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="yqk-f0-g71"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DFY-4x-0Ce" firstAttribute="top" secondItem="QJp-J8-mZa" secondAttribute="top" constant="20" id="2l1-vE-ssg"/>
+                                                <constraint firstAttribute="trailing" secondItem="seZ-i3-CRT" secondAttribute="trailing" constant="20" id="4nu-YA-LTq"/>
+                                                <constraint firstItem="DFY-4x-0Ce" firstAttribute="leading" secondItem="QJp-J8-mZa" secondAttribute="leading" constant="20" id="7jR-Sq-MQB"/>
+                                                <constraint firstAttribute="bottom" secondItem="seZ-i3-CRT" secondAttribute="bottom" constant="15" id="ADR-a8-OYq"/>
+                                                <constraint firstAttribute="bottom" secondItem="DFY-4x-0Ce" secondAttribute="bottom" constant="20" id="aCa-o5-1R7"/>
+                                                <constraint firstItem="seZ-i3-CRT" firstAttribute="top" secondItem="QJp-J8-mZa" secondAttribute="top" constant="15" id="hMH-cF-6Xy"/>
+                                                <constraint firstItem="seZ-i3-CRT" firstAttribute="leading" secondItem="DFY-4x-0Ce" secondAttribute="trailing" constant="20" id="uR3-eb-fLn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="FtV-U9-2U9">
+                                        <rect key="frame" x="0.0" y="170" width="390" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FtV-U9-2U9" id="9hG-C8-4YW">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed Units" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLs-y6-BfF">
+                                                    <rect key="frame" x="20" y="20" width="230" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6rn-up-lAP">
+                                                    <rect key="frame" x="270" y="15" width="100" height="31"/>
+                                                    <color key="backgroundColor" name="AccentColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="Zbn-Lw-Tl9"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="mph"/>
+                                                        <segment title="km/h"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="windUnitsControlTapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="OhG-2K-gB3"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="6rn-up-lAP" secondAttribute="bottom" constant="15" id="2nt-mS-Qgs"/>
+                                                <constraint firstAttribute="bottom" secondItem="mLs-y6-BfF" secondAttribute="bottom" constant="20" id="5LX-bl-ucg"/>
+                                                <constraint firstAttribute="trailing" secondItem="6rn-up-lAP" secondAttribute="trailing" constant="20" id="7dr-BQ-YuJ"/>
+                                                <constraint firstItem="6rn-up-lAP" firstAttribute="top" secondItem="9hG-C8-4YW" secondAttribute="top" constant="15" id="bEe-aJ-xkk"/>
+                                                <constraint firstItem="mLs-y6-BfF" firstAttribute="top" secondItem="9hG-C8-4YW" secondAttribute="top" constant="20" id="cTY-gg-bzH"/>
+                                                <constraint firstItem="mLs-y6-BfF" firstAttribute="leading" secondItem="9hG-C8-4YW" secondAttribute="leading" constant="20" id="cxz-8e-8ck"/>
+                                                <constraint firstItem="6rn-up-lAP" firstAttribute="leading" secondItem="mLs-y6-BfF" secondAttribute="trailing" constant="20" id="yyi-nO-Fgz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="5fI-4L-EgP">
+                                        <rect key="frame" x="0.0" y="230" width="390" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5fI-4L-EgP" id="9cl-v2-h6e">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure Units" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjM-ny-BHo">
+                                                    <rect key="frame" x="20" y="20" width="230" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="07F-1T-wk3">
+                                                    <rect key="frame" x="270" y="15" width="100" height="31"/>
+                                                    <color key="backgroundColor" name="AccentColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="WKQ-9i-zqA"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="inHg"/>
+                                                        <segment title="mmHg"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="pressureUnitsControlTapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="WuT-gU-I2n"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="07F-1T-wk3" secondAttribute="bottom" constant="15" id="Bsy-mz-xGD"/>
+                                                <constraint firstItem="07F-1T-wk3" firstAttribute="top" secondItem="9cl-v2-h6e" secondAttribute="top" constant="15" id="Nma-fo-Dzq"/>
+                                                <constraint firstItem="VjM-ny-BHo" firstAttribute="top" secondItem="9cl-v2-h6e" secondAttribute="top" constant="20" id="a9J-Od-muF"/>
+                                                <constraint firstAttribute="bottom" secondItem="VjM-ny-BHo" secondAttribute="bottom" constant="20" id="dkw-xa-wlS"/>
+                                                <constraint firstAttribute="trailing" secondItem="07F-1T-wk3" secondAttribute="trailing" constant="20" id="lLZ-1D-E3d"/>
+                                                <constraint firstItem="07F-1T-wk3" firstAttribute="leading" secondItem="VjM-ny-BHo" secondAttribute="trailing" constant="20" id="zTh-p9-FIH"/>
+                                                <constraint firstItem="VjM-ny-BHo" firstAttribute="leading" secondItem="9cl-v2-h6e" secondAttribute="leading" constant="20" id="zmH-Bj-zAE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="AZ8-cY-1VV">
+                                        <rect key="frame" x="0.0" y="290" width="390" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AZ8-cY-1VV" id="muL-V0-ca9">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommendations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijy-Zw-pHp">
+                                                    <rect key="frame" x="20" y="20" width="230" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5at-6v-gsz">
+                                                    <rect key="frame" x="270" y="15" width="100" height="31"/>
+                                                    <color key="backgroundColor" name="AccentColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="7zT-ga-3q0"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="off"/>
+                                                        <segment title="on"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="recommendationsControlTapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="Pfk-TV-JIb"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ijy-Zw-pHp" firstAttribute="leading" secondItem="muL-V0-ca9" secondAttribute="leading" constant="20" id="0uh-dh-UKf"/>
+                                                <constraint firstAttribute="trailing" secondItem="5at-6v-gsz" secondAttribute="trailing" constant="20" id="6DC-qY-Mfp"/>
+                                                <constraint firstAttribute="bottom" secondItem="5at-6v-gsz" secondAttribute="bottom" constant="15" id="K6l-po-wTM"/>
+                                                <constraint firstItem="5at-6v-gsz" firstAttribute="top" secondItem="muL-V0-ca9" secondAttribute="top" constant="15" id="Peb-um-7ue"/>
+                                                <constraint firstItem="Ijy-Zw-pHp" firstAttribute="top" secondItem="muL-V0-ca9" secondAttribute="top" constant="20" id="bH1-Bx-V2m"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ijy-Zw-pHp" secondAttribute="bottom" constant="20" id="hgu-ZC-AaS"/>
+                                                <constraint firstItem="5at-6v-gsz" firstAttribute="leading" secondItem="Ijy-Zw-pHp" secondAttribute="trailing" constant="20" id="tlY-mT-96X"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="190" id="DW9-8X-1kj">
+                                        <rect key="frame" x="0.0" y="350" width="390" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DW9-8X-1kj" id="5Bp-6N-d1B">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Duo-wV-YrD">
+                                                    <rect key="frame" x="20" y="11" width="100" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Td-gh-hmY">
+                                                    <rect key="frame" x="20" y="50" width="350" height="110"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="6h6-su-wsS">
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hb4-qW-hiM">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="50"/>
+                                                                    <color key="tintColor" name="lightOrange"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton0Tapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="2oq-qh-po9"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxI-ZK-Jn7">
+                                                                    <rect key="frame" x="74.333333333333329" y="0.0" width="53" height="50"/>
+                                                                    <color key="tintColor" name="pollen"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton1Tapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="jFB-Bu-AVF"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHY-9b-ilY">
+                                                                    <rect key="frame" x="148.33333333333334" y="0.0" width="53.333333333333343" height="50"/>
+                                                                    <color key="tintColor" name="mint"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton2Tapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="d06-Sz-HXK"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOg-4z-SYa">
+                                                                    <rect key="frame" x="222.66666666666666" y="0.0" width="52.999999999999972" height="50"/>
+                                                                    <color key="tintColor" name="lilac"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton3Tapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="2Jd-Av-ECe"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpx-xi-R1f">
+                                                                    <rect key="frame" x="296.66666666666669" y="0.0" width="53.333333333333314" height="50"/>
+                                                                    <color key="tintColor" name="azure"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton4Tapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="Rgw-Vs-nqP"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="31C-nO-C6O">
+                                                            <rect key="frame" x="0.0" y="60" width="350" height="50"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajj-Db-wIQ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="50"/>
+                                                                    <color key="tintColor" name="midnightBlue"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton5Tapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="qCS-4T-l4E"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwA-Pz-9VX">
+                                                                    <rect key="frame" x="74.333333333333329" y="0.0" width="53" height="50"/>
+                                                                    <color key="tintColor" name="ultraViolet"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton6Tapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="uox-fg-D9R"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5T-Em-atq">
+                                                                    <rect key="frame" x="148.33333333333334" y="0.0" width="53.333333333333343" height="50"/>
+                                                                    <color key="tintColor" name="roseRed"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton7Tapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="uno-9Y-h6A"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRi-Yr-J09">
+                                                                    <rect key="frame" x="222.66666666666666" y="0.0" width="52.999999999999972" height="50"/>
+                                                                    <color key="tintColor" name="antiqueWhite"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton8Tapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="I8e-fn-iCb"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9a-sH-J20">
+                                                                    <rect key="frame" x="296.66666666666669" y="0.0" width="53.333333333333314" height="50"/>
+                                                                    <color key="tintColor" name="darkOlive"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                        <imageReference key="image" image="circle.fill" catalog="system" symbolScale="large"/>
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="themeButton9Tapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="nrZ-g5-AKg"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="theme" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJQ-mQ-mZY">
+                                                    <rect key="frame" x="170" y="11" width="200" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="Ai9-nq-Dwo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="qJQ-mQ-mZY" secondAttribute="trailing" constant="20" id="078-Fj-iiz"/>
+                                                <constraint firstItem="3Td-gh-hmY" firstAttribute="top" secondItem="qJQ-mQ-mZY" secondAttribute="bottom" constant="20" id="6RQ-IP-UAJ"/>
+                                                <constraint firstItem="Duo-wV-YrD" firstAttribute="top" secondItem="5Bp-6N-d1B" secondAttribute="top" constant="11" id="CGu-NV-YGI"/>
+                                                <constraint firstItem="3Td-gh-hmY" firstAttribute="leading" secondItem="5Bp-6N-d1B" secondAttribute="leading" constant="20" id="Fmp-0v-VJE"/>
+                                                <constraint firstItem="qJQ-mQ-mZY" firstAttribute="top" secondItem="5Bp-6N-d1B" secondAttribute="top" constant="11" id="Qhg-yN-qCX"/>
+                                                <constraint firstAttribute="bottom" secondItem="3Td-gh-hmY" secondAttribute="bottom" constant="30" id="XK6-EP-L5v"/>
+                                                <constraint firstItem="3Td-gh-hmY" firstAttribute="top" secondItem="Duo-wV-YrD" secondAttribute="bottom" constant="20" id="gnz-Z9-bsk"/>
+                                                <constraint firstItem="qJQ-mQ-mZY" firstAttribute="leading" secondItem="Duo-wV-YrD" secondAttribute="trailing" constant="50" id="oTb-rw-XEU"/>
+                                                <constraint firstItem="Duo-wV-YrD" firstAttribute="leading" secondItem="5Bp-6N-d1B" secondAttribute="leading" constant="20" id="rHY-n1-vsK"/>
+                                                <constraint firstAttribute="trailing" secondItem="3Td-gh-hmY" secondAttribute="trailing" constant="20" id="z2u-cS-oMI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="330" id="ybr-bw-UJg">
+                                        <rect key="frame" x="0.0" y="540" width="390" height="330"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ybr-bw-UJg" id="5ce-e4-0tz">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="330"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support the developer with a tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8R-td-9KA">
+                                                    <rect key="frame" x="20" y="11" width="270" height="39"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VRj-S1-XgO">
+                                                    <rect key="frame" x="70" y="75" width="250" height="230"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbX-rn-cdw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                                            <color key="backgroundColor" name="AccentColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="56D-gF-JCz"/>
+                                                                <constraint firstAttribute="width" constant="250" id="jmT-NJ-F5R"/>
+                                                            </constraints>
+                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="gray" title="Droplet - $0.99"/>
+                                                            <connections>
+                                                                <action selector="dropletTipButtonTapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="Owk-eN-kCS"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGC-O0-t91">
+                                                            <rect key="frame" x="0.0" y="60" width="250" height="50"/>
+                                                            <color key="backgroundColor" name="AccentColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="M9V-aG-d3r"/>
+                                                            </constraints>
+                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="gray" title="Drizzle - $2.99"/>
+                                                            <connections>
+                                                                <action selector="drizzleTipButtonTapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="YRt-YC-T6Y"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg3-Zx-iGy">
+                                                            <rect key="frame" x="0.0" y="120" width="250" height="50"/>
+                                                            <color key="backgroundColor" name="AccentColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="Hh4-q8-vn0"/>
+                                                            </constraints>
+                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="gray" title="Shower - $8.99"/>
+                                                            <connections>
+                                                                <action selector="showerTipButtonTapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="2LR-6b-MoL"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQI-xS-5Fw">
+                                                            <rect key="frame" x="0.0" y="180" width="250" height="50"/>
+                                                            <color key="backgroundColor" name="AccentColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="PnV-yT-8a2"/>
+                                                            </constraints>
+                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="gray" title="Downpour - $19.99"/>
+                                                            <connections>
+                                                                <action selector="downpourTipButtonTapped:" destination="e0O-77-lLc" eventType="touchUpInside" id="ZeJ-zb-ATz"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Y8R-td-9KA" firstAttribute="top" secondItem="5ce-e4-0tz" secondAttribute="top" constant="11" id="JW7-AM-Wfk"/>
+                                                <constraint firstAttribute="bottom" secondItem="VRj-S1-XgO" secondAttribute="bottom" constant="25" id="OIu-iT-oaP"/>
+                                                <constraint firstAttribute="trailing" secondItem="Y8R-td-9KA" secondAttribute="trailing" constant="100" id="dzX-Gh-HeZ"/>
+                                                <constraint firstItem="VRj-S1-XgO" firstAttribute="top" secondItem="Y8R-td-9KA" secondAttribute="bottom" constant="25" id="gTM-Kz-qaO"/>
+                                                <constraint firstAttribute="trailing" secondItem="VRj-S1-XgO" secondAttribute="trailing" constant="70" id="jCa-0g-SO6"/>
+                                                <constraint firstItem="Y8R-td-9KA" firstAttribute="leading" secondItem="5ce-e4-0tz" secondAttribute="leading" constant="20" id="tJh-xw-q0a"/>
+                                                <constraint firstItem="VRj-S1-XgO" firstAttribute="leading" secondItem="5ce-e4-0tz" secondAttribute="leading" constant="70" id="u76-IT-ZBo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="QpN-Rg-oa9">
+                                        <rect key="frame" x="0.0" y="870" width="390" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QpN-Rg-oa9" id="Exe-Ou-h7m">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version: 1.0(0)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gd-w3-X6E">
+                                                    <rect key="frame" x="20" y="15" width="350" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="e0O-77-lLc" id="BMo-Tw-zBZ"/>
+                            <outlet property="delegate" destination="e0O-77-lLc" id="bKT-tX-AJU"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="a3I-t9-F5S"/>
+                    <connections>
+                        <outlet property="clockControl" destination="clW-vW-vxi" id="8At-IK-Ho2"/>
+                        <outlet property="downpourTipButton" destination="nQI-xS-5Fw" id="7zy-3o-yRt"/>
+                        <outlet property="drizzleTipButton" destination="cGC-O0-t91" id="fJA-M9-d68"/>
+                        <outlet property="dropletTipButton" destination="zbX-rn-cdw" id="yWZ-AD-jjV"/>
+                        <outlet property="pressureUnitsControl" destination="07F-1T-wk3" id="cCP-sk-Jqm"/>
+                        <outlet property="recommendationsControl" destination="5at-6v-gsz" id="bLK-Mp-JxM"/>
+                        <outlet property="showerTipButton" destination="dg3-Zx-iGy" id="pcu-Qw-54N"/>
+                        <outlet property="temperatureUnitsControl" destination="seZ-i3-CRT" id="7Z5-gJ-YUq"/>
+                        <outlet property="themeButton0" destination="hb4-qW-hiM" id="nye-J4-cHc"/>
+                        <outlet property="themeButton1" destination="JxI-ZK-Jn7" id="Jvw-GH-9NN"/>
+                        <outlet property="themeButton2" destination="lHY-9b-ilY" id="is1-fk-gg2"/>
+                        <outlet property="themeButton3" destination="HOg-4z-SYa" id="QYb-fn-E5j"/>
+                        <outlet property="themeButton4" destination="Dpx-xi-R1f" id="xmy-kR-sSh"/>
+                        <outlet property="themeButton5" destination="Ajj-Db-wIQ" id="Niw-1A-Pik"/>
+                        <outlet property="themeButton6" destination="KwA-Pz-9VX" id="sQp-Zk-C6I"/>
+                        <outlet property="themeButton7" destination="R5T-Em-atq" id="oKJ-5x-JAx"/>
+                        <outlet property="themeButton8" destination="tRi-Yr-J09" id="bFo-cS-j3L"/>
+                        <outlet property="themeButton9" destination="b9a-sH-J20" id="WZt-BC-gr3"/>
+                        <outlet property="themeLabel" destination="qJQ-mQ-mZY" id="9d7-eS-T6F"/>
+                        <outlet property="versionLabel" destination="6gd-w3-X6E" id="csv-UL-AAa"/>
+                        <outlet property="windUnitsControl" destination="6rn-up-lAP" id="ymk-wn-rW1"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3YK-X2-7T7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="-28"/>
         </scene>
     </scenes>
     <resources>

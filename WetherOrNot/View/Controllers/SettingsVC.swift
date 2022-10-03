@@ -16,11 +16,6 @@ class SettingsVC: UITableViewController {
     @IBOutlet weak var pressureUnitsControl: UISegmentedControl!
     @IBOutlet weak var recommendationsControl: UISegmentedControl!
     
-    @IBOutlet weak var dropletTipButton: UIButton!
-    @IBOutlet weak var drizzleTipButton: UIButton!
-    @IBOutlet weak var showerTipButton: UIButton!
-    @IBOutlet weak var downpourTipButton: UIButton!
-    
     @IBOutlet weak var themeLabel: UILabel!
     @IBOutlet weak var themeButton0: UIButton!
     @IBOutlet weak var themeButton1: UIButton!
@@ -33,8 +28,19 @@ class SettingsVC: UITableViewController {
     @IBOutlet weak var themeButton8: UIButton!
     @IBOutlet weak var themeButton9: UIButton!
     
+    @IBOutlet weak var dropletTipButton: UIButton!
+    @IBOutlet weak var drizzleTipButton: UIButton!
+    @IBOutlet weak var showerTipButton: UIButton!
+    @IBOutlet weak var downpourTipButton: UIButton!
+    
+    @IBOutlet weak var versionLabel: UILabel!
+    
     var productsArray = [SKProduct]()
     var settingsChanged: Bool = false
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +52,7 @@ class SettingsVC: UITableViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        settingsChanged = false
         dropletTipButton.layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
         drizzleTipButton.layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
         showerTipButton.layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
@@ -108,7 +115,9 @@ class SettingsVC: UITableViewController {
             themeLabel.text = "dark olive"
         }
         
-        settingsChanged = false
+        let appVersionShort = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let appVersionLong = Bundle.main.infoDictionary?["CFBundleString"] as? String
+        versionLabel.text = "Version: \(appVersionShort ?? "0")(\(appVersionLong ?? "0"))"
     }
     
     @objc func doneTapped(sender: UIBarButtonItem) {
@@ -121,7 +130,7 @@ class SettingsVC: UITableViewController {
         }
     }
     
-    @IBAction func clockControlValue(_ sender: UISegmentedControl) {
+    @IBAction func clockControlTapped(_ sender: UISegmentedControl) {
         settingsChanged = true
         
         if clockControl.selectedSegmentIndex == 0 {
