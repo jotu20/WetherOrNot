@@ -60,11 +60,12 @@ func setupCurrentSubheadCard(view: CurrentSubheadCardView, type: String) {
         let windSpeed = CurrentForecast.sharedInstance.windSpeed.rounded()
         let windDirection = CurrentForecast.sharedInstance.windDirection
         let windGust = CurrentForecast.sharedInstance.windGust.rounded()
-        let windUnits = "km/h"
+        let windUnits = defaults.string(forKey: "windUnits") ?? ""
         view.valueLabel.text = "\(Int(windSpeed))(\(Int(windGust)))\(windUnits) \(windDirection)"
     } else if type == "Pressure" {
         view.descriptionImage.image = UIImage(systemName: "gauge.high")
         let pressure = Int(CurrentForecast.sharedInstance.pressure)
-        view.valueLabel.text = "\(pressure)"
+        let pressureUnits = defaults.string(forKey: "pressureUnits") ?? ""
+        view.valueLabel.text = "\(pressure)\(pressureUnits)"
     }
 }

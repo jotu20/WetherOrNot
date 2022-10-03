@@ -19,26 +19,58 @@ class FetchWeather {
         
         let currentWeather = weather.currentWeather
         CurrentForecast.sharedInstance.symbol = currentWeather.symbolName
-        CurrentForecast.sharedInstance.temp = currentWeather.temperature.value
-        CurrentForecast.sharedInstance.apparentTemp = currentWeather.apparentTemperature.value
         CurrentForecast.sharedInstance.uvIndex = currentWeather.uvIndex.value
         CurrentForecast.sharedInstance.humidity = currentWeather.humidity
-        CurrentForecast.sharedInstance.windSpeed = currentWeather.wind.speed.value
-        CurrentForecast.sharedInstance.windGust = currentWeather.wind.gust!.value 
-        CurrentForecast.sharedInstance.windDirection = currentWeather.wind.compassDirection.abbreviation
-        CurrentForecast.sharedInstance.pressure = currentWeather.pressure.value
         
-        // Attire description
-        if CurrentForecast.sharedInstance.temp >= 75 {
-            GlobalVariables.sharedInstance.description = "This is great t-shirt weather!"
-        } else if CurrentForecast.sharedInstance.temp < 75 && CurrentForecast.sharedInstance.temp > 50 {
-            GlobalVariables.sharedInstance.description = "It's like that perfect spring weather for a light jacket."
-        } else if CurrentForecast.sharedInstance.temp < 50 && CurrentForecast.sharedInstance.temp > 30 {
-            GlobalVariables.sharedInstance.description = "Is it fall? You should probably grab your jacket."
-        } else if CurrentForecast.sharedInstance.temp < 30 {
-            GlobalVariables.sharedInstance.description = "You'll definetely want a heavy jacket today with these freezing temps."
+        let temperature = Measurement(value: currentWeather.temperature.value, unit: UnitTemperature.celsius)
+        let apparentTemperature = Measurement(value: currentWeather.apparentTemperature.value, unit: UnitTemperature.celsius)
+        if defaults.string(forKey: "temperatureUnits") == "F" {
+            CurrentForecast.sharedInstance.temp = temperature.converted(to: .fahrenheit).value
+            CurrentForecast.sharedInstance.apparentTemp = apparentTemperature.converted(to: .fahrenheit).value
+            
+            if CurrentForecast.sharedInstance.temp >= 75 {
+                GlobalVariables.sharedInstance.description = "This is great t-shirt weather!"
+            } else if CurrentForecast.sharedInstance.temp < 75 && CurrentForecast.sharedInstance.temp > 50 {
+                GlobalVariables.sharedInstance.description = "It's like that perfect spring weather for a light jacket."
+            } else if CurrentForecast.sharedInstance.temp < 50 && CurrentForecast.sharedInstance.temp > 30 {
+                GlobalVariables.sharedInstance.description = "Is it fall? You should probably grab your jacket."
+            } else if CurrentForecast.sharedInstance.temp < 30 {
+                GlobalVariables.sharedInstance.description = "You'll definetely want a heavy jacket today with these freezing temps."
+            }
+        } else {
+            CurrentForecast.sharedInstance.temp = temperature.converted(to: .celsius).value
+            CurrentForecast.sharedInstance.apparentTemp = apparentTemperature.converted(to: .celsius).value
+            
+            if CurrentForecast.sharedInstance.temp >= 23 {
+                GlobalVariables.sharedInstance.description = "This is great t-shirt weather!"
+            } else if CurrentForecast.sharedInstance.temp < 23 && CurrentForecast.sharedInstance.temp > 10 {
+                GlobalVariables.sharedInstance.description = "It's like that perfect spring weather for a light jacket."
+            } else if CurrentForecast.sharedInstance.temp < 10 && CurrentForecast.sharedInstance.temp > -1 {
+                GlobalVariables.sharedInstance.description = "Is it fall? You should probably grab your jacket."
+            } else if CurrentForecast.sharedInstance.temp < -1 {
+                GlobalVariables.sharedInstance.description = "You'll definetely want a heavy jacket today with these freezing temps."
+            }
         }
         
+        let windSpeed = Measurement(value: currentWeather.wind.speed.value, unit: UnitSpeed.kilometersPerHour)
+        let windGust = Measurement(value: currentWeather.wind.gust!.value, unit: UnitSpeed.kilometersPerHour)
+        CurrentForecast.sharedInstance.windDirection = currentWeather.wind.compassDirection.abbreviation
+        if defaults.string(forKey: "windUnits") == "mph" {
+            CurrentForecast.sharedInstance.windSpeed = windSpeed.converted(to: .milesPerHour).value
+            CurrentForecast.sharedInstance.windGust = windGust.converted(to: .milesPerHour).value
+        } else {
+            CurrentForecast.sharedInstance.windSpeed = windSpeed.converted(to: .kilometersPerHour).value
+            CurrentForecast.sharedInstance.windGust = windGust.converted(to: .kilometersPerHour).value
+        }
+        
+        let pressure = Measurement(value: currentWeather.pressure.value, unit: UnitPressure.millimetersOfMercury)
+        if defaults.string(forKey: "pressureUnits") == "inHg" {
+            CurrentForecast.sharedInstance.pressure = pressure.converted(to: .inchesOfMercury).value
+        } else {
+            CurrentForecast.sharedInstance.pressure = pressure.converted(to: .millimetersOfMercury).value
+        }
+        
+        // Attire
         let currentCondition = currentWeather.condition.description.lowercased()
         let cloudCover = Int(currentWeather.cloudCover * 100)
         if currentCondition.contains("sun") || currentCondition.contains("partly cloudy") && cloudCover < 50 {
@@ -74,14 +106,6 @@ class FetchWeather {
         } else {
             dateFormatter.dateFormat = "HH:mm"
         }
-        
-//        defaults.string(forKey: "clock") == "12h"
-//
-//        defaults.string(forKey: "temperatureUnits") == "F"
-//
-//        defaults.string(forKey: "windUnits") == "mph"
-//
-//        defaults.string(forKey: "pressureUnits") == "inHg"
         
         CurrentForecast.sharedInstance.sunrise = dateFormatter.string(from: dailyWeather[0].sun.sunrise ?? Date())
         CurrentForecast.sharedInstance.sunset = dateFormatter.string(from: dailyWeather[0].sun.sunset ?? Date())
