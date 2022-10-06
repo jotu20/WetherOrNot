@@ -23,13 +23,14 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var day2CardView: DayCardView!
     @IBOutlet weak var day3CardView: DayCardView!
     @IBOutlet weak var day4CardView: DayCardView!
+    @IBOutlet weak var day5CardView: DayCardView!
+    @IBOutlet weak var day6CardView: DayCardView!
+    @IBOutlet weak var day7CardView: DayCardView!
+    @IBOutlet weak var day8CardView: DayCardView!
+    @IBOutlet weak var day9CardView: DayCardView!
     
     let locationManager = CLLocationManager()
     var fetcher = FetchWeather()
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .darkContent
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         locationManager.delegate = self
@@ -45,7 +46,6 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         createSpinnerView()
-        setColor(view: view, value: defaults.integer(forKey: "color"))
         
         if defaults.string(forKey: "recommendations") == "off" {
             descriptionLabel.isHidden = true
@@ -89,6 +89,11 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
 //                    setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
 //                    setupDayCard(view: self.day3CardView, dayNumber: 3, data: self.fetcher)
 //                    setupDayCard(view: self.day4CardView, dayNumber: 4, data: self.fetcher)
+//                    setupDayCard(view: self.day5CardView, dayNumber: 5, data: self.fetcher)
+//                    setupDayCard(view: self.day6CardView, dayNumber: 6, data: self.fetcher)
+//                    setupDayCard(view: self.day7CardView, dayNumber: 7, data: self.fetcher)
+//                    setupDayCard(view: self.day8CardView, dayNumber: 8, data: self.fetcher)
+//                    setupDayCard(view: self.day9CardView, dayNumber: 9, data: self.fetcher)
                 }
             }
         }

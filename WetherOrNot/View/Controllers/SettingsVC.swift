@@ -38,10 +38,6 @@ class SettingsVC: UITableViewController {
     var productsArray = [SKProduct]()
     var settingsChanged: Bool = false
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.title = "Settings"
@@ -121,6 +117,7 @@ class SettingsVC: UITableViewController {
     }
     
     @objc func doneTapped(sender: UIBarButtonItem) {
+        print(settingsChanged)
         if settingsChanged == true {
             let vc = self.storyboard!.instantiateViewController(withIdentifier: "ForecastVC") as! ForecastVC
             vc.modalPresentationStyle = .fullScreen
@@ -152,6 +149,7 @@ class SettingsVC: UITableViewController {
             temperatureUnitsControl.selectedSegmentIndex = 0
             defaults.set("F", forKey: "temperatureUnits")
         }
+        print(settingsChanged)
     }
     
     @IBAction func windUnitsControlTapped(_ sender: UISegmentedControl) {

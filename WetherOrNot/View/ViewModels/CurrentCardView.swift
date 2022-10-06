@@ -27,6 +27,7 @@ class CurrentCardView: UIView {
     
     private func setup() {
         layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
+        setColor(view: self, value: defaults.integer(forKey: "color"))
     }
     
 //    @IBAction func cardTapped(_ sender: UITapGestureRecognizer) {

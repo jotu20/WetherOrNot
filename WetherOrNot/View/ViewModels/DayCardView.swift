@@ -29,6 +29,7 @@ class DayCardView: UIView {
     
     private func setup() {
         layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
+        setColor(view: self, value: defaults.integer(forKey: "color"))
     }
     
 //    @IBAction func cardTapped(_ sender: UITapGestureRecognizer) {
@@ -51,11 +52,19 @@ class DayCardView: UIView {
 func setupDayCard(view: DayCardView, dayNumber: Int, data: FetchWeather) {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "EEEE"
-    let dayOfTheWeekString = dateFormatter.string(from: data.dailyForecast[dayNumber].day)
+    let dayOfTheWeekString = dateFormatter.string(from: data.dailyForecastArray[dayNumber].day)
+    
+    let highTemp = Measurement(value: data.dailyForecastArray[dayNumber].highTemp, unit: UnitTemperature.celsius)
+    let lowTemp = Measurement(value: data.dailyForecastArray[dayNumber].lowTemp, unit: UnitTemperature.celsius)
+    if defaults.string(forKey: "temperatureUnits") == "F" {
+        view.highTemperatureLabel.text = "\(Int(highTemp.converted(to: .fahrenheit).value))°"
+        view.lowTemperatureLabel.text = "\(Int(lowTemp.converted(to: .fahrenheit).value))°"
+    } else {
+        view.highTemperatureLabel.text = "\(Int(highTemp.converted(to: .celsius).value))°"
+        view.lowTemperatureLabel.text = "\(Int(lowTemp.converted(to: .celsius).value))°"
+    }
 
     view.dayLabel.text = dayOfTheWeekString
-    view.highTemperatureLabel.text = "\(Int(data.dailyForecast[dayNumber].highTemp))°"
-    view.lowTemperatureLabel.text = "\(Int(data.dailyForecast[dayNumber].lowTemp))°"
-    view.precipitationLabel.text = "\(Int(data.dailyForecast[dayNumber].precipChance * 100))%"
-    view.conditionImage.image = UIImage(systemName: "\(data.dailyForecast[dayNumber].symbol)")
+    view.precipitationLabel.text = "\(Int(data.dailyForecastArray[dayNumber].precipChance * 100))%"
+    view.conditionImage.image = UIImage(systemName: "\(data.dailyForecastArray[dayNumber].symbol)")
 }

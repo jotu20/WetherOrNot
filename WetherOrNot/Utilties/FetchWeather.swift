@@ -9,15 +9,16 @@ import WeatherKit
 import CoreLocation
 
 class FetchWeather {
-    var dailyForecast: [DailyForecast] = []
+    var dailyForecastArray: [DailyForecast] = []
     
     func fetch(latitude: Double, longitude: Double) async {
         let weatherService = WeatherService()
         let location = CLLocation(latitude: latitude, longitude: longitude)
         
         let weather = try! await weatherService.weather(for: location)
-        
         let currentWeather = weather.currentWeather
+        let dailyWeather = weather.dailyForecast.forecast
+        
         CurrentForecast.sharedInstance.symbol = currentWeather.symbolName
         CurrentForecast.sharedInstance.uvIndex = currentWeather.uvIndex.value
         CurrentForecast.sharedInstance.humidity = currentWeather.humidity
@@ -89,17 +90,6 @@ class FetchWeather {
             GlobalVariables.sharedInstance.description = "You should probably grab an umbrella or poncho with this rain."
         }
         
-        let dailyWeather = weather.dailyForecast.forecast
-        let dailyForecast = Array(dailyWeather.prefix(5)).map {
-            DailyForecast(
-                day: $0.date,
-                symbol: $0.symbolName,
-                highTemp: $0.highTemperature.value,
-                lowTemp: $0.lowTemperature.value,
-                precipChance: $0.precipitationChance
-             )
-        }
-        
         let dateFormatter = DateFormatter()
         if defaults.string(forKey: "clock") == "12h" {
             dateFormatter.dateFormat = "h:mm a"
@@ -109,9 +99,32 @@ class FetchWeather {
         
         CurrentForecast.sharedInstance.sunrise = dateFormatter.string(from: dailyWeather[0].sun.sunrise ?? Date())
         CurrentForecast.sharedInstance.sunset = dateFormatter.string(from: dailyWeather[0].sun.sunset ?? Date())
-   
-          DispatchQueue.main.async {
-              self.dailyForecast = dailyForecast
-          }
+        
+        func getDayWeather(day: Int) {
+            let test = Array(arrayLiteral: dailyWeather[day]).map {
+                DailyForecast(
+                    day: $0.date,
+                    symbol: $0.symbolName,
+                    highTemp: $0.highTemperature.value,
+                    lowTemp: $0.lowTemperature.value,
+                    precipChance: $0.precipitationChance
+                 )
+            }
+            
+            for i in test {
+                dailyForecastArray.append(i)
+            }
+        }
+        
+        getDayWeather(day: 0)
+        getDayWeather(day: 1)
+        getDayWeather(day: 2)
+        getDayWeather(day: 3)
+        getDayWeather(day: 4)
+        getDayWeather(day: 5)
+        getDayWeather(day: 6)
+        getDayWeather(day: 7)
+        getDayWeather(day: 8)
+        getDayWeather(day: 9)
     }
 }

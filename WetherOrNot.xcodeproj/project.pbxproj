@@ -13,7 +13,6 @@
 		B3D4B7BB28DB5DCC00A57732 /* CurrentSubheadCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4B7BA28DB5DCC00A57732 /* CurrentSubheadCardView.swift */; };
 		B3D4B7BF28DB6C6400A57732 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4B7BE28DB6C6400A57732 /* HexColor.swift */; };
 		B3D4B7C128DB7E4700A57732 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4B7C028DB7E4700A57732 /* Colors.swift */; };
-		B3F2AAC928D37F7F008CF9E7 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2AAC828D37F7F008CF9E7 /* Functions.swift */; };
 		B3F2AACB28D3BFFD008CF9E7 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2AACA28D3BFFD008CF9E7 /* GlobalVariables.swift */; };
 		B3F2AACD28D3C54C008CF9E7 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2AACC28D3C54C008CF9E7 /* SpinnerViewController.swift */; };
 		CF118CF628C29FBE00C63CE4 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF118CF528C29FBE00C63CE4 /* DateExtension.swift */; };
@@ -56,7 +55,6 @@
 		B3D4B7BA28DB5DCC00A57732 /* CurrentSubheadCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSubheadCardView.swift; sourceTree = "<group>"; };
 		B3D4B7BE28DB6C6400A57732 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 		B3D4B7C028DB7E4700A57732 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		B3F2AAC828D37F7F008CF9E7 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		B3F2AACA28D3BFFD008CF9E7 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		B3F2AACC28D3C54C008CF9E7 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		CF118CF528C29FBE00C63CE4 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 		CF68CEA42885F2710092E5DE /* Utilties */ = {
 			isa = PBXGroup;
 			children = (
-				B3F2AAC828D37F7F008CF9E7 /* Functions.swift */,
 				B3F2AACA28D3BFFD008CF9E7 /* GlobalVariables.swift */,
 				B3D4B7C028DB7E4700A57732 /* Colors.swift */,
 				CF118CF428C29F8500C63CE4 /* Extensions */,
@@ -374,7 +371,6 @@
 				CF68CE762885EB3E0092E5DE /* SceneDelegate.swift in Sources */,
 				B3D4B7BF28DB6C6400A57732 /* HexColor.swift in Sources */,
 				B3F2AACD28D3C54C008CF9E7 /* SpinnerViewController.swift in Sources */,
-				B3F2AAC928D37F7F008CF9E7 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,12 +555,12 @@
 				INFOPLIST_KEY_CFBundleDisplayName = WetherOrNot;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "WetherOrNot uses your location to retrieve local weather data.";
-				INFOPLIST_KEY_NSLocationUsageDescription = "WetherOrNot uses your location to retrieve local weather data.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WetherOrNot uses your location to retrieve local weather data.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Your location is used for fetching the latest weather data.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used for fetching the latest weather data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -598,12 +594,12 @@
 				INFOPLIST_KEY_CFBundleDisplayName = WetherOrNot;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "WetherOrNot uses your location to retrieve local weather data.";
-				INFOPLIST_KEY_NSLocationUsageDescription = "WetherOrNot uses your location to retrieve local weather data.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WetherOrNot uses your location to retrieve local weather data.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Your location is used for fetching the latest weather data.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used for fetching the latest weather data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
