@@ -14,5 +14,5 @@ class CurrentAlerts {
     
     var isEmpty: Bool = true
     var summary: String = ""
-    var detailsURL: URL?
+    var detailsURL: String = ""
 }

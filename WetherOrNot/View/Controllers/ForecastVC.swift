@@ -11,6 +11,7 @@ import CoreLocation
 class ForecastVC: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var locationNameLabel: UILabel!
+    @IBOutlet weak var alertLabel: UILabel!
     @IBOutlet weak var currentAlertsStackView: UIStackView!
     
     @IBOutlet weak var currentCardView: CurrentCardView!
@@ -50,6 +51,12 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         createSpinnerView()
+        
+        let locationTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.locationLabelTapped(_:)))
+        self.locationNameLabel.addGestureRecognizer(locationTapGesture)
+        
+        let alertTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.alertLabelTapped(_:)))
+        self.alertLabel.addGestureRecognizer(alertTapGesture)
         
         if CurrentAlerts.sharedInstance.isEmpty == false {
             currentAlertsStackView.isHidden = false
@@ -115,13 +122,6 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
         print("User location not found.")
     }
     
-    @IBAction func settingsButtonTapped(_ sender: UIButton) {
-        let vc = self.storyboard!.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsVC
-        let navController = UINavigationController(rootViewController: vc)
-        navController.modalPresentationStyle = .fullScreen
-        self.present(navController, animated: true, completion: nil)
-    }
-    
     func createSpinnerView() {
         let child = SpinnerViewController()
 
@@ -136,6 +136,25 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
             child.removeFromParent()
         }
     }
-
+    
+    @objc func locationLabelTapped(_ sender: UITapGestureRecognizer) {
+        print("test")
+    }
+    
+    @objc func alertLabelTapped(_ sender: UITapGestureRecognizer) {
+        let alert = CurrentAlerts.sharedInstance.detailsURL
+        if alert.isEmpty == false {
+            if let url = URL(string: alert) {
+                UIApplication.shared.open(url)
+            }
+        }
+    }
+    
+    @IBAction func settingsButtonTapped(_ sender: UIButton) {
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsVC
+        let navController = UINavigationController(rootViewController: vc)
+        navController.modalPresentationStyle = .fullScreen
+        self.present(navController, animated: true, completion: nil)
+    }
 }
 

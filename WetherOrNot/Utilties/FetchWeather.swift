@@ -28,7 +28,7 @@ class FetchWeather {
             if weatherAlerts?.isEmpty == false {
                 CurrentAlerts.sharedInstance.isEmpty = false
                 CurrentAlerts.sharedInstance.summary = weatherAlerts?[0].summary.description ?? ""
-                CurrentAlerts.sharedInstance.detailsURL = weatherAlerts?[0].detailsURL
+                CurrentAlerts.sharedInstance.detailsURL = "\(String(describing: weatherAlerts?[0].detailsURL))"
             } else {
                 CurrentAlerts.sharedInstance.isEmpty = true
             }

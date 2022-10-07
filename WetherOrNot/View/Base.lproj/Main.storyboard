@@ -38,7 +38,7 @@
                                                                     <constraint firstAttribute="height" constant="30" id="mmr-05-htY"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKb-y8-IJz">
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKb-y8-IJz">
                                                                 <rect key="frame" x="40" y="0.0" width="79" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                 <color key="textColor" name="TextColor"/>
@@ -57,7 +57,7 @@
                                                                     <constraint firstAttribute="width" constant="30" id="dii-cy-Ckd"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNo-EP-y47">
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNo-EP-y47">
                                                                 <rect key="frame" x="40" y="0.0" width="44.666666666666657" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                 <color key="textColor" name="TextColor"/>
@@ -1289,6 +1289,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alertLabel" destination="KNo-EP-y47" id="xWf-cZ-lZu"/>
                         <outlet property="currentAlertsStackView" destination="yyV-RX-whL" id="B9D-eA-0d9"/>
                         <outlet property="currentCardView" destination="Pa7-gO-zI9" id="L6S-ha-vNA"/>
                         <outlet property="currentSubheadCardConstraintTop" destination="bkK-AE-rvS" id="0ai-Cy-PGs"/>
@@ -1307,7 +1308,7 @@
                         <outlet property="day8CardView" destination="VyX-2V-QP4" id="Def-g8-1XM"/>
                         <outlet property="day9CardView" destination="Jci-cs-9xy" id="Vfs-aW-IIb"/>
                         <outlet property="descriptionLabel" destination="UD3-5N-uQw" id="HSA-ie-dZY"/>
-                        <outlet property="locationNameLabel" destination="tKb-y8-IJz" id="P9k-Ln-XQx"/>
+                        <outlet property="locationNameLabel" destination="tKb-y8-IJz" id="Hme-im-qb4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3E-rt-hyJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
