@@ -11,6 +11,8 @@ import CoreLocation
 class ForecastVC: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var locationNameLabel: UILabel!
+    @IBOutlet weak var currentAlertsStackView: UIStackView!
+    
     @IBOutlet weak var currentCardView: CurrentCardView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var currentSubheadCardView0: CurrentSubheadCardView!
@@ -28,6 +30,8 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var day7CardView: DayCardView!
     @IBOutlet weak var day8CardView: DayCardView!
     @IBOutlet weak var day9CardView: DayCardView!
+    
+    @IBOutlet weak var currentSubheadCardConstraintTop: NSLayoutConstraint!
     
     let locationManager = CLLocationManager()
     var fetcher = FetchWeather()
@@ -47,10 +51,18 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         createSpinnerView()
         
+        if CurrentAlerts.sharedInstance.isEmpty == false {
+            currentAlertsStackView.isHidden = false
+        } else {
+            currentAlertsStackView.isHidden = true
+        }
+        
         if defaults.string(forKey: "recommendations") == "off" {
             descriptionLabel.isHidden = true
+            currentSubheadCardConstraintTop.constant = -40
         } else {
             descriptionLabel.isHidden = false
+            currentSubheadCardConstraintTop.constant = 40
         }
     }
     
@@ -75,7 +87,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
             self.locationManager.stopUpdatingLocation()
             DispatchQueue.main.async {
                 Task {
-                    await self.fetcher.fetch(latitude: latitude, longitude: longitude)
+                    await self.fetcher.fetch(vc: ForecastVC(),latitude: latitude, longitude: longitude)
 
                     setupCurrentCard(view: self.currentCardView)
                     setupCurrentSubheadCard(view: self.currentSubheadCardView0, type: "Wind")
