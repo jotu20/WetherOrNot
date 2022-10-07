@@ -10,6 +10,7 @@ import UIKit
 class CurrentCardView: UIView {
     
     @IBOutlet weak var currentTemperatureLabel: UILabel!
+    @IBOutlet weak var conditionLabel: UILabel!
     @IBOutlet weak var apparentTemperatureLabel: UILabel!
     @IBOutlet weak var sunriseLabel: UILabel!
     @IBOutlet weak var sunsetLabel: UILabel!
@@ -29,26 +30,11 @@ class CurrentCardView: UIView {
         layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
         setColor(view: self, value: defaults.integer(forKey: "color"))
     }
-    
-//    @IBAction func cardTapped(_ sender: UITapGestureRecognizer) {
-//        enableHapticFeedback()
-//
-//    if height.constant == 60 {
-//            height.constant = 200
-//            summaryLabel.isHidden = false
-//            slotLabel0.isHidden = false
-//            slotLabel1.isHidden = false
-//    } else {
-//            height.constant = 60
-//            summaryLabel.isHidden = true
-//            slotLabel0.isHidden = true
-//            slotLabel1.isHidden = true
-//        }
-//    }
 }
 
 func setupCurrentCard(view: CurrentCardView) {
     view.currentTemperatureLabel.text = "\(Int(CurrentForecast.sharedInstance.temp))°"
+    view.conditionLabel.text = "\(CurrentForecast.sharedInstance.condition)"
     view.apparentTemperatureLabel.text = "Feels like: \(Int(CurrentForecast.sharedInstance.apparentTemp))°"
     view.sunriseLabel.text = "\(CurrentForecast.sharedInstance.sunrise.lowercased())"
     view.sunsetLabel.text = "\(CurrentForecast.sharedInstance.sunset.lowercased())"

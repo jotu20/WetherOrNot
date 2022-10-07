@@ -15,6 +15,7 @@ class CurrentForecast {
     var symbol: String = ""
     var temp: Double = 0
     var apparentTemp: Double = 0
+    var condition: String = ""
     var uvIndex: Int = 0
     var humidity: Double = 0
     var windSpeed: Double = 0

@@ -12,6 +12,7 @@ class FetchWeather {
     var dailyForecastArray: [DailyForecast] = []
     
     func fetch(latitude: Double, longitude: Double) async {
+        print("fetching...")
         let weatherService = WeatherService()
         let location = CLLocation(latitude: latitude, longitude: longitude)
         
@@ -20,6 +21,7 @@ class FetchWeather {
         let dailyWeather = weather.dailyForecast.forecast
         
         CurrentForecast.sharedInstance.symbol = currentWeather.symbolName
+        CurrentForecast.sharedInstance.condition = currentWeather.condition.description
         CurrentForecast.sharedInstance.uvIndex = currentWeather.uvIndex.value
         CurrentForecast.sharedInstance.humidity = currentWeather.humidity
         
