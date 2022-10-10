@@ -1832,10 +1832,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7OH-nu-qVG">
-                                <rect key="frame" x="0.0" y="89" width="390" height="755"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRo-RO-QcN">
                                 <rect key="frame" x="310.66666666666669" y="47" width="64.333333333333314" height="34"/>
                                 <color key="tintColor" systemColor="labelColor"/>
@@ -1876,6 +1872,10 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7OH-nu-qVG">
+                                <rect key="frame" x="0.0" y="89" width="390" height="755"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kfd-wb-2Qb"/>
                         <color key="backgroundColor" name="AccentColor"/>
@@ -1893,6 +1893,9 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="locationsTable" destination="7OH-nu-qVG" id="Vxx-lP-mu9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOK-Gg-pwf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1906,27 +1909,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="H8K-7c-ocM">
-                                <rect key="frame" x="0.0" y="47" width="275" height="56"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jaZ-RE-1cd">
+                                <rect key="frame" x="0.0" y="138" width="390" height="706"/>
                                 <color key="backgroundColor" name="AccentColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnh-kV-y7M">
+                                <rect key="frame" x="309" y="47" width="65" height="35"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="Qkr-tW-0he" eventType="touchUpInside" id="ac5-zj-PkC"/>
+                                </connections>
+                            </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="H8K-7c-ocM">
+                                <rect key="frame" x="0.0" y="82" width="390" height="56"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="barTintColor" name="AccentColor"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Qkr-tW-0he" id="mNJ-8O-sC8"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jaZ-RE-1cd">
-                                <rect key="frame" x="0.0" y="103" width="390" height="741"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnh-kV-y7M">
-                                <rect key="frame" x="297" y="58" width="77" height="35"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
-                                <connections>
-                                    <action selector="cancelButtonTapped:" destination="Qkr-tW-0he" eventType="touchUpInside" id="sVb-uV-kWt"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kHd-YK-1Jb"/>
                         <color key="backgroundColor" name="AccentColor"/>
@@ -1934,12 +1938,12 @@
                             <constraint firstItem="jaZ-RE-1cd" firstAttribute="trailing" secondItem="kHd-YK-1Jb" secondAttribute="trailing" id="EM0-ER-6bA"/>
                             <constraint firstAttribute="bottom" secondItem="jaZ-RE-1cd" secondAttribute="bottom" id="IHX-jx-jfj"/>
                             <constraint firstItem="jaZ-RE-1cd" firstAttribute="leading" secondItem="kHd-YK-1Jb" secondAttribute="leading" id="IYN-ze-svm"/>
-                            <constraint firstItem="Mnh-kV-y7M" firstAttribute="top" secondItem="kHd-YK-1Jb" secondAttribute="top" constant="11" id="MCf-h7-eMC"/>
-                            <constraint firstItem="jaZ-RE-1cd" firstAttribute="top" secondItem="Mnh-kV-y7M" secondAttribute="bottom" constant="10" id="bIG-lq-KZC"/>
+                            <constraint firstItem="Mnh-kV-y7M" firstAttribute="top" secondItem="kHd-YK-1Jb" secondAttribute="top" id="MCf-h7-eMC"/>
+                            <constraint firstItem="H8K-7c-ocM" firstAttribute="trailing" secondItem="kHd-YK-1Jb" secondAttribute="trailing" id="Quk-bC-ySo"/>
                             <constraint firstItem="kHd-YK-1Jb" firstAttribute="trailing" secondItem="Mnh-kV-y7M" secondAttribute="trailing" constant="16" id="enF-Up-1Op"/>
+                            <constraint firstItem="H8K-7c-ocM" firstAttribute="top" secondItem="Mnh-kV-y7M" secondAttribute="bottom" id="lr2-8W-Slw"/>
                             <constraint firstItem="jaZ-RE-1cd" firstAttribute="top" secondItem="H8K-7c-ocM" secondAttribute="bottom" id="oSQ-8G-DWS"/>
                             <constraint firstItem="H8K-7c-ocM" firstAttribute="leading" secondItem="kHd-YK-1Jb" secondAttribute="leading" id="r7u-wQ-gZV"/>
-                            <constraint firstItem="Mnh-kV-y7M" firstAttribute="leading" secondItem="H8K-7c-ocM" secondAttribute="trailing" constant="22" id="zeA-Ux-Uft"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

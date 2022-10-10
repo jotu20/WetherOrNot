@@ -38,8 +38,10 @@ class SearchLocationsVC: UIViewController, MKLocalSearchCompleterDelegate, UISea
         print("search error")
     }
     
-    @IBAction func cancelButtonTapped(_ sender: UIButton) {
-        self.dismiss(animated: true)
+    @IBAction func doneButtonTapped(_ sender: UIButton) {
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "LocationsVC") as! LocationsVC
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
@@ -83,7 +85,7 @@ extension SearchLocationsVC: UITableViewDelegate {
             let lon = coordinate.longitude
             
             locationsArray.append(Location(latitude: lat, longitude: lon, name: name))
-            print(locationsArray)
+            //defaults.set(locationsArray, forKey: "savedLocations")
         }
     }
 }

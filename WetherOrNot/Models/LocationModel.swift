@@ -7,6 +7,8 @@
 
 import Foundation
 
+var userSelectedLocation: Bool = false
+var userSelectedLocationRow: Int = 0
 var locationsArray: [Location] = []
 
 struct Location {
