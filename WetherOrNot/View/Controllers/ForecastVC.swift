@@ -138,7 +138,9 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     }
     
     @objc func locationLabelTapped(_ sender: UITapGestureRecognizer) {
-        print("test")
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "LocationsVC") as! LocationsVC
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     @objc func alertLabelTapped(_ sender: UITapGestureRecognizer) {

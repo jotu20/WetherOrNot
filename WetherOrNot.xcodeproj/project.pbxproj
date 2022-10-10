@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B352B52728F467D500D31D10 /* SearchLocationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352B52628F467D500D31D10 /* SearchLocationsVC.swift */; };
+		B352B52B28F46DFC00D31D10 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352B52A28F46DFC00D31D10 /* LocationModel.swift */; };
+		B352B52D28F470AF00D31D10 /* LocationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352B52C28F470AF00D31D10 /* LocationsVC.swift */; };
 		B356698A28C8E240002A9BC6 /* CurrentForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356698928C8E240002A9BC6 /* CurrentForecast.swift */; };
 		B3AB483828DE071B00767393 /* ProductIAPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AB483728DE071B00767393 /* ProductIAPHandler.swift */; };
 		B3AC5B6C28CB7EB8004C9B40 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AC5B6B28CB7EB8004C9B40 /* SettingsVC.swift */; };
@@ -50,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B352B52628F467D500D31D10 /* SearchLocationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationsVC.swift; sourceTree = "<group>"; };
+		B352B52A28F46DFC00D31D10 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		B352B52C28F470AF00D31D10 /* LocationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsVC.swift; sourceTree = "<group>"; };
 		B356698928C8E240002A9BC6 /* CurrentForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentForecast.swift; sourceTree = "<group>"; };
 		B3AB483728DE071B00767393 /* ProductIAPHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductIAPHandler.swift; sourceTree = "<group>"; };
 		B3AC5B6B28CB7EB8004C9B40 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
@@ -194,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				CF4C9BBF28AE88A100804BC1 /* ForecastModel.swift */,
+				B352B52A28F46DFC00D31D10 /* LocationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +222,8 @@
 			children = (
 				CF68CE772885EB3E0092E5DE /* ForecastVC.swift */,
 				B3AC5B6B28CB7EB8004C9B40 /* SettingsVC.swift */,
+				B352B52C28F470AF00D31D10 /* LocationsVC.swift */,
+				B352B52628F467D500D31D10 /* SearchLocationsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -365,6 +374,8 @@
 				B3AB483828DE071B00767393 /* ProductIAPHandler.swift in Sources */,
 				B3D4B7BB28DB5DCC00A57732 /* CurrentSubheadCardView.swift in Sources */,
 				B3CD3F2C28F07CB00046BC7C /* CurrentAlerts.swift in Sources */,
+				B352B52728F467D500D31D10 /* SearchLocationsVC.swift in Sources */,
+				B352B52B28F46DFC00D31D10 /* LocationModel.swift in Sources */,
 				B3F2AACB28D3BFFD008CF9E7 /* GlobalVariables.swift in Sources */,
 				CF68CE742885EB3E0092E5DE /* AppDelegate.swift in Sources */,
 				B356698A28C8E240002A9BC6 /* CurrentForecast.swift in Sources */,
@@ -373,6 +384,7 @@
 				CFD718A228C13F3A001A1694 /* DayCardView.swift in Sources */,
 				CF4C9BBE28AE819000804BC1 /* FetchWeather.swift in Sources */,
 				CF68CE762885EB3E0092E5DE /* SceneDelegate.swift in Sources */,
+				B352B52D28F470AF00D31D10 /* LocationsVC.swift in Sources */,
 				B3D4B7BF28DB6C6400A57732 /* HexColor.swift in Sources */,
 				B3F2AACD28D3C54C008CF9E7 /* SpinnerViewController.swift in Sources */,
 			);
