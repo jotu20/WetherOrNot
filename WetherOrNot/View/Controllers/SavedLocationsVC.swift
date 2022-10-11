@@ -46,6 +46,21 @@ class SavedLocationsVC: UIViewController, UITableViewDataSource, UITableViewDele
         self.present(vc, animated: false)
     }
     
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+       if indexPath.row == 0 {
+           return UITableViewCell.EditingStyle.none
+        } else {
+            return UITableViewCell.EditingStyle.delete
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            locationsArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     @IBAction func searchButtonTapped(_ sender: UIButton) {
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "SearchLocationsVC") as! SearchLocationsVC
         vc.modalPresentationStyle = .fullScreen
