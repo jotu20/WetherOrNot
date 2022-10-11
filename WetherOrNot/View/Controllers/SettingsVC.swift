@@ -28,6 +28,18 @@ class SettingsVC: UITableViewController {
     @IBOutlet weak var themeButton8: UIButton!
     @IBOutlet weak var themeButton9: UIButton!
     
+    @IBOutlet weak var iconLabel: UILabel!
+    @IBOutlet weak var themeImageView0: UIImageView!
+    @IBOutlet weak var themeImageView1: UIImageView!
+    @IBOutlet weak var themeImageView2: UIImageView!
+    @IBOutlet weak var themeImageView3: UIImageView!
+    @IBOutlet weak var themeImageView4: UIImageView!
+    @IBOutlet weak var themeImageView5: UIImageView!
+    @IBOutlet weak var themeImageView6: UIImageView!
+    @IBOutlet weak var themeImageView7: UIImageView!
+    @IBOutlet weak var themeImageView8: UIImageView!
+    @IBOutlet weak var themeImageView9: UIImageView!
+    
     @IBOutlet weak var dropletTipButton: UIButton!
     @IBOutlet weak var drizzleTipButton: UIButton!
     @IBOutlet weak var showerTipButton: UIButton!
@@ -117,6 +129,48 @@ class SettingsVC: UITableViewController {
             themeLabel.text = "dark olive"
         }
         
+        setAppIconText(icon: UIApplication.shared.alternateIconName ?? "Primary")
+        roundImageView(view: themeImageView0)
+        roundImageView(view: themeImageView1)
+        roundImageView(view: themeImageView2)
+        roundImageView(view: themeImageView3)
+        roundImageView(view: themeImageView4)
+        roundImageView(view: themeImageView5)
+        roundImageView(view: themeImageView6)
+        roundImageView(view: themeImageView7)
+        roundImageView(view: themeImageView8)
+        roundImageView(view: themeImageView9)
+        
+        let themeImageView0TapGesture = UITapGestureRecognizer(target: self, action: #selector(self.themeImageView0Tapped(_:)))
+        self.themeImageView0.addGestureRecognizer(themeImageView0TapGesture)
+        
+        let themeImageView1TapGesture = UITapGestureRecognizer(target: self, action: #selector(self.themeImageView1Tapped(_:)))
+        self.themeImageView1.addGestureRecognizer(themeImageView1TapGesture)
+        
+        let themeImageView2TapGesture = UITapGestureRecognizer(target: self, action: #selector(self.themeImageView2Tapped(_:)))
+        self.themeImageView2.addGestureRecognizer(themeImageView2TapGesture)
+        
+        let themeImageView3TapGesture = UITapGestureRecognizer(target: self, action: #selector(self.themeImageView3Tapped(_:)))
+        self.themeImageView3.addGestureRecognizer(themeImageView3TapGesture)
+        
+        let themeImageView4TapGesture = UITapGestureRecognizer(target: self, action: #selector(self.themeImageView4Tapped(_:)))
+        self.themeImageView4.addGestureRecognizer(themeImageView4TapGesture)
+        
+        let themeImageView5TapGesture = UITapGestureRecognizer(target: self, action: #selector(self.themeImageView5Tapped(_:)))
+        self.themeImageView5.addGestureRecognizer(themeImageView5TapGesture)
+        
+        let themeImageView6TapGesture = UITapGestureRecognizer(target: self, action: #selector(self.themeImageView6Tapped(_:)))
+        self.themeImageView6.addGestureRecognizer(themeImageView6TapGesture)
+        
+        let themeImageView7TapGesture = UITapGestureRecognizer(target: self, action: #selector(self.themeImageView7Tapped(_:)))
+        self.themeImageView7.addGestureRecognizer(themeImageView7TapGesture)
+        
+        let themeImageView8TapGesture = UITapGestureRecognizer(target: self, action: #selector(self.themeImageView8Tapped(_:)))
+        self.themeImageView8.addGestureRecognizer(themeImageView8TapGesture)
+        
+        let themeImageView9TapGesture = UITapGestureRecognizer(target: self, action: #selector(self.themeImageView9Tapped(_:)))
+        self.themeImageView9.addGestureRecognizer(themeImageView9TapGesture)
+        
         let appVersionShort = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let appVersionLong = Bundle.main.infoDictionary?["CFBundleString"] as? String
         versionLabel.text = "Version: \(appVersionShort ?? "0")(\(appVersionLong ?? "0"))"
@@ -140,6 +194,50 @@ class SettingsVC: UITableViewController {
         }
         
         print("\(settingKey) set to: \(defaults.string(forKey: settingKey) ?? "")")
+    }
+    
+    func roundImageView(view: UIImageView) {
+        view.layer.cornerRadius = 5
+        view.clipsToBounds = true
+    }
+    
+    func setAppIcon(icon: String) {
+        if icon == "AppIcon-Pollen" {
+            UIApplication.shared.setAlternateIconName(nil)
+        } else {
+            UIApplication.shared.setAlternateIconName(icon) { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    print("Success! Icon has been changed")
+                }
+            }
+        }
+        self.setAppIconText(icon: UIApplication.shared.alternateIconName ?? "Primary")
+    }
+    
+    func setAppIconText(icon: String) {
+        if icon == "Primary" {
+            iconLabel.text = "pollen"
+        } else if icon == "AppIcon-Antique_White" {
+            iconLabel.text = "antique white"
+        } else if icon == "AppIcon-Azure" {
+            iconLabel.text = "azure"
+        } else if icon == "AppIcon-Dark_Olive" {
+            iconLabel.text = "dark olive"
+        } else if icon == "AppIcon-Light_Orange" {
+            iconLabel.text = "light orange"
+        } else if icon == "AppIcon-Lilac" {
+            iconLabel.text = "lilac"
+        } else if icon == "AppIcon-Midnight_Blue" {
+            iconLabel.text = "midnight blue"
+        } else if icon == "AppIcon-Mint" {
+            iconLabel.text = "mint"
+        } else if icon == "AppIcon-Rose_Red" {
+            iconLabel.text = "rose red"
+        } else if icon == "AppIcon-Ultra_Violet" {
+            iconLabel.text = "ultra violet"
+        }
     }
     
     @objc func doneTapped(sender: UIBarButtonItem) {
@@ -210,6 +308,46 @@ class SettingsVC: UITableViewController {
     
     @IBAction func themeButton9Tapped(_ sender: UIButton) {
         changeDefaultColor(number: 9, color: "dark olive")
+    }
+    
+    @objc func themeImageView0Tapped(_ sender: UITapGestureRecognizer) {
+        setAppIcon(icon: "AppIcon-Light_Orange")
+    }
+    
+    @objc func themeImageView1Tapped(_ sender: UITapGestureRecognizer) {
+        setAppIcon(icon: "AppIcon-Pollen")
+    }
+    
+    @objc func themeImageView2Tapped(_ sender: UITapGestureRecognizer) {
+        setAppIcon(icon: "AppIcon-Mint")
+    }
+    
+    @objc func themeImageView3Tapped(_ sender: UITapGestureRecognizer) {
+        setAppIcon(icon: "AppIcon-Lilac")
+    }
+    
+    @objc func themeImageView4Tapped(_ sender: UITapGestureRecognizer) {
+        setAppIcon(icon: "AppIcon-Azure")
+    }
+    
+    @objc func themeImageView5Tapped(_ sender: UITapGestureRecognizer) {
+        setAppIcon(icon: "AppIcon-Midnight_Blue")
+    }
+    
+    @objc func themeImageView6Tapped(_ sender: UITapGestureRecognizer) {
+        setAppIcon(icon: "AppIcon-Ultra_Violet")
+    }
+    
+    @objc func themeImageView7Tapped(_ sender: UITapGestureRecognizer) {
+        setAppIcon(icon: "AppIcon-Rose_Red")
+    }
+    
+    @objc func themeImageView8Tapped(_ sender: UITapGestureRecognizer) {
+        setAppIcon(icon: "AppIcon-Antique_White")
+    }
+    
+    @objc func themeImageView9Tapped(_ sender: UITapGestureRecognizer) {
+        setAppIcon(icon: "AppIcon-Dark_Olive")
     }
     
     @IBAction func dropletTipButtonTapped(_ sender: UIButton) {
