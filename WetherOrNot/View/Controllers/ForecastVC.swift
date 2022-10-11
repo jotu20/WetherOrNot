@@ -42,9 +42,9 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
 
         if CLLocationManager.locationServicesEnabled() {
-            if userSelectedLocation == true {
+            if userSelectedLocation == true && userSelectedLocationRow > 0 {
                 self.locationNameLabel.text = locationsArray[userSelectedLocationRow].name
-                
+
                 DispatchQueue.main.async {
                     Task {
                         await self.fetcher.fetch(vc: ForecastVC(),latitude: locationsArray[userSelectedLocationRow].latitude, longitude: locationsArray[userSelectedLocationRow].longitude)
@@ -166,9 +166,9 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     }
     
     @objc func locationLabelTapped(_ sender: UITapGestureRecognizer) {
-        let vc = self.storyboard!.instantiateViewController(withIdentifier: "LocationsVC") as! LocationsVC
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "SavedLocationsVC") as! SavedLocationsVC
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        self.present(vc, animated: true)
     }
     
     @objc func alertLabelTapped(_ sender: UITapGestureRecognizer) {
@@ -184,7 +184,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsVC
         let navController = UINavigationController(rootViewController: vc)
         navController.modalPresentationStyle = .fullScreen
-        self.present(navController, animated: true, completion: nil)
+        self.present(navController, animated: true)
     }
 }
 

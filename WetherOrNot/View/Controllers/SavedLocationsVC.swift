@@ -1,5 +1,5 @@
 //
-//  LocationsVC.swift
+//  SavedLocationsVC.swift
 //  WetherOrNot
 //
 //  Created by Joseph Szafarowicz on 10/10/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LocationsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SavedLocationsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var locationsTable: UITableView!
     
@@ -43,20 +43,18 @@ class LocationsVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "ForecastVC") as! ForecastVC
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        self.present(vc, animated: false)
     }
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "SearchLocationsVC") as! SearchLocationsVC
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        self.present(vc, animated: false)
     }
     
-    @IBAction func currentLocationButtonTapped(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func doneButtonTapped(_ sender: UIButton) {
-        self.dismiss(animated: true)
+    @IBAction func closeButtonTapped(_ sender: UIButton) {
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "ForecastVC") as! ForecastVC
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: false)
     }
 }

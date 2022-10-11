@@ -38,10 +38,10 @@ class SearchLocationsVC: UIViewController, MKLocalSearchCompleterDelegate, UISea
         print("search error")
     }
     
-    @IBAction func doneButtonTapped(_ sender: UIButton) {
-        let vc = self.storyboard!.instantiateViewController(withIdentifier: "LocationsVC") as! LocationsVC
+    @IBAction func closeButtonTapped(_ sender: UIButton) {
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "SavedLocationsVC") as! SavedLocationsVC
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        self.present(vc, animated: false)
     }
 }
 
@@ -87,5 +87,9 @@ extension SearchLocationsVC: UITableViewDelegate {
             locationsArray.append(Location(latitude: lat, longitude: lon, name: name))
             //defaults.set(locationsArray, forKey: "savedLocations")
         }
+        
+        let alert = UIAlertController(title: "Location Saved", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true)
     }
 }
