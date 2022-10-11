@@ -1947,7 +1947,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Di-An-yn2">
-                                <rect key="frame" x="16.000000000000004" y="47" width="46.333333333333343" height="34"/>
+                                <rect key="frame" x="16.000000000000004" y="49" width="46.333333333333343" height="34"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system" title=""/>
@@ -1956,7 +1956,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcj-5b-x1k">
-                                <rect key="frame" x="344" y="47" width="30" height="34"/>
+                                <rect key="frame" x="344" y="49" width="30" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="AYL-rl-Bgi"/>
                                     <constraint firstAttribute="width" constant="30" id="zQA-0d-AjX"/>
@@ -1973,11 +1973,11 @@
                         <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstItem="7OH-nu-qVG" firstAttribute="top" secondItem="7P3-je-cEO" secondAttribute="bottom" constant="10" id="1Ke-Hs-Tws"/>
-                            <constraint firstItem="Kcj-5b-x1k" firstAttribute="top" secondItem="kfd-wb-2Qb" secondAttribute="top" id="2D9-mS-t4x"/>
+                            <constraint firstItem="Kcj-5b-x1k" firstAttribute="top" secondItem="kfd-wb-2Qb" secondAttribute="top" constant="2" id="2D9-mS-t4x"/>
                             <constraint firstItem="7P3-je-cEO" firstAttribute="centerX" secondItem="YDL-VG-Dlq" secondAttribute="centerX" id="4jE-1G-i86"/>
                             <constraint firstItem="7P3-je-cEO" firstAttribute="top" secondItem="kfd-wb-2Qb" secondAttribute="top" id="8Dk-dp-41O"/>
                             <constraint firstItem="0Di-An-yn2" firstAttribute="leading" secondItem="kfd-wb-2Qb" secondAttribute="leading" constant="16" id="BuM-Kl-XVf"/>
-                            <constraint firstItem="0Di-An-yn2" firstAttribute="top" secondItem="kfd-wb-2Qb" secondAttribute="top" id="NkD-zL-qF2"/>
+                            <constraint firstItem="0Di-An-yn2" firstAttribute="top" secondItem="kfd-wb-2Qb" secondAttribute="top" constant="2" id="NkD-zL-qF2"/>
                             <constraint firstItem="7OH-nu-qVG" firstAttribute="trailing" secondItem="kfd-wb-2Qb" secondAttribute="trailing" id="RqD-Gb-1Mc"/>
                             <constraint firstItem="7OH-nu-qVG" firstAttribute="leading" secondItem="kfd-wb-2Qb" secondAttribute="leading" id="XR0-Sw-vAP"/>
                             <constraint firstItem="kfd-wb-2Qb" firstAttribute="trailing" secondItem="Kcj-5b-x1k" secondAttribute="trailing" constant="16" id="Yv1-s4-8xc"/>
