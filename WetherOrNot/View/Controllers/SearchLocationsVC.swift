@@ -19,10 +19,13 @@ class SearchLocationsVC: UIViewController, MKLocalSearchCompleterDelegate, UISea
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchCompleter.delegate = self
         searchBar?.delegate = self
         searchResultsTable?.delegate = self
         searchResultsTable?.dataSource = self
+        
+        searchCompleter.delegate = self
+        searchCompleter.region = MKCoordinateRegion(.world)
+        searchCompleter.resultTypes = MKLocalSearchCompleter.ResultType([.address])
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

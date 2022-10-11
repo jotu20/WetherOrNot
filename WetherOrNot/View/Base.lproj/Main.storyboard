@@ -2016,10 +2016,10 @@
                                 </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnh-kV-y7M">
-                                <rect key="frame" x="15.000000000000004" y="47" width="46.333333333333343" height="34.333333333333343"/>
+                                <rect key="frame" x="15" y="47" width="67" height="34.333333333333343"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system" title=""/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
                                 <connections>
                                     <action selector="closeButtonTapped:" destination="Qkr-tW-0he" eventType="touchUpInside" id="Tw7-vz-LGa"/>
                                 </connections>
