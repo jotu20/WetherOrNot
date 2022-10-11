@@ -85,7 +85,7 @@ extension SearchLocationsVC: UITableViewDelegate {
             let lon = coordinate.longitude
             
             locationsArray.append(Location(latitude: lat, longitude: lon, name: name))
-            //defaults.set(locationsArray, forKey: "savedLocations")
+            defaults.set(try? PropertyListEncoder().encode(locationsArray), forKey: "savedLocations")
         }
         
         let alert = UIAlertController(title: "Location Saved", message: "", preferredStyle: .alert)

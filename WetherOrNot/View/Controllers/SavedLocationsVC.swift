@@ -17,8 +17,11 @@ class SavedLocationsVC: UIViewController, UITableViewDataSource, UITableViewDele
         locationsTable?.dataSource = self
         userSelectedLocation = false
         
-        print(locationsArray)
-        //print(defaults.array(forKey: "savedLocations") ?? locationsArray)
+        if let data = defaults.value(forKey: "savedLocations") as? Data {
+            let locations = try? PropertyListDecoder().decode(Array<Location>.self, from: data)
+            locationsArray = locations!
+            print(locationsArray)
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -58,6 +61,7 @@ class SavedLocationsVC: UIViewController, UITableViewDataSource, UITableViewDele
         if editingStyle == .delete {
             locationsArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            defaults.set(try? PropertyListEncoder().encode(locationsArray), forKey: "savedLocations")
         }
     }
     
