@@ -47,25 +47,25 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
 
                 DispatchQueue.main.async {
                     Task {
-//                        await self.fetcher.fetch(vc: ForecastVC(),latitude: locationsArray[userSelectedLocationRow].latitude, longitude: locationsArray[userSelectedLocationRow].longitude)
-//
-//                        setupCurrentCard(view: self.currentCardView)
-//                        setupCurrentSubheadCard(view: self.currentSubheadCardView0, type: "Wind")
-//                        setupCurrentSubheadCard(view: self.currentSubheadCardView1, type: "UV Index")
-//                        setupCurrentSubheadCard(view: self.currentSubheadCardView2, type: "Humidity")
-//                        setupCurrentSubheadCard(view: self.currentSubheadCardView3, type: "Pressure")
-//                        self.descriptionLabel.text = GlobalVariables.sharedInstance.description
-//
-//                        setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
-//                        setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
-//                        setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
-//                        setupDayCard(view: self.day3CardView, dayNumber: 3, data: self.fetcher)
-//                        setupDayCard(view: self.day4CardView, dayNumber: 4, data: self.fetcher)
-//                        setupDayCard(view: self.day5CardView, dayNumber: 5, data: self.fetcher)
-//                        setupDayCard(view: self.day6CardView, dayNumber: 6, data: self.fetcher)
-//                        setupDayCard(view: self.day7CardView, dayNumber: 7, data: self.fetcher)
-//                        setupDayCard(view: self.day8CardView, dayNumber: 8, data: self.fetcher)
-//                        setupDayCard(view: self.day9CardView, dayNumber: 9, data: self.fetcher)
+                        await self.fetcher.fetch(vc: ForecastVC(),latitude: locationsArray[userSelectedLocationRow].latitude, longitude: locationsArray[userSelectedLocationRow].longitude)
+
+                        setupCurrentCard(view: self.currentCardView)
+                        setupCurrentSubheadCard(view: self.currentSubheadCardView0, type: "Wind")
+                        setupCurrentSubheadCard(view: self.currentSubheadCardView1, type: "UV Index")
+                        setupCurrentSubheadCard(view: self.currentSubheadCardView2, type: "Humidity")
+                        setupCurrentSubheadCard(view: self.currentSubheadCardView3, type: "Pressure")
+                        self.descriptionLabel.text = GlobalVariables.sharedInstance.description
+
+                        setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
+                        setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
+                        setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
+                        setupDayCard(view: self.day3CardView, dayNumber: 3, data: self.fetcher)
+                        setupDayCard(view: self.day4CardView, dayNumber: 4, data: self.fetcher)
+                        setupDayCard(view: self.day5CardView, dayNumber: 5, data: self.fetcher)
+                        setupDayCard(view: self.day6CardView, dayNumber: 6, data: self.fetcher)
+                        setupDayCard(view: self.day7CardView, dayNumber: 7, data: self.fetcher)
+                        setupDayCard(view: self.day8CardView, dayNumber: 8, data: self.fetcher)
+                        setupDayCard(view: self.day9CardView, dayNumber: 9, data: self.fetcher)
                     }
                 }
             } else {
@@ -122,25 +122,25 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
             self.locationManager.stopUpdatingLocation()
             DispatchQueue.main.async {
                 Task {
-//                    await self.fetcher.fetch(vc: ForecastVC(),latitude: latitude, longitude: longitude)
-//
-//                    setupCurrentCard(view: self.currentCardView)
-//                    setupCurrentSubheadCard(view: self.currentSubheadCardView0, type: "Wind")
-//                    setupCurrentSubheadCard(view: self.currentSubheadCardView1, type: "UV Index")
-//                    setupCurrentSubheadCard(view: self.currentSubheadCardView2, type: "Humidity")
-//                    setupCurrentSubheadCard(view: self.currentSubheadCardView3, type: "Pressure")
-//                    self.descriptionLabel.text = GlobalVariables.sharedInstance.description
-//
-//                    setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
-//                    setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
-//                    setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
-//                    setupDayCard(view: self.day3CardView, dayNumber: 3, data: self.fetcher)
-//                    setupDayCard(view: self.day4CardView, dayNumber: 4, data: self.fetcher)
-//                    setupDayCard(view: self.day5CardView, dayNumber: 5, data: self.fetcher)
-//                    setupDayCard(view: self.day6CardView, dayNumber: 6, data: self.fetcher)
-//                    setupDayCard(view: self.day7CardView, dayNumber: 7, data: self.fetcher)
-//                    setupDayCard(view: self.day8CardView, dayNumber: 8, data: self.fetcher)
-//                    setupDayCard(view: self.day9CardView, dayNumber: 9, data: self.fetcher)
+                    await self.fetcher.fetch(vc: ForecastVC(),latitude: latitude, longitude: longitude)
+
+                    setupCurrentCard(view: self.currentCardView)
+                    setupCurrentSubheadCard(view: self.currentSubheadCardView0, type: "Wind")
+                    setupCurrentSubheadCard(view: self.currentSubheadCardView1, type: "UV Index")
+                    setupCurrentSubheadCard(view: self.currentSubheadCardView2, type: "Humidity")
+                    setupCurrentSubheadCard(view: self.currentSubheadCardView3, type: "Pressure")
+                    self.descriptionLabel.text = GlobalVariables.sharedInstance.description
+
+                    setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
+                    setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
+                    setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
+                    setupDayCard(view: self.day3CardView, dayNumber: 3, data: self.fetcher)
+                    setupDayCard(view: self.day4CardView, dayNumber: 4, data: self.fetcher)
+                    setupDayCard(view: self.day5CardView, dayNumber: 5, data: self.fetcher)
+                    setupDayCard(view: self.day6CardView, dayNumber: 6, data: self.fetcher)
+                    setupDayCard(view: self.day7CardView, dayNumber: 7, data: self.fetcher)
+                    setupDayCard(view: self.day8CardView, dayNumber: 8, data: self.fetcher)
+                    setupDayCard(view: self.day9CardView, dayNumber: 9, data: self.fetcher)
                 }
             }
         }
