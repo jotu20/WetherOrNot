@@ -661,12 +661,13 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "WetherOrNot uses your location to retrieve local weather data.";
 				INFOPLIST_KEY_NSLocationUsageDescription = "Your location is used for fetching the latest weather data.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used for fetching the latest weather data.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WetherOrNot uses your location to fetch local weather data";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -701,12 +702,13 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "WetherOrNot uses your location to retrieve local weather data.";
 				INFOPLIST_KEY_NSLocationUsageDescription = "Your location is used for fetching the latest weather data.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used for fetching the latest weather data.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WetherOrNot uses your location to fetch local weather data";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
