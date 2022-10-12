@@ -1703,23 +1703,23 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="lhg-ci-sMt">
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light_orange_app_icon_1024x1024" translatesAutoresizingMaskIntoConstraints="NO" id="ww6-fu-aj2">
+                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light_orange_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ww6-fu-aj2">
                                                                     <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="0zY-cF-I9d"/>
                                                                         <constraint firstAttribute="width" constant="50" id="cgV-vD-ArV"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pollen_app_icon_1024x1024" translatesAutoresizingMaskIntoConstraints="NO" id="bxM-ft-YAt">
+                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pollen_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="bxM-ft-YAt">
                                                                     <rect key="frame" x="74.333333333333329" y="0.0" width="53" height="50"/>
                                                                 </imageView>
-                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mint_app_icon_1024x1024" translatesAutoresizingMaskIntoConstraints="NO" id="enJ-mK-Jzd">
+                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mint_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="enJ-mK-Jzd">
                                                                     <rect key="frame" x="148.33333333333334" y="0.0" width="53.333333333333343" height="50"/>
                                                                 </imageView>
-                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lilac_app_icon_1024x1024" translatesAutoresizingMaskIntoConstraints="NO" id="TcG-sa-6MP">
+                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lilac_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="TcG-sa-6MP">
                                                                     <rect key="frame" x="222.66666666666666" y="0.0" width="52.999999999999972" height="50"/>
                                                                 </imageView>
-                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="azure_app_icon_1024x1024" translatesAutoresizingMaskIntoConstraints="NO" id="txN-SK-JuS">
+                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="azure_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="txN-SK-JuS">
                                                                     <rect key="frame" x="296.66666666666669" y="0.0" width="53.333333333333314" height="50"/>
                                                                 </imageView>
                                                             </subviews>
@@ -1727,23 +1727,23 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="5NL-En-4z7">
                                                             <rect key="frame" x="0.0" y="60" width="350" height="50"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="midnight_blue_app_icon_1024x1024" translatesAutoresizingMaskIntoConstraints="NO" id="3Me-aZ-9uI">
+                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="midnight_blue_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Me-aZ-9uI">
                                                                     <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="50" id="Re8-Vx-jH8"/>
                                                                         <constraint firstAttribute="height" constant="50" id="SCr-qf-flG"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ultra_violet_app_icon_1024x1024" translatesAutoresizingMaskIntoConstraints="NO" id="KAB-9j-S0j">
+                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ultra_violet_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="KAB-9j-S0j">
                                                                     <rect key="frame" x="74.333333333333329" y="0.0" width="53" height="50"/>
                                                                 </imageView>
-                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rose_red_app_icon_1024x1024" translatesAutoresizingMaskIntoConstraints="NO" id="Xj2-08-lVw">
+                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rose_red_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xj2-08-lVw">
                                                                     <rect key="frame" x="148.33333333333334" y="0.0" width="53.333333333333343" height="50"/>
                                                                 </imageView>
-                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="antique_white_app_icon_1024x1024" translatesAutoresizingMaskIntoConstraints="NO" id="CgV-oN-oHD">
+                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="antique_white_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="CgV-oN-oHD">
                                                                     <rect key="frame" x="222.66666666666666" y="0.0" width="52.999999999999972" height="50"/>
                                                                 </imageView>
-                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark_olive_app_icon_1024x1024" translatesAutoresizingMaskIntoConstraints="NO" id="qCM-dy-gGQ">
+                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark_olive_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="qCM-dy-gGQ">
                                                                     <rect key="frame" x="296.66666666666669" y="0.0" width="53.333333333333314" height="50"/>
                                                                 </imageView>
                                                             </subviews>
@@ -2052,29 +2052,29 @@
         </scene>
     </scenes>
     <resources>
-        <image name="antique_white_app_icon_1024x1024" width="1024" height="1024"/>
-        <image name="azure_app_icon_1024x1024" width="1024" height="1024"/>
+        <image name="antique_white_icon.png" width="60" height="60"/>
+        <image name="azure_icon.png" width="60" height="60"/>
         <image name="circle.fill" catalog="system" width="128" height="123"/>
         <image name="cloud" catalog="system" width="128" height="87"/>
         <image name="cloud.sun" catalog="system" width="128" height="97"/>
-        <image name="dark_olive_app_icon_1024x1024" width="1024" height="1024"/>
+        <image name="dark_olive_icon.png" width="60" height="60"/>
         <image name="drop" catalog="system" width="96" height="128"/>
         <image name="exclamationmark.triangle.fill" catalog="system" width="128" height="109"/>
         <image name="gauge.high" catalog="system" width="128" height="123"/>
         <image name="humidity" catalog="system" width="128" height="96"/>
-        <image name="light_orange_app_icon_1024x1024" width="1024" height="1024"/>
-        <image name="lilac_app_icon_1024x1024" width="1024" height="1024"/>
+        <image name="light_orange_icon.png" width="60" height="60"/>
+        <image name="lilac_icon.png" width="60" height="60"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="midnight_blue_app_icon_1024x1024" width="1024" height="1024"/>
-        <image name="mint_app_icon_1024x1024" width="1024" height="1024"/>
-        <image name="pollen_app_icon_1024x1024" width="1024" height="1024"/>
-        <image name="rose_red_app_icon_1024x1024" width="1024" height="1024"/>
+        <image name="midnight_blue_icon.png" width="60" height="60"/>
+        <image name="mint_icon.png" width="60" height="60"/>
+        <image name="pollen_icon.png" width="60" height="60"/>
+        <image name="rose_red_icon.png" width="60" height="60"/>
         <image name="sun.max" catalog="system" width="128" height="125"/>
         <image name="sun.min" catalog="system" width="128" height="123"/>
         <image name="sunrise" catalog="system" width="128" height="97"/>
         <image name="sunset" catalog="system" width="128" height="97"/>
-        <image name="ultra_violet_app_icon_1024x1024" width="1024" height="1024"/>
+        <image name="ultra_violet_icon.png" width="60" height="60"/>
         <image name="wind" catalog="system" width="128" height="103"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">

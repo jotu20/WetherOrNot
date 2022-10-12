@@ -171,9 +171,9 @@ class SettingsVC: UITableViewController {
         let themeImageView9TapGesture = UITapGestureRecognizer(target: self, action: #selector(self.themeImageView9Tapped(_:)))
         self.themeImageView9.addGestureRecognizer(themeImageView9TapGesture)
         
-        let appVersionShort = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        let appVersionLong = Bundle.main.infoDictionary?["CFBundleString"] as? String
-        versionLabel.text = "Version: \(appVersionShort ?? "0")(\(appVersionLong ?? "0"))"
+        let versionNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        let buildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
+        versionLabel.text = "Version: \(versionNumber)(\(buildNumber))"
     }
     
     func changeDefaultColor(number: Int, color: String) {

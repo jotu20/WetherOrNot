@@ -23,10 +23,10 @@
 	</dict>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>CFBundleVersion</key>
-	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>WetherOrNot uses your location to fetch local weather data</string>
 	<key>CFBundleIcons</key>
