@@ -46,6 +46,14 @@ func setupCurrentSubheadCard(view: CurrentSubheadCardView, type: String) {
         } else if uvIndex >= 11 {
             view.valueLabel.text = "Extreme (\(uvIndex))"
         }
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            view.descriptionLabel.textAlignment = .right
+            view.valueLabel.textAlignment = .right
+        } else {
+            view.descriptionLabel.textAlignment = .left
+            view.valueLabel.textAlignment = .left
+        }
     } else if type == "Humidity" {
         view.descriptionImage.image = UIImage(systemName: "humidity")
         let humidity = Int(CurrentForecast.sharedInstance.humidity * 100)
@@ -68,5 +76,13 @@ func setupCurrentSubheadCard(view: CurrentSubheadCardView, type: String) {
         let pressure = Int(CurrentForecast.sharedInstance.pressure)
         let pressureUnits = defaults.string(forKey: "pressureUnits") ?? ""
         view.valueLabel.text = "\(pressure)\(pressureUnits)"
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            view.descriptionLabel.textAlignment = .right
+            view.valueLabel.textAlignment = .right
+        } else {
+            view.descriptionLabel.textAlignment = .left
+            view.valueLabel.textAlignment = .left
+        }
     }
 }

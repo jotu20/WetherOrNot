@@ -47,9 +47,9 @@ class FetchWeather {
                 if CurrentForecast.sharedInstance.temp >= 75 {
                     GlobalVariables.sharedInstance.description = "This is great t-shirt weather!"
                 } else if CurrentForecast.sharedInstance.temp < 75 && CurrentForecast.sharedInstance.temp > 50 {
-                    GlobalVariables.sharedInstance.description = "It's like that perfect spring weather for a light jacket."
+                    GlobalVariables.sharedInstance.description = "It's that perfect weather for a light jacket."
                 } else if CurrentForecast.sharedInstance.temp < 50 && CurrentForecast.sharedInstance.temp > 30 {
-                    GlobalVariables.sharedInstance.description = "Is it fall? You should probably grab your jacket."
+                    GlobalVariables.sharedInstance.description = "You should probably grab your jacket."
                 } else if CurrentForecast.sharedInstance.temp < 30 {
                     GlobalVariables.sharedInstance.description = "You'll definetely want a heavy jacket today with these freezing temps."
                 }
@@ -60,9 +60,9 @@ class FetchWeather {
                 if CurrentForecast.sharedInstance.temp >= 23 {
                     GlobalVariables.sharedInstance.description = "This is great t-shirt weather!"
                 } else if CurrentForecast.sharedInstance.temp < 23 && CurrentForecast.sharedInstance.temp > 10 {
-                    GlobalVariables.sharedInstance.description = "It's like that perfect spring weather for a light jacket."
+                    GlobalVariables.sharedInstance.description = "It's that perfect weather for a light jacket."
                 } else if CurrentForecast.sharedInstance.temp < 10 && CurrentForecast.sharedInstance.temp > -1 {
-                    GlobalVariables.sharedInstance.description = "Is it fall? You should probably grab your jacket."
+                    GlobalVariables.sharedInstance.description = "You should probably grab your jacket."
                 } else if CurrentForecast.sharedInstance.temp < -1 {
                     GlobalVariables.sharedInstance.description = "You'll definetely want a heavy jacket today with these freezing temps."
                 }
@@ -107,7 +107,7 @@ class FetchWeather {
             
             let dateFormatter = DateFormatter()
             if defaults.string(forKey: "clock") == "12h" {
-                dateFormatter.dateFormat = "h:mm a"
+                dateFormatter.dateFormat = "h:mma"
             } else {
                 dateFormatter.dateFormat = "HH:mm"
             }
