@@ -653,7 +653,7 @@
 				CODE_SIGN_ENTITLEMENTS = WetherOrNot/WetherOrNot.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WetherOrNot/Info.plist;
@@ -694,7 +694,7 @@
 				CODE_SIGN_ENTITLEMENTS = WetherOrNot/WetherOrNot.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WetherOrNot/Info.plist;

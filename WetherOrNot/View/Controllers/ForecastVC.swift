@@ -94,7 +94,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
         
         if defaults.string(forKey: "recommendations") == "off" {
             descriptionLabel.isHidden = true
-            currentSubheadCardConstraintTop.constant = -40
+            currentSubheadCardConstraintTop.constant = -20
         } else {
             descriptionLabel.isHidden = false
             currentSubheadCardConstraintTop.constant = 40
@@ -158,7 +158,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
         view.addSubview(child.view)
         child.didMove(toParent: self)
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             child.willMove(toParent: nil)
             child.view.removeFromSuperview()
             child.removeFromParent()

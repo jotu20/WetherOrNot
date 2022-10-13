@@ -47,7 +47,7 @@ class FetchWeather {
                 if CurrentForecast.sharedInstance.temp >= 75 {
                     GlobalVariables.sharedInstance.description = "This is great t-shirt weather!"
                 } else if CurrentForecast.sharedInstance.temp < 75 && CurrentForecast.sharedInstance.temp > 50 {
-                    GlobalVariables.sharedInstance.description = "It's that perfect weather for a light jacket."
+                    GlobalVariables.sharedInstance.description = "It's the perfect weather for a light jacket."
                 } else if CurrentForecast.sharedInstance.temp < 50 && CurrentForecast.sharedInstance.temp > 30 {
                     GlobalVariables.sharedInstance.description = "You should probably grab your jacket."
                 } else if CurrentForecast.sharedInstance.temp < 30 {
@@ -60,7 +60,7 @@ class FetchWeather {
                 if CurrentForecast.sharedInstance.temp >= 23 {
                     GlobalVariables.sharedInstance.description = "This is great t-shirt weather!"
                 } else if CurrentForecast.sharedInstance.temp < 23 && CurrentForecast.sharedInstance.temp > 10 {
-                    GlobalVariables.sharedInstance.description = "It's that perfect weather for a light jacket."
+                    GlobalVariables.sharedInstance.description = "It's the perfect weather for a light jacket."
                 } else if CurrentForecast.sharedInstance.temp < 10 && CurrentForecast.sharedInstance.temp > -1 {
                     GlobalVariables.sharedInstance.description = "You should probably grab your jacket."
                 } else if CurrentForecast.sharedInstance.temp < -1 {
