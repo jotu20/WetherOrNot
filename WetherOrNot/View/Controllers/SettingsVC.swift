@@ -45,6 +45,7 @@ class SettingsVC: UITableViewController {
     @IBOutlet weak var showerTipButton: UIButton!
     @IBOutlet weak var downpourTipButton: UIButton!
     
+    @IBOutlet weak var policyTermsLabel: UILabel!
     @IBOutlet weak var versionLabel: UILabel!
     
     var productsArray = [SKProduct]()
@@ -170,6 +171,9 @@ class SettingsVC: UITableViewController {
         
         let themeImageView9TapGesture = UITapGestureRecognizer(target: self, action: #selector(self.themeImageView9Tapped(_:)))
         self.themeImageView9.addGestureRecognizer(themeImageView9TapGesture)
+        
+        let policyTermsTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.policyTermsLabelTapped(_:)))
+        self.policyTermsLabel.addGestureRecognizer(policyTermsTapGesture)
         
         let versionNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         let buildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
@@ -419,6 +423,12 @@ class SettingsVC: UITableViewController {
                    self.present(alert, animated: true)
                }
            }
+        }
+    }
+    
+    @objc func policyTermsLabelTapped(_ sender: UITapGestureRecognizer) {
+        if let url = URL(string: "https://joeszafarowicz.github.io/weatherornot/privacypolicy/") {
+            UIApplication.shared.open(url)
         }
     }
 }
