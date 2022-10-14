@@ -1864,36 +1864,53 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="AccentColor"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="QpN-Rg-oa9">
-                                        <rect key="frame" x="0.0" y="1028" width="390" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="QpN-Rg-oa9">
+                                        <rect key="frame" x="0.0" y="1028" width="390" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QpN-Rg-oa9" id="Exe-Ou-h7m">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: 1.0(0)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10h-ji-RfR">
-                                                    <rect key="frame" x="50" y="49.333333333333336" width="290" height="15.666666666666664"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy/Terms of Use" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gd-w3-X6E">
-                                                    <rect key="frame" x="50" y="25.000000000000004" width="290" height="15.666666666666668"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="dbS-g0-fvl"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" systemColor="linkColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aVz-x6-K5t">
+                                                    <rect key="frame" x="25" y="25" width="340" height="80"/>
+                                                    <subviews>
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy/Terms of Use" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFH-mh-27D">
+                                                            <rect key="frame" x="0.0" y="0.0" width="340" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="BIt-j9-kVO"/>
+                                                                <constraint firstAttribute="width" constant="200" id="hyd-ZE-mEQ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" systemColor="linkColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by  Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gd-w3-X6E">
+                                                            <rect key="frame" x="0.0" y="30" width="340" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="dbS-g0-fvl"/>
+                                                                <constraint firstAttribute="height" constant="20" id="wZs-bR-4oP"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" systemColor="linkColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: 1.0(0)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10h-ji-RfR">
+                                                            <rect key="frame" x="0.0" y="60" width="340" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="KTZ-mQ-XhT"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="6gd-w3-X6E" firstAttribute="leading" secondItem="Exe-Ou-h7m" secondAttribute="leading" constant="50" id="0VQ-gJ-gWK"/>
-                                                <constraint firstAttribute="bottom" secondItem="10h-ji-RfR" secondAttribute="bottom" constant="25" id="Kc2-mK-c2q"/>
-                                                <constraint firstAttribute="trailing" secondItem="10h-ji-RfR" secondAttribute="trailing" constant="50" id="nSx-m3-JW6"/>
-                                                <constraint firstItem="10h-ji-RfR" firstAttribute="leading" secondItem="Exe-Ou-h7m" secondAttribute="leading" constant="50" id="pcT-t6-6VP"/>
-                                                <constraint firstItem="6gd-w3-X6E" firstAttribute="top" secondItem="Exe-Ou-h7m" secondAttribute="top" constant="25" id="sfW-HG-yhk"/>
-                                                <constraint firstAttribute="trailing" secondItem="6gd-w3-X6E" secondAttribute="trailing" constant="50" id="t4f-vy-4Q0"/>
+                                                <constraint firstItem="aVz-x6-K5t" firstAttribute="leading" secondItem="Exe-Ou-h7m" secondAttribute="leading" constant="25" id="5Lc-jB-2et"/>
+                                                <constraint firstAttribute="bottom" secondItem="aVz-x6-K5t" secondAttribute="bottom" constant="25" id="Dam-K9-HEj"/>
+                                                <constraint firstItem="aVz-x6-K5t" firstAttribute="top" secondItem="Exe-Ou-h7m" secondAttribute="top" constant="25" id="FMY-u1-IUo"/>
+                                                <constraint firstAttribute="trailing" secondItem="aVz-x6-K5t" secondAttribute="trailing" constant="25" id="uEr-Lx-Pc9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="AccentColor"/>
@@ -1914,7 +1931,8 @@
                         <outlet property="drizzleTipButton" destination="cGC-O0-t91" id="fJA-M9-d68"/>
                         <outlet property="dropletTipButton" destination="zbX-rn-cdw" id="yWZ-AD-jjV"/>
                         <outlet property="iconLabel" destination="d1I-ui-urU" id="En2-rZ-CGc"/>
-                        <outlet property="policyTermsLabel" destination="6gd-w3-X6E" id="sYP-pU-roj"/>
+                        <outlet property="policyTermsLabel" destination="gFH-mh-27D" id="tkk-5K-dEH"/>
+                        <outlet property="poweredByLabel" destination="6gd-w3-X6E" id="QIT-c6-gGh"/>
                         <outlet property="pressureUnitsControl" destination="07F-1T-wk3" id="cCP-sk-Jqm"/>
                         <outlet property="recommendationsControl" destination="5at-6v-gsz" id="bLK-Mp-JxM"/>
                         <outlet property="showerTipButton" destination="dg3-Zx-iGy" id="pcu-Qw-54N"/>

@@ -47,6 +47,7 @@ class SettingsVC: UITableViewController {
     
     @IBOutlet weak var policyTermsLabel: UILabel!
     @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var poweredByLabel: UILabel!
     
     var productsArray = [SKProduct]()
     var settingsChanged: Bool = false
@@ -174,6 +175,9 @@ class SettingsVC: UITableViewController {
         
         let policyTermsTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.policyTermsLabelTapped(_:)))
         self.policyTermsLabel.addGestureRecognizer(policyTermsTapGesture)
+        
+        let poweredByTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.poweredByLabelTapped(_:)))
+        self.poweredByLabel.addGestureRecognizer(poweredByTapGesture)
         
         let versionNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         let buildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
@@ -428,6 +432,12 @@ class SettingsVC: UITableViewController {
     
     @objc func policyTermsLabelTapped(_ sender: UITapGestureRecognizer) {
         if let url = URL(string: "https://joeszafarowicz.github.io/weatherornot/privacypolicy/") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @objc func poweredByLabelTapped(_ sender: UITapGestureRecognizer) {
+        if let url = URL(string: "https://weatherkit.apple.com/legal-attribution.html") {
             UIApplication.shared.open(url)
         }
     }
