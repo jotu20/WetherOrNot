@@ -7,6 +7,9 @@
 
 import Foundation
 
+var forecastLoaded: Bool = false
+var settingsChanged: Bool = false
+
 struct DailyForecast {
     let day: Date
     let symbol: String

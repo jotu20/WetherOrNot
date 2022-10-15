@@ -19,6 +19,7 @@ class SearchLocationsVC: UIViewController, MKLocalSearchCompleterDelegate, UISea
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        forecastLoaded = false
         searchBar?.delegate = self
         searchResultsTable?.delegate = self
         searchResultsTable?.dataSource = self
@@ -42,6 +43,7 @@ class SearchLocationsVC: UIViewController, MKLocalSearchCompleterDelegate, UISea
     }
     
     @IBAction func closeButtonTapped(_ sender: UIButton) {
+        forecastLoaded = false
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "SavedLocationsVC") as! SavedLocationsVC
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: false)
@@ -83,11 +85,12 @@ extension SearchLocationsVC: UITableViewDelegate {
             guard let name = response?.mapItems[0].name else {
                 return
             }
-
-            let lat = coordinate.latitude
-            let lon = coordinate.longitude
             
-            locationsArray.append(Location(latitude: lat, longitude: lon, name: name))
+            forecastLoaded = false
+            GlobalVariables.sharedInstance.latitude = coordinate.latitude
+            GlobalVariables.sharedInstance.longitude = coordinate.longitude
+            
+            locationsArray.append(Location(latitude: GlobalVariables.sharedInstance.latitude, longitude: GlobalVariables.sharedInstance.longitude, name: name))
             defaults.set(try? PropertyListEncoder().encode(locationsArray), forKey: "savedLocations")
         }
         

@@ -7,6 +7,7 @@
 
 import Foundation
 
+var locationChanged: Bool = false
 var userSelectedLocation: Bool = false
 var userSelectedLocationRow: Int = 0
 var locationsArray: [Location] = [Location(latitude: 0, longitude: 0, name: "Current Location")]

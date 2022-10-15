@@ -50,7 +50,6 @@ class SettingsVC: UITableViewController {
     @IBOutlet weak var poweredByLabel: UILabel!
     
     var productsArray = [SKProduct]()
-    var settingsChanged: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
