@@ -50,7 +50,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if forecastLoaded == false || settingsChanged == true {
+        if forecastLoaded == false || settingsChanged == true || userSelectedLocation == true {
             createSpinnerView()
         }
         
@@ -83,6 +83,10 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
             if userSelectedLocation == true && userSelectedLocationRow > 0 {
                 self.locationNameLabel.text = locationsArray[userSelectedLocationRow].name
                 
+                defaults.set(locationsArray[userSelectedLocationRow].name, forKey: "savedLocationName")
+                defaults.set(locationsArray[userSelectedLocationRow].latitude, forKey: "savedLocationLatitude")
+                defaults.set(locationsArray[userSelectedLocationRow].longitude, forKey: "savedLocationLongitude")
+                
                 DispatchQueue.main.async {
                     Task {
                         await self.fetcher.fetch(vc: ForecastVC(),latitude: locationsArray[userSelectedLocationRow].latitude, longitude: locationsArray[userSelectedLocationRow].longitude)
@@ -110,6 +114,34 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
                 locationManager.delegate = self
                 locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
                 locationManager.startUpdatingLocation()
+            }
+        }
+        
+        if defaults.bool(forKey: "locationServicesEnabled") == false {
+            self.locationNameLabel.text = defaults.string(forKey: "savedLocationName")
+            
+            DispatchQueue.main.async {
+                Task {
+                    await self.fetcher.fetch(vc: ForecastVC(),latitude: defaults.double(forKey: "savedLocationLatitude"), longitude: defaults.double(forKey: "savedLocationLongitude"))
+
+                    setupCurrentCard(view: self.currentCardView)
+                    setupCurrentSubheadCard(view: self.currentSubheadCardView0, type: "Wind")
+                    setupCurrentSubheadCard(view: self.currentSubheadCardView1, type: "UV Index")
+                    setupCurrentSubheadCard(view: self.currentSubheadCardView2, type: "Humidity")
+                    setupCurrentSubheadCard(view: self.currentSubheadCardView3, type: "Pressure")
+                    self.descriptionLabel.text = GlobalVariables.sharedInstance.description
+                    
+                    setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
+                    setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
+                    setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
+                    setupDayCard(view: self.day3CardView, dayNumber: 3, data: self.fetcher)
+                    setupDayCard(view: self.day4CardView, dayNumber: 4, data: self.fetcher)
+                    setupDayCard(view: self.day5CardView, dayNumber: 5, data: self.fetcher)
+                    setupDayCard(view: self.day6CardView, dayNumber: 6, data: self.fetcher)
+                    setupDayCard(view: self.day7CardView, dayNumber: 7, data: self.fetcher)
+                    setupDayCard(view: self.day8CardView, dayNumber: 8, data: self.fetcher)
+                    setupDayCard(view: self.day9CardView, dayNumber: 9, data: self.fetcher)
+                }
             }
         }
     }
@@ -159,6 +191,19 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedAlways || status == .authorizedWhenInUse {
+            defaults.set(true, forKey: "locationServicesEnabled")
+        } else if status == .denied {
+            defaults.set(false, forKey: "locationServicesEnabled")
+            if defaults.double(forKey: "savedLocationLatitude") == 0 && defaults.double(forKey: "savedLocationLongitude") ==  0 {
+                let vc = self.storyboard!.instantiateViewController(withIdentifier: "SavedLocationsVC") as! SavedLocationsVC
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true)
+            }
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("User location not found")
     }
@@ -171,7 +216,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
         view.addSubview(child.view)
         child.didMove(toParent: self)
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             child.willMove(toParent: nil)
             child.view.removeFromSuperview()
             child.removeFromParent()
