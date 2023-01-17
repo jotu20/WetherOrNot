@@ -108,7 +108,7 @@
 		CF118CF528C29FBE00C63CE4 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		CF4C9BBD28AE819000804BC1 /* FetchWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWeather.swift; sourceTree = "<group>"; };
 		CF4C9BBF28AE88A100804BC1 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
-		CF68CE702885EB3E0092E5DE /* Cumulus Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cumulus Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF68CE702885EB3E0092E5DE /* CumulusWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CumulusWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF68CE732885EB3E0092E5DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF68CE752885EB3E0092E5DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CF68CE772885EB3E0092E5DE /* ForecastVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastVC.swift; sourceTree = "<group>"; };
@@ -116,9 +116,9 @@
 		CF68CE7C2885EB3F0092E5DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF68CE7F2885EB3F0092E5DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF68CE812885EB3F0092E5DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF68CE862885EB400092E5DE /* Cumulus WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cumulus WeatherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF68CE862885EB400092E5DE /* CumulusWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CumulusWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF68CE8A2885EB400092E5DE /* CumulusWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumulusWeatherTests.swift; sourceTree = "<group>"; };
-		CF68CE902885EB400092E5DE /* Cumulus WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cumulus WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF68CE902885EB400092E5DE /* CumulusWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CumulusWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF68CE942885EB400092E5DE /* CumulusWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumulusWeatherUITests.swift; sourceTree = "<group>"; };
 		CF68CE962885EB400092E5DE /* CumulusWeatherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumulusWeatherUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CFD7189E28C13A1F001A1694 /* CumulusWeather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CumulusWeather.entitlements; sourceTree = "<group>"; };
@@ -210,9 +210,9 @@
 		CF68CE712885EB3E0092E5DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF68CE702885EB3E0092E5DE /* Cumulus Weather.app */,
-				CF68CE862885EB400092E5DE /* Cumulus WeatherTests.xctest */,
-				CF68CE902885EB400092E5DE /* Cumulus WeatherUITests.xctest */,
+				CF68CE702885EB3E0092E5DE /* CumulusWeather.app */,
+				CF68CE862885EB400092E5DE /* CumulusWeatherTests.xctest */,
+				CF68CE902885EB400092E5DE /* CumulusWeatherUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -307,9 +307,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CF68CE6F2885EB3E0092E5DE /* Cumulus Weather */ = {
+		CF68CE6F2885EB3E0092E5DE /* CumulusWeather */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF68CE9A2885EB400092E5DE /* Build configuration list for PBXNativeTarget "Cumulus Weather" */;
+			buildConfigurationList = CF68CE9A2885EB400092E5DE /* Build configuration list for PBXNativeTarget "CumulusWeather" */;
 			buildPhases = (
 				CF68CE6C2885EB3E0092E5DE /* Sources */,
 				CF68CE6D2885EB3E0092E5DE /* Frameworks */,
@@ -319,14 +319,14 @@
 			);
 			dependencies = (
 			);
-			name = "Cumulus Weather";
+			name = CumulusWeather;
 			productName = Puhdl;
-			productReference = CF68CE702885EB3E0092E5DE /* Cumulus Weather.app */;
+			productReference = CF68CE702885EB3E0092E5DE /* CumulusWeather.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CF68CE852885EB400092E5DE /* Cumulus WeatherTests */ = {
+		CF68CE852885EB400092E5DE /* CumulusWeatherTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF68CE9D2885EB400092E5DE /* Build configuration list for PBXNativeTarget "Cumulus WeatherTests" */;
+			buildConfigurationList = CF68CE9D2885EB400092E5DE /* Build configuration list for PBXNativeTarget "CumulusWeatherTests" */;
 			buildPhases = (
 				CF68CE822885EB400092E5DE /* Sources */,
 				CF68CE832885EB400092E5DE /* Frameworks */,
@@ -337,14 +337,14 @@
 			dependencies = (
 				CF68CE882885EB400092E5DE /* PBXTargetDependency */,
 			);
-			name = "Cumulus WeatherTests";
+			name = CumulusWeatherTests;
 			productName = PuhdlTests;
-			productReference = CF68CE862885EB400092E5DE /* Cumulus WeatherTests.xctest */;
+			productReference = CF68CE862885EB400092E5DE /* CumulusWeatherTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CF68CE8F2885EB400092E5DE /* Cumulus WeatherUITests */ = {
+		CF68CE8F2885EB400092E5DE /* CumulusWeatherUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF68CEA02885EB400092E5DE /* Build configuration list for PBXNativeTarget "Cumulus WeatherUITests" */;
+			buildConfigurationList = CF68CEA02885EB400092E5DE /* Build configuration list for PBXNativeTarget "CumulusWeatherUITests" */;
 			buildPhases = (
 				CF68CE8C2885EB400092E5DE /* Sources */,
 				CF68CE8D2885EB400092E5DE /* Frameworks */,
@@ -355,9 +355,9 @@
 			dependencies = (
 				CF68CE922885EB400092E5DE /* PBXTargetDependency */,
 			);
-			name = "Cumulus WeatherUITests";
+			name = CumulusWeatherUITests;
 			productName = PuhdlUITests;
-			productReference = CF68CE902885EB400092E5DE /* Cumulus WeatherUITests.xctest */;
+			productReference = CF68CE902885EB400092E5DE /* CumulusWeatherUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -383,7 +383,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CF68CE6B2885EB3E0092E5DE /* Build configuration list for PBXProject "Cumulus Weather" */;
+			buildConfigurationList = CF68CE6B2885EB3E0092E5DE /* Build configuration list for PBXProject "CumulusWeather" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -396,9 +396,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF68CE6F2885EB3E0092E5DE /* Cumulus Weather */,
-				CF68CE852885EB400092E5DE /* Cumulus WeatherTests */,
-				CF68CE8F2885EB400092E5DE /* Cumulus WeatherUITests */,
+				CF68CE6F2885EB3E0092E5DE /* CumulusWeather */,
+				CF68CE852885EB400092E5DE /* CumulusWeatherTests */,
+				CF68CE8F2885EB400092E5DE /* CumulusWeatherUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -500,12 +500,12 @@
 /* Begin PBXTargetDependency section */
 		CF68CE882885EB400092E5DE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CF68CE6F2885EB3E0092E5DE /* Cumulus Weather */;
+			target = CF68CE6F2885EB3E0092E5DE /* CumulusWeather */;
 			targetProxy = CF68CE872885EB400092E5DE /* PBXContainerItemProxy */;
 		};
 		CF68CE922885EB400092E5DE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CF68CE6F2885EB3E0092E5DE /* Cumulus Weather */;
+			target = CF68CE6F2885EB3E0092E5DE /* CumulusWeather */;
 			targetProxy = CF68CE912885EB400092E5DE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -653,7 +653,7 @@
 				CODE_SIGN_ENTITLEMENTS = CumulusWeather/CumulusWeather.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CumulusWeather/Info.plist;
@@ -694,7 +694,7 @@
 				CODE_SIGN_ENTITLEMENTS = CumulusWeather/CumulusWeather.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CumulusWeather/Info.plist;
@@ -742,7 +742,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cumulus Weather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cumulus Weather";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CumulusWeather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CumulusWeather";
 			};
 			name = Debug;
 		};
@@ -762,7 +762,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cumulus Weather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cumulus Weather";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CumulusWeather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CumulusWeather";
 			};
 			name = Release;
 		};
@@ -805,7 +805,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CF68CE6B2885EB3E0092E5DE /* Build configuration list for PBXProject "Cumulus Weather" */ = {
+		CF68CE6B2885EB3E0092E5DE /* Build configuration list for PBXProject "CumulusWeather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF68CE982885EB400092E5DE /* Debug */,
@@ -814,7 +814,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF68CE9A2885EB400092E5DE /* Build configuration list for PBXNativeTarget "Cumulus Weather" */ = {
+		CF68CE9A2885EB400092E5DE /* Build configuration list for PBXNativeTarget "CumulusWeather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF68CE9B2885EB400092E5DE /* Debug */,
@@ -823,7 +823,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF68CE9D2885EB400092E5DE /* Build configuration list for PBXNativeTarget "Cumulus WeatherTests" */ = {
+		CF68CE9D2885EB400092E5DE /* Build configuration list for PBXNativeTarget "CumulusWeatherTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF68CE9E2885EB400092E5DE /* Debug */,
@@ -832,7 +832,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF68CEA02885EB400092E5DE /* Build configuration list for PBXNativeTarget "Cumulus WeatherUITests" */ = {
+		CF68CEA02885EB400092E5DE /* Build configuration list for PBXNativeTarget "CumulusWeatherUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF68CEA12885EB400092E5DE /* Debug */,
