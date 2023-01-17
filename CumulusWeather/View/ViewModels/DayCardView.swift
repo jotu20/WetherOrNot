@@ -10,12 +10,9 @@ import UIKit
 class DayCardView: UIView {
 
     @IBOutlet weak var dayLabel: UILabel!
-    @IBOutlet weak var highTemperatureLabel: UILabel!
-    @IBOutlet weak var lowTemperatureLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var precipitationLabel: UILabel!
     @IBOutlet weak var conditionImage: UIImageView!
-    
-    @IBOutlet weak var height: NSLayoutConstraint!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,11 +38,9 @@ func setupDayCard(view: DayCardView, dayNumber: Int, data: FetchWeather) {
     let highTemp = Measurement(value: data.dailyForecastArray[dayNumber].highTemp, unit: UnitTemperature.celsius)
     let lowTemp = Measurement(value: data.dailyForecastArray[dayNumber].lowTemp, unit: UnitTemperature.celsius)
     if defaults.string(forKey: "temperatureUnits") == "F" {
-        view.highTemperatureLabel.text = "\(Int(highTemp.converted(to: .fahrenheit).value))°"
-        view.lowTemperatureLabel.text = "\(Int(lowTemp.converted(to: .fahrenheit).value))°"
+        view.temperatureLabel.text = "\(Int(highTemp.converted(to: .fahrenheit).value))°/\(Int(lowTemp.converted(to: .fahrenheit).value))°"
     } else {
-        view.highTemperatureLabel.text = "\(Int(highTemp.converted(to: .celsius).value))°"
-        view.lowTemperatureLabel.text = "\(Int(lowTemp.converted(to: .celsius).value))°"
+        view.temperatureLabel.text = "\(Int(highTemp.converted(to: .celsius).value))°/\(Int(lowTemp.converted(to: .celsius).value))°"
     }
     
     if dayNumber == 0 {

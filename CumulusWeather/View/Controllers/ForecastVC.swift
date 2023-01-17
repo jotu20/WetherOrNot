@@ -10,17 +10,16 @@ import CoreLocation
 
 class ForecastVC: UIViewController, CLLocationManagerDelegate {
     
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var alertLabel: UILabel!
     @IBOutlet weak var currentAlertsStackView: UIStackView!
     
-    @IBOutlet weak var currentCardView: CurrentCardView!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var currentSubheadCardView0: CurrentSubheadCardView!
-    @IBOutlet weak var currentSubheadCardView1: CurrentSubheadCardView!
-    @IBOutlet weak var currentSubheadCardView2: CurrentSubheadCardView!
-    @IBOutlet weak var currentSubheadCardView3: CurrentSubheadCardView!
+    @IBOutlet weak var conditionLabel0: UILabel!
+    @IBOutlet weak var conditionLabel1: UILabel!
+    @IBOutlet weak var conditionLabel2: UILabel!
+    @IBOutlet weak var conditionLabel3: UILabel!
+    @IBOutlet weak var conditionLabel4: UILabel!
+    @IBOutlet weak var conditionLabel5: UILabel!
     
     @IBOutlet weak var day0CardView: DayCardView!
     @IBOutlet weak var day1CardView: DayCardView!
@@ -33,18 +32,12 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var day8CardView: DayCardView!
     @IBOutlet weak var day9CardView: DayCardView!
     
-    @IBOutlet weak var currentSubheadCardConstraintTop: NSLayoutConstraint!
-    
     let locationManager = CLLocationManager()
     var fetcher = FetchWeather()
     var refreshControl: UIRefreshControl!
     
     override func viewWillAppear(_ animated: Bool) {
         getWeatherService()
-        
-        refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        scrollView.refreshControl = refreshControl
     }
     
     override func viewDidLoad() {
@@ -65,14 +58,6 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
         } else {
             currentAlertsStackView.isHidden = true
         }
-        
-        if defaults.string(forKey: "recommendations") == "off" {
-            descriptionLabel.isHidden = true
-            currentSubheadCardConstraintTop.constant = -20
-        } else {
-            descriptionLabel.isHidden = false
-            currentSubheadCardConstraintTop.constant = 40
-        }
     }
     
     func getWeatherService() {
@@ -90,13 +75,6 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
                 DispatchQueue.main.async {
                     Task {
                         await self.fetcher.fetch(vc: ForecastVC(),latitude: locationsArray[userSelectedLocationRow].latitude, longitude: locationsArray[userSelectedLocationRow].longitude)
-                        
-                        setupCurrentCard(view: self.currentCardView)
-                        setupCurrentSubheadCard(view: self.currentSubheadCardView0, type: "Wind")
-                        setupCurrentSubheadCard(view: self.currentSubheadCardView1, type: "UV Index")
-                        setupCurrentSubheadCard(view: self.currentSubheadCardView2, type: "Humidity")
-                        setupCurrentSubheadCard(view: self.currentSubheadCardView3, type: "Pressure")
-                        self.descriptionLabel.text = GlobalVariables.sharedInstance.description
                         
                         setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
                         setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
@@ -123,13 +101,6 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
             DispatchQueue.main.async {
                 Task {
                     await self.fetcher.fetch(vc: ForecastVC(),latitude: defaults.double(forKey: "savedLocationLatitude"), longitude: defaults.double(forKey: "savedLocationLongitude"))
-
-                    setupCurrentCard(view: self.currentCardView)
-                    setupCurrentSubheadCard(view: self.currentSubheadCardView0, type: "Wind")
-                    setupCurrentSubheadCard(view: self.currentSubheadCardView1, type: "UV Index")
-                    setupCurrentSubheadCard(view: self.currentSubheadCardView2, type: "Humidity")
-                    setupCurrentSubheadCard(view: self.currentSubheadCardView3, type: "Pressure")
-                    self.descriptionLabel.text = GlobalVariables.sharedInstance.description
                     
                     setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
                     setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
@@ -168,13 +139,41 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
             DispatchQueue.main.async {
                 Task {
                     await self.fetcher.fetch(vc: ForecastVC(),latitude: GlobalVariables.sharedInstance.latitude, longitude: GlobalVariables.sharedInstance.longitude)
-
-                    setupCurrentCard(view: self.currentCardView)
-                    setupCurrentSubheadCard(view: self.currentSubheadCardView0, type: "Wind")
-                    setupCurrentSubheadCard(view: self.currentSubheadCardView1, type: "UV Index")
-                    setupCurrentSubheadCard(view: self.currentSubheadCardView2, type: "Humidity")
-                    setupCurrentSubheadCard(view: self.currentSubheadCardView3, type: "Pressure")
-                    self.descriptionLabel.text = GlobalVariables.sharedInstance.description
+                    
+                    let uvIndex = CurrentForecast.sharedInstance.uvIndex
+                    if uvIndex <= 2 {
+                        self.conditionLabel4.text = "Low (\(uvIndex))"
+                    } else if uvIndex >= 3 && uvIndex <= 5 {
+                        self.conditionLabel4.text = "Moderate (\(uvIndex))"
+                    } else if uvIndex >= 6 && uvIndex <= 7 {
+                        self.conditionLabel4.text = "High (\(uvIndex))"
+                    } else if uvIndex >= 8 && uvIndex <= 10 {
+                        self.conditionLabel4.text = "Very high (\(uvIndex))"
+                    } else if uvIndex >= 11 {
+                        self.conditionLabel4.text = "Extreme (\(uvIndex))"
+                    }
+                    
+                    let humidity = Int(CurrentForecast.sharedInstance.humidity * 100)
+                    if humidity < 25 {
+                        self.conditionLabel0.text = "Low (\(humidity)%)"
+                    } else if humidity >= 25 && humidity < 70 {
+                        self.conditionLabel0.text = "Fair (\(humidity)%)"
+                    } else if humidity >= 70 {
+                        self.conditionLabel0.text = "High (\(humidity)%)"
+                    }
+                    
+                    let windSpeed = CurrentForecast.sharedInstance.windSpeed.rounded()
+                    let windDirection = CurrentForecast.sharedInstance.windDirection
+                    let windGust = CurrentForecast.sharedInstance.windGust.rounded()
+                    let windUnits = defaults.string(forKey: "windUnits") ?? ""
+                    self.conditionLabel3.text = "\(Int(windSpeed))(\(Int(windGust)))\(windUnits) \(windDirection)"
+                    
+                    let pressure = Int(CurrentForecast.sharedInstance.pressure)
+                    let pressureUnits = defaults.string(forKey: "pressureUnits") ?? ""
+                    self.conditionLabel1.text = "\(pressure)\(pressureUnits)"
+                    
+                    self.conditionLabel3.text = CurrentForecast.sharedInstance.sunrise
+                    self.conditionLabel5.text = CurrentForecast.sharedInstance.sunset
 
                     setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
                     setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
@@ -236,12 +235,6 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
                 UIApplication.shared.open(url)
             }
         }
-    }
-    
-    @objc func refresh() {
-        print("refreshing...")
-        self.getWeatherService()
-        refreshControl.endRefreshing()
     }
     
     @IBAction func settingsButtonTapped(_ sender: UIButton) {
