@@ -10,6 +10,7 @@ import CoreLocation
 
 class ForecastVC: UIViewController, CLLocationManagerDelegate {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var alertLabel: UILabel!
@@ -38,7 +39,8 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     var refreshControl: UIRefreshControl!
     
     override func viewWillAppear(_ animated: Bool) {
-        //getWeatherService()
+        setColor(view: mainView, value: defaults.integer(forKey: "color"))
+        getWeatherService()
         
         let locationTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.locationLabelTapped(_:)))
         self.locationNameLabel.addGestureRecognizer(locationTapGesture)
@@ -51,11 +53,14 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
         } else {
             currentAlertsStackView.isHidden = true
         }
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        scrollView.refreshControl = refreshControl
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setColor(view: mainView, value: defaults.integer(forKey: "color"))
         
         if forecastLoaded == false || settingsChanged == true || userSelectedLocation == true {
             createSpinnerView()
@@ -237,6 +242,12 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
                 UIApplication.shared.open(url)
             }
         }
+    }
+    
+    @objc func refresh() {
+        print("refreshing...")
+        self.getWeatherService()
+        refreshControl.endRefreshing()
     }
     
     @IBAction func settingsButtonTapped(_ sender: UIButton) {
