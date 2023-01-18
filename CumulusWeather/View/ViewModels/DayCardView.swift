@@ -25,8 +25,7 @@ class DayCardView: UIView {
     }
     
     private func setup() {
-        layer.cornerRadius = CGFloat(GlobalVariables.sharedInstance.cornerRadius)
-        setColor(view: self, value: defaults.integer(forKey: "color"))
+        
     }
 }
 

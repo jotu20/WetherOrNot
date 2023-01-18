@@ -10,6 +10,7 @@ import CoreLocation
 
 class ForecastVC: UIViewController, CLLocationManagerDelegate {
     
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var alertLabel: UILabel!
     @IBOutlet weak var currentAlertsStackView: UIStackView!
@@ -37,26 +38,27 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     var refreshControl: UIRefreshControl!
     
     override func viewWillAppear(_ animated: Bool) {
-        getWeatherService()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if forecastLoaded == false || settingsChanged == true || userSelectedLocation == true {
-            createSpinnerView()
-        }
+        //getWeatherService()
         
         let locationTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.locationLabelTapped(_:)))
         self.locationNameLabel.addGestureRecognizer(locationTapGesture)
-        
+
         let alertTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.alertLabelTapped(_:)))
         self.alertLabel.addGestureRecognizer(alertTapGesture)
-        
+
         if CurrentAlerts.sharedInstance.isEmpty == false {
             currentAlertsStackView.isHidden = false
         } else {
             currentAlertsStackView.isHidden = true
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setColor(view: mainView, value: defaults.integer(forKey: "color"))
+        
+        if forecastLoaded == false || settingsChanged == true || userSelectedLocation == true {
+            createSpinnerView()
         }
     }
     
