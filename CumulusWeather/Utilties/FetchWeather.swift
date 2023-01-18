@@ -43,29 +43,9 @@ class FetchWeather {
             if defaults.string(forKey: "temperatureUnits") == "F" {
                 CurrentForecast.sharedInstance.temp = temperature.converted(to: .fahrenheit).value
                 CurrentForecast.sharedInstance.apparentTemp = apparentTemperature.converted(to: .fahrenheit).value
-                
-                if CurrentForecast.sharedInstance.temp >= 75 {
-                    GlobalVariables.sharedInstance.description = "This is great t-shirt weather!"
-                } else if CurrentForecast.sharedInstance.temp < 75 && CurrentForecast.sharedInstance.temp > 50 {
-                    GlobalVariables.sharedInstance.description = "It's the perfect weather for a light jacket."
-                } else if CurrentForecast.sharedInstance.temp < 50 && CurrentForecast.sharedInstance.temp > 30 {
-                    GlobalVariables.sharedInstance.description = "You should probably grab your jacket."
-                } else if CurrentForecast.sharedInstance.temp < 30 {
-                    GlobalVariables.sharedInstance.description = "You'll definetely want a heavy jacket today with these freezing temps."
-                }
             } else {
                 CurrentForecast.sharedInstance.temp = temperature.converted(to: .celsius).value
                 CurrentForecast.sharedInstance.apparentTemp = apparentTemperature.converted(to: .celsius).value
-                
-                if CurrentForecast.sharedInstance.temp >= 23 {
-                    GlobalVariables.sharedInstance.description = "This is great t-shirt weather!"
-                } else if CurrentForecast.sharedInstance.temp < 23 && CurrentForecast.sharedInstance.temp > 10 {
-                    GlobalVariables.sharedInstance.description = "It's the perfect weather for a light jacket."
-                } else if CurrentForecast.sharedInstance.temp < 10 && CurrentForecast.sharedInstance.temp > -1 {
-                    GlobalVariables.sharedInstance.description = "You should probably grab your jacket."
-                } else if CurrentForecast.sharedInstance.temp < -1 {
-                    GlobalVariables.sharedInstance.description = "You'll definetely want a heavy jacket today with these freezing temps."
-                }
             }
             
             let windSpeed = Measurement(value: currentWeather.wind.speed.value, unit: UnitSpeed.kilometersPerHour)
@@ -86,24 +66,8 @@ class FetchWeather {
                 CurrentForecast.sharedInstance.pressure = pressure.converted(to: .millimetersOfMercury).value
             }
             
-            // Attire
             let currentCondition = currentWeather.condition.description.lowercased()
             let cloudCover = Int(currentWeather.cloudCover * 100)
-            if currentCondition.contains("sun") || currentCondition.contains("partly cloudy") && cloudCover < 50 {
-                GlobalVariables.sharedInstance.description = "You might want your sunglasses."
-            }
-            
-            if CurrentForecast.sharedInstance.uvIndex >= 8 {
-                GlobalVariables.sharedInstance.description = "You'll definetely want sunscreen with these UV levels."
-            }
-            
-            if currentCondition.contains("drizzle") {
-                GlobalVariables.sharedInstance.description = "A rain jacket might be worth it in these conditions."
-            }
-            
-            if currentCondition.contains("rain") {
-                GlobalVariables.sharedInstance.description = "You should probably grab an umbrella or poncho with this rain."
-            }
             
             let dateFormatter = DateFormatter()
             if defaults.string(forKey: "clock") == "12h" {
