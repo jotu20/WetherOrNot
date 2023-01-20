@@ -657,7 +657,7 @@
 				CODE_SIGN_ENTITLEMENTS = CumulusWeather/CumulusWeather.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CumulusWeather/Info.plist;
@@ -676,7 +676,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.cumulusweather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -698,7 +698,7 @@
 				CODE_SIGN_ENTITLEMENTS = CumulusWeather/CumulusWeather.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 24WZU35MAF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CumulusWeather/Info.plist;
@@ -717,7 +717,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephszafarowicz.cumulusweather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
