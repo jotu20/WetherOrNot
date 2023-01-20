@@ -66,9 +66,6 @@ class FetchWeather {
                 CurrentForecast.sharedInstance.pressure = pressure.converted(to: .millimetersOfMercury).value
             }
             
-            let currentCondition = currentWeather.condition.description.lowercased()
-            let cloudCover = Int(currentWeather.cloudCover * 100)
-            
             let dateFormatter = DateFormatter()
             if defaults.string(forKey: "clock") == "12h" {
                 dateFormatter.dateFormat = "h:mma"
