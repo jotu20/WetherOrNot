@@ -31,15 +31,15 @@ class DayCardView: UIView {
 
 func setupDayCard(view: DayCardView, dayNumber: Int, data: FetchWeather) {
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "EEEE"
+    dateFormatter.dateFormat = "EEE"
     let dayOfTheWeekString = dateFormatter.string(from: data.dailyForecastArray[dayNumber].day)
     
     let highTemp = Measurement(value: data.dailyForecastArray[dayNumber].highTemp, unit: UnitTemperature.celsius)
     let lowTemp = Measurement(value: data.dailyForecastArray[dayNumber].lowTemp, unit: UnitTemperature.celsius)
     if defaults.string(forKey: "temperatureUnits") == "F" {
-        view.temperatureLabel.text = "\(Int(highTemp.converted(to: .fahrenheit).value))°/\(Int(lowTemp.converted(to: .fahrenheit).value))°"
+        view.temperatureLabel.text = "\(Int(highTemp.converted(to: .fahrenheit).value))° \(Int(lowTemp.converted(to: .fahrenheit).value))°"
     } else {
-        view.temperatureLabel.text = "\(Int(highTemp.converted(to: .celsius).value))°/\(Int(lowTemp.converted(to: .celsius).value))°"
+        view.temperatureLabel.text = "\(Int(highTemp.converted(to: .celsius).value))° \(Int(lowTemp.converted(to: .celsius).value))°"
     }
     
     if dayNumber == 0 {
