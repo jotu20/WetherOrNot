@@ -73,7 +73,7 @@ class SettingsVC: UITableViewController {
         pressureUnitsControl.addTarget(self, action: #selector(SettingsVC.pressureUnitsControlChanged(_:)), for: .valueChanged)
         recommendationsControl.addTarget(self, action: #selector(SettingsVC.recommendationsControlChanged(_:)), for: .valueChanged)
         
-        ProductIAPHandler.shared.setProductIds(ids: ["com.dropletTip", "com.drizzleTip", "com.showerTip", "com.downpourTip"])
+        ProductIAPHandler.shared.setProductIds(ids: ["com.cumulusweather.downpourtip", "com.cumulusweather.drizzletip", "com.cumulusweather.showertip", "com.cumulusweather.downpourtip"])
         ProductIAPHandler.shared.fetchAvailableProducts { [weak self] (products) in
             self?.productsArray = products
         }
