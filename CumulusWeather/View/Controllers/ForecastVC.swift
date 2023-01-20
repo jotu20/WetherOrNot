@@ -12,8 +12,10 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var currentCardView: CurrentCardView!
     @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var alertLabel: UILabel!
+    @IBOutlet weak var settingsImage: UIImageView!
     @IBOutlet weak var currentAlertsStackView: UIStackView!
     
     @IBOutlet weak var conditionLabel0: UILabel!
@@ -83,6 +85,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
                     Task {
                         await self.fetcher.fetch(vc: ForecastVC(),latitude: locationsArray[userSelectedLocationRow].latitude, longitude: locationsArray[userSelectedLocationRow].longitude)
                         
+                        setupCurrentCard(view: self.currentCardView)
                         setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
                         setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
                         setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
@@ -109,6 +112,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
                 Task {
                     await self.fetcher.fetch(vc: ForecastVC(),latitude: defaults.double(forKey: "savedLocationLatitude"), longitude: defaults.double(forKey: "savedLocationLongitude"))
                     
+                    setupCurrentCard(view: self.currentCardView)
                     setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
                     setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
                     setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
@@ -182,6 +186,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
                     self.conditionLabel3.text = CurrentForecast.sharedInstance.sunrise
                     self.conditionLabel5.text = CurrentForecast.sharedInstance.sunset
 
+                    setupCurrentCard(view: self.currentCardView)
                     setupDayCard(view: self.day0CardView, dayNumber: 0, data: self.fetcher)
                     setupDayCard(view: self.day1CardView, dayNumber: 1, data: self.fetcher)
                     setupDayCard(view: self.day2CardView, dayNumber: 2, data: self.fetcher)
@@ -219,6 +224,7 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
 
         addChild(child)
         child.view.frame = view.frame
+        setColor(view: child.view, value: defaults.integer(forKey: "color"))
         view.addSubview(child.view)
         child.didMove(toParent: self)
 
