@@ -49,5 +49,6 @@ func setupDayCard(view: DayCardView, dayNumber: Int, data: FetchWeather) {
     }
 
     view.precipitationLabel.text = "\(Int(data.dailyForecastArray[dayNumber].precipChance * 100))%"
-    view.conditionImage.image = UIImage(systemName: "\(data.dailyForecastArray[dayNumber].symbol)")
+    view.conditionImage.image = UIImage(named: setConditionImage(condition: data.dailyForecastArray[dayNumber].symbol))
+    print(data.dailyForecastArray[dayNumber].symbol)
 }

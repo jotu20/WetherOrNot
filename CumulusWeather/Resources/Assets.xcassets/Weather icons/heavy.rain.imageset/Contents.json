@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "heavy.rain.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

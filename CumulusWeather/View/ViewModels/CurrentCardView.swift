@@ -44,6 +44,7 @@ func setupCurrentCard(view: CurrentCardView) {
     view.sunriseLabel.text = "Sunrise \(CurrentForecast.sharedInstance.sunrise.lowercased())"
     view.sunsetLabel.text = "Sunset \(CurrentForecast.sharedInstance.sunset.lowercased())"
     view.conditionImage.image = UIImage(systemName: "\(CurrentForecast.sharedInstance.symbol)")
+    view.conditionImage.image = UIImage(named: setConditionImage(condition: CurrentForecast.sharedInstance.symbol))
     
     let uvIndex = CurrentForecast.sharedInstance.uvIndex
     if uvIndex <= 2 {

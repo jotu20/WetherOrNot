@@ -40,6 +40,10 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     var fetcher = FetchWeather()
     var refreshControl: UIRefreshControl!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .darkContent
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         setColor(view: mainView, value: defaults.integer(forKey: "color"))
         getWeatherService()
