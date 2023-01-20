@@ -15,7 +15,6 @@ class ForecastVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var currentCardView: CurrentCardView!
     @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var alertLabel: UILabel!
-    @IBOutlet weak var settingsImage: UIImageView!
     @IBOutlet weak var currentAlertsStackView: UIStackView!
     
     @IBOutlet weak var conditionLabel0: UILabel!
